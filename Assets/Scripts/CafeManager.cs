@@ -98,7 +98,6 @@ public class CafeManager : MonoBehaviour, IDataPersistence
             income += (int) incomeFromItem;
         }
         Debug.Log("Total income earned over " + hoursPassed + " hours = " + income);
-        moneyText.addMoney(income);
         return income;
     }
 }
