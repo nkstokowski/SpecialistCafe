@@ -1937,7 +1937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &526973068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6774,6 +6774,7 @@ MonoBehaviour:
   allMenuItems:
   - {fileID: 11400000, guid: 772cb1c8840dd92459858fb0d7d28482, type: 2}
   - {fileID: 11400000, guid: 561578857674445418a6bc2c3ddb0b38, type: 2}
+  - {fileID: 11400000, guid: 6aeff0f98ebb0b84db5ff3661236a61a, type: 2}
   moneyText: {fileID: 0}
 --- !u!1 &1417030824
 GameObject:
