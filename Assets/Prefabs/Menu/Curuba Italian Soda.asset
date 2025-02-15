@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
-  m_Name: Bamboo Boba
+  m_Name: Curuba Italian Soda
   m_EditorClassIdentifier: 
-  itemName: Bamboo Boba
-  guestName: Panda
-  guestSprite: {fileID: 1465245311, guid: 2c092b99e708a414a9d72c5ab8ee0394, type: 3}
-  tableSprite: {fileID: -171704004, guid: 8b8858d2c9937e04b98f70f80498a41a, type: 3}
-  chalkText: {fileID: -207003524, guid: 0196960b81f235543b96cc07026a27b8, type: 3}
-  rarity: 0.75
+  itemName: Curuba Italian Soda
+  guestName: Sword Billed Hummingbird
+  guestSprite: {fileID: -1033695744, guid: 19a58b7ec51591c498ab16b3e095e30e, type: 3}
+  tableSprite: {fileID: 546824270, guid: fb610f125bf24314eae13b8b3596df8a, type: 3}
+  chalkText: {fileID: 964433646, guid: 20c1f509769778c46a4db361b6880056, type: 3}
+  rarity: 0.25
   hourlyRate: 0

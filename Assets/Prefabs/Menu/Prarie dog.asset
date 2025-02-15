@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
-  m_Name: Bamboo Boba
+  m_Name: Prarie dog
   m_EditorClassIdentifier: 
-  itemName: Bamboo Boba
-  guestName: Panda
-  guestSprite: {fileID: 1465245311, guid: 2c092b99e708a414a9d72c5ab8ee0394, type: 3}
-  tableSprite: {fileID: -171704004, guid: 8b8858d2c9937e04b98f70f80498a41a, type: 3}
-  chalkText: {fileID: -207003524, guid: 0196960b81f235543b96cc07026a27b8, type: 3}
+  itemName: Prarie dog
+  guestName: Black Footed Ferret
+  guestSprite: {fileID: 954705302, guid: 0890d0b69dd8ffc42aff06b8c4d7541b, type: 3}
+  tableSprite: {fileID: 1989062044, guid: acec3448459693e46a85c7954b0fbf22, type: 3}
+  chalkText: {fileID: -387113588, guid: b02b42385c699874bbe1f6004069c556, type: 3}
   rarity: 0.75
   hourlyRate: 0

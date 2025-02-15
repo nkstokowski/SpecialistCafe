@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
-  m_Name: Bamboo Boba
+  m_Name: Krill Kombutcha
   m_EditorClassIdentifier: 
-  itemName: Bamboo Boba
-  guestName: Panda
-  guestSprite: {fileID: 1465245311, guid: 2c092b99e708a414a9d72c5ab8ee0394, type: 3}
-  tableSprite: {fileID: -171704004, guid: 8b8858d2c9937e04b98f70f80498a41a, type: 3}
-  chalkText: {fileID: -207003524, guid: 0196960b81f235543b96cc07026a27b8, type: 3}
-  rarity: 0.75
+  itemName: Krill Kombutcha
+  guestName: Blue Whale
+  guestSprite: {fileID: -1600266199, guid: f5cf2345330fb8b4ea46262b9a4a97e5, type: 3}
+  tableSprite: {fileID: -218103718, guid: 41bca8a6b05a0de47b8244769edca303, type: 3}
+  chalkText: {fileID: 1285282956, guid: 4f99c08a18591774782973123db68356, type: 3}
+  rarity: 0.5
   hourlyRate: 0

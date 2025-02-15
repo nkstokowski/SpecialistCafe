@@ -6775,6 +6775,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 772cb1c8840dd92459858fb0d7d28482, type: 2}
   - {fileID: 11400000, guid: 561578857674445418a6bc2c3ddb0b38, type: 2}
   - {fileID: 11400000, guid: 6aeff0f98ebb0b84db5ff3661236a61a, type: 2}
+  - {fileID: 11400000, guid: ff3abca13bed4fa468867dadc5fad986, type: 2}
+  - {fileID: 11400000, guid: dc3d7d07f2284344395298f078ca957f, type: 2}
+  - {fileID: 11400000, guid: ba87f687ff6750f43a12f26f00251d94, type: 2}
+  - {fileID: 11400000, guid: caa85008ba2b7cd4189e31b1a39d431a, type: 2}
+  - {fileID: 11400000, guid: 56c8f044e0055934fa34070311a7ffcd, type: 2}
+  - {fileID: 11400000, guid: 0162a2a08be43e74498cd630476a442a, type: 2}
+  - {fileID: 11400000, guid: f80bb37a28821bb4a9d23a3fb0070618, type: 2}
   moneyText: {fileID: 0}
 --- !u!1 &1417030824
 GameObject:
