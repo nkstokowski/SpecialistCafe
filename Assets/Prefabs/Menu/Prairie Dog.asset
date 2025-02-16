@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
-  m_Name: Prarie dog
+  m_Name: Prairie Dog
   m_EditorClassIdentifier: 
-  itemName: Prarie dog
+  itemName: Prairie Dog
   guestName: Black Footed Ferret
   guestSprite: {fileID: 954705302, guid: 0890d0b69dd8ffc42aff06b8c4d7541b, type: 3}
   tableSprite: {fileID: 1989062044, guid: acec3448459693e46a85c7954b0fbf22, type: 3}

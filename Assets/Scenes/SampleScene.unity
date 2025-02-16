@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 536663055}
   - component: {fileID: 536663056}
   m_Layer: 0
-  m_Name: Prairie dog
+  m_Name: Prairie Dog
   m_TagString: Ingridient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5071,7 +5071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083277355}
   m_Layer: 0
-  m_Name: Krill Kombucha
+  m_Name: Krill Kombutcha
   m_TagString: Ingridient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9740,7 +9740,7 @@ GameObject:
   - component: {fileID: 2047537724}
   - component: {fileID: 2047537725}
   m_Layer: 0
-  m_Name: Yucca
+  m_Name: Yucca Seed Shaken Espresso
   m_TagString: Ingridient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
