@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb9f7ad315ce9c42b9038bd5550b57b, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  themeName: Default
+  unlocked: 1
+  table: {fileID: -564679149, guid: 06b6c9d66604ef048998f5ff8f94ccd5, type: 3}
+  chair: {fileID: -333347318, guid: 0c6b5cd6336933d409b3f07ea2797804, type: 3}
+  wall: {fileID: -1223950645, guid: 4157f8abe3c26ca4ca75754140209e93, type: 3}
+  counter: {fileID: -1149636496, guid: 3e8ee011cbbe9c74397ff89694bf4671, type: 3}
+  floor: {fileID: -1690467353, guid: cdbc91acc06cacb439b72150f4afa83f, type: 3}
+  icon: {fileID: -192150209, guid: 5c52be94a96917a42ba03ad421147d2d, type: 3}

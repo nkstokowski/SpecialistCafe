@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bcca2ce9b46273c429ae6c0610a326fc
+guid: 4157f8abe3c26ca4ca75754140209e93
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Krill Kombutcha Ingredients_0
+      name: Default_Wall_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 1526
-        width: 82
-        height: 99
+        x: 0
+        y: 981
+        width: 1080
+        height: 939
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2f8324c3d44997458c294de41a8cc2c
-      internalID: 524476287
+      spriteID: a37ca0e74e1f4eb43ae9543e2d00da44
+      internalID: -1223950645
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Krill Kombutcha Ingredients_0: 524476287
+      Default_Wall_0: -1223950645
+      Default_Wall_1: -1662601650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

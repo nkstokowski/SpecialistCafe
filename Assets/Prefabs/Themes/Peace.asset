@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb9f7ad315ce9c42b9038bd5550b57b, type: 3}
+  m_Name: Peace
+  m_EditorClassIdentifier: 
+  themeName: Peace
+  unlocked: 0
+  table: {fileID: -834824601, guid: 2eb249f3e050870428635f6f0f9ab49a, type: 3}
+  chair: {fileID: -1685076340, guid: db91e9bddaeee5846ba2f359ce11d779, type: 3}
+  wall: {fileID: 2138656524, guid: 04bc9a19421cee249b9fd1e0cc2e2869, type: 3}
+  counter: {fileID: 323728228, guid: ab5a82544914374468a1a413fd36a557, type: 3}
+  floor: {fileID: 1874559572, guid: eda43544ae79a4040ada410079e6ff24, type: 3}
+  icon: {fileID: 2094670859, guid: a0be3e5f70e2d994588b17314038dd4a, type: 3}

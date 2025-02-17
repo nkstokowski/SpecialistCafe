@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb9f7ad315ce9c42b9038bd5550b57b, type: 3}
+  m_Name: Diamond
+  m_EditorClassIdentifier: 
+  themeName: Diamond
+  unlocked: 0
+  table: {fileID: 1119621696, guid: f1462c0900ec16e43a0a10ac6fa399f8, type: 3}
+  chair: {fileID: 1529612351, guid: 22a80fab1cc255f42a118fd062bd3105, type: 3}
+  wall: {fileID: 1385143320, guid: 3c200d81b4c2d7648b1805ce46c8f9e9, type: 3}
+  counter: {fileID: 1123236619, guid: ad87b7b31f106ff4f83e90c5085b62c3, type: 3}
+  floor: {fileID: -1692548204, guid: a8c97c3f453e4c64d9eaccb6afb15a10, type: 3}
+  icon: {fileID: -486992064, guid: 6d29bf7b0d186104eb1f43de40357a35, type: 3}
