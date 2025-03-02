@@ -1357,7 +1357,7 @@ Transform:
   m_GameObject: {fileID: 76796823}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15166977, y: 0.13552877, z: -0.51852125}
+  m_LocalPosition: {x: -0.15166977, y: 0.13552877, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1684,6 +1684,7 @@ GameObject:
   - component: {fileID: 89865521}
   - component: {fileID: 89865520}
   - component: {fileID: 89865519}
+  - component: {fileID: 89865522}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -1754,7 +1755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 89865520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 89865519}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Book
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &89865520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1793,6 +1806,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89865517}
   m_CullTransparentMesh: 1
+--- !u!114 &89865522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89865517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Book
+  category: Table
 --- !u!1 &97315731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2073,7 @@ GameObject:
   - component: {fileID: 98358770}
   - component: {fileID: 98358769}
   - component: {fileID: 98358768}
+  - component: {fileID: 98358771}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -2116,7 +2144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 98358769}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 98358768}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &98358769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,6 +2195,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98358766}
   m_CullTransparentMesh: 1
+--- !u!114 &98358771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98358766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Default
+  category: Floor
 --- !u!1 &103681972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,6 +3126,7 @@ GameObject:
   - component: {fileID: 131247280}
   - component: {fileID: 131247279}
   - component: {fileID: 131247278}
+  - component: {fileID: 131247281}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -3142,7 +3197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 131247279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 131247278}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &131247279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,6 +3248,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131247276}
   m_CullTransparentMesh: 1
+--- !u!114 &131247281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131247276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Car
+  category: Table
 --- !u!1 &132509328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +3846,7 @@ GameObject:
   - component: {fileID: 158420419}
   - component: {fileID: 158420418}
   - component: {fileID: 158420417}
+  - component: {fileID: 158420420}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -3835,7 +3917,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 158420418}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 158420417}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Book
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &158420418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3874,6 +3968,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158420415}
   m_CullTransparentMesh: 1
+--- !u!114 &158420420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158420415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Book
+  category: Chair
 --- !u!1 &160204847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5218,6 +5326,7 @@ GameObject:
   - component: {fileID: 198710725}
   - component: {fileID: 198710724}
   - component: {fileID: 198710723}
+  - component: {fileID: 198710726}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -5288,7 +5397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 198710724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 198710723}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Coffin
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &198710724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5327,6 +5448,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198710721}
   m_CullTransparentMesh: 1
+--- !u!114 &198710726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198710721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Coffin
+  category: Floor
 --- !u!1 &200986424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,6 +5737,7 @@ GameObject:
   - component: {fileID: 208003120}
   - component: {fileID: 208003119}
   - component: {fileID: 208003118}
+  - component: {fileID: 208003121}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -5672,7 +5808,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 208003119}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 208003118}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stamp
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &208003119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5711,6 +5859,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208003116}
   m_CullTransparentMesh: 1
+--- !u!114 &208003121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208003116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Stamp
+  category: Floor
 --- !u!1 &208452938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5828,6 +5990,7 @@ GameObject:
   - component: {fileID: 210053222}
   - component: {fileID: 210053221}
   - component: {fileID: 210053220}
+  - component: {fileID: 210053223}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -5898,7 +6061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 210053221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 210053220}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &210053221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5937,6 +6112,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210053218}
   m_CullTransparentMesh: 1
+--- !u!114 &210053223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210053218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Bow
+  category: Chair
 --- !u!1 &227011895
 GameObject:
   m_ObjectHideFlags: 0
@@ -6067,7 +6256,7 @@ Transform:
   m_GameObject: {fileID: 228068293}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.039, y: 0.045, z: -0.51852125}
+  m_LocalPosition: {x: -0.039, y: 0.045, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6377,6 +6566,7 @@ GameObject:
   - component: {fileID: 243159824}
   - component: {fileID: 243159823}
   - component: {fileID: 243159822}
+  - component: {fileID: 243159825}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -6447,7 +6637,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 243159823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 243159822}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &243159823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6486,6 +6688,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243159820}
   m_CullTransparentMesh: 1
+--- !u!114 &243159825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243159820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Default
+  category: Counter
 --- !u!1 &243388027
 GameObject:
   m_ObjectHideFlags: 0
@@ -6573,6 +6789,7 @@ GameObject:
   - component: {fileID: 247036780}
   - component: {fileID: 247036779}
   - component: {fileID: 247036778}
+  - component: {fileID: 247036781}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -6643,7 +6860,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 247036779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 247036778}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Diamond
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &247036779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6682,6 +6911,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247036776}
   m_CullTransparentMesh: 1
+--- !u!114 &247036781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247036776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Diamond
+  category: Counter
 --- !u!1 &250861833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6778,6 +7021,7 @@ GameObject:
   - component: {fileID: 252052012}
   - component: {fileID: 252052011}
   - component: {fileID: 252052010}
+  - component: {fileID: 252052013}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -6848,7 +7092,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 252052011}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 252052010}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Anchor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252052011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6887,6 +7143,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252052008}
   m_CullTransparentMesh: 1
+--- !u!114 &252052013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252052008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Anchor
+  category: Wall
 --- !u!1 &255158616
 GameObject:
   m_ObjectHideFlags: 0
@@ -7379,7 +7649,7 @@ Transform:
   m_GameObject: {fileID: 275381686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.61, y: -0.492, z: -0.51852125}
+  m_LocalPosition: {x: -2.61, y: -0.492, z: -1}
   m_LocalScale: {x: 0.485, y: 0.485, z: 0.485}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7602,6 +7872,7 @@ GameObject:
   - component: {fileID: 277235871}
   - component: {fileID: 277235870}
   - component: {fileID: 277235869}
+  - component: {fileID: 277235872}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -7672,7 +7943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 277235870}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 277235869}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Anchor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &277235870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7711,6 +7994,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277235867}
   m_CullTransparentMesh: 1
+--- !u!114 &277235872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277235867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Anchor
+  category: Floor
 --- !u!1 &285170283
 GameObject:
   m_ObjectHideFlags: 0
@@ -7973,6 +8270,7 @@ GameObject:
   - component: {fileID: 315044394}
   - component: {fileID: 315044393}
   - component: {fileID: 315044392}
+  - component: {fileID: 315044395}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -8043,7 +8341,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 315044393}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 315044392}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &315044393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8082,6 +8392,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315044390}
   m_CullTransparentMesh: 1
+--- !u!114 &315044395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315044390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Car
+  category: Wall
 --- !u!1 &325456986
 GameObject:
   m_ObjectHideFlags: 0
@@ -8722,6 +9046,7 @@ GameObject:
   - component: {fileID: 349636939}
   - component: {fileID: 349636938}
   - component: {fileID: 349636937}
+  - component: {fileID: 349636940}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -8792,7 +9117,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 349636938}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 349636937}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Anchor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &349636938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8831,6 +9168,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349636935}
   m_CullTransparentMesh: 1
+--- !u!114 &349636940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349636935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Anchor
+  category: Chair
 --- !u!1 &352624370
 GameObject:
   m_ObjectHideFlags: 0
@@ -10002,6 +10353,7 @@ GameObject:
   - component: {fileID: 405280027}
   - component: {fileID: 405280026}
   - component: {fileID: 405280025}
+  - component: {fileID: 405280028}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -10072,7 +10424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 405280026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 405280025}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Anchor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &405280026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10111,6 +10475,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405280023}
   m_CullTransparentMesh: 1
+--- !u!114 &405280028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405280023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Anchor
+  category: Counter
 --- !u!1 &407114454
 GameObject:
   m_ObjectHideFlags: 0
@@ -11026,6 +11404,7 @@ GameObject:
   - component: {fileID: 442535643}
   - component: {fileID: 442535642}
   - component: {fileID: 442535641}
+  - component: {fileID: 442535644}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -11096,7 +11475,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 442535642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 442535641}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Book
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &442535642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11135,6 +11526,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442535639}
   m_CullTransparentMesh: 1
+--- !u!114 &442535644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442535639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Book
+  category: Counter
 --- !u!1 &451967829
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,6 +12636,7 @@ GameObject:
   - component: {fileID: 492943011}
   - component: {fileID: 492943010}
   - component: {fileID: 492943009}
+  - component: {fileID: 492943012}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -12301,7 +12707,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492943010}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 492943009}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaf
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &492943010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12340,6 +12758,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492943007}
   m_CullTransparentMesh: 1
+--- !u!114 &492943012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492943007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Leaf
+  category: Floor
 --- !u!1 &493414275
 GameObject:
   m_ObjectHideFlags: 0
@@ -12352,6 +12784,7 @@ GameObject:
   - component: {fileID: 493414279}
   - component: {fileID: 493414278}
   - component: {fileID: 493414277}
+  - component: {fileID: 493414280}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -12422,7 +12855,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 493414278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 493414277}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &493414278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12461,6 +12906,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493414275}
   m_CullTransparentMesh: 1
+--- !u!114 &493414280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493414275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Bow
+  category: Wall
 --- !u!1 &495930172
 GameObject:
   m_ObjectHideFlags: 0
@@ -13870,6 +14329,7 @@ GameObject:
   - component: {fileID: 528072736}
   - component: {fileID: 528072735}
   - component: {fileID: 528072734}
+  - component: {fileID: 528072737}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -13940,7 +14400,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 528072735}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 528072734}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &528072735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13979,6 +14451,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528072732}
   m_CullTransparentMesh: 1
+--- !u!114 &528072737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528072732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Default
+  category: Table
 --- !u!1 &530615521
 GameObject:
   m_ObjectHideFlags: 0
@@ -14318,7 +14804,7 @@ Transform:
   m_GameObject: {fileID: 536663054}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.10621522, y: 0.114192955, z: -0.51852125}
+  m_LocalPosition: {x: -0.10621522, y: 0.114192955, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14388,6 +14874,7 @@ GameObject:
   - component: {fileID: 537483304}
   - component: {fileID: 537483303}
   - component: {fileID: 537483302}
+  - component: {fileID: 537483305}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -14458,7 +14945,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 537483303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 537483302}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LEaf
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &537483303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14497,6 +14996,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537483300}
   m_CullTransparentMesh: 1
+--- !u!114 &537483305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537483300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Leaf
+  category: Table
 --- !u!1 &541519886
 GameObject:
   m_ObjectHideFlags: 0
@@ -14825,6 +15338,7 @@ GameObject:
   - component: {fileID: 548722344}
   - component: {fileID: 548722343}
   - component: {fileID: 548722342}
+  - component: {fileID: 548722345}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -14895,7 +15409,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 548722343}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 548722342}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Book
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &548722343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14934,6 +15460,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548722340}
   m_CullTransparentMesh: 1
+--- !u!114 &548722345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548722340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Book
+  category: Wall
 --- !u!1 &550229122
 GameObject:
   m_ObjectHideFlags: 0
@@ -14946,6 +15486,7 @@ GameObject:
   - component: {fileID: 550229126}
   - component: {fileID: 550229125}
   - component: {fileID: 550229124}
+  - component: {fileID: 550229127}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -15016,7 +15557,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 550229125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 550229124}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flower
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &550229125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15055,6 +15608,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550229122}
   m_CullTransparentMesh: 1
+--- !u!114 &550229127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550229122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Flower
+  category: Counter
 --- !u!1 &551333275
 GameObject:
   m_ObjectHideFlags: 0
@@ -16041,6 +16608,7 @@ GameObject:
   - component: {fileID: 595805500}
   - component: {fileID: 595805499}
   - component: {fileID: 595805498}
+  - component: {fileID: 595805501}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -16111,7 +16679,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 595805499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 595805498}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &595805499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16150,6 +16730,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595805496}
   m_CullTransparentMesh: 1
+--- !u!114 &595805501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595805496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Bow
+  category: Floor
 --- !u!1 &600418944
 GameObject:
   m_ObjectHideFlags: 0
@@ -16162,6 +16756,7 @@ GameObject:
   - component: {fileID: 600418948}
   - component: {fileID: 600418947}
   - component: {fileID: 600418946}
+  - component: {fileID: 600418949}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -16232,7 +16827,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 600418947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 600418946}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Coffin
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &600418947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16271,6 +16878,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600418944}
   m_CullTransparentMesh: 1
+--- !u!114 &600418949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600418944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Coffin
+  category: Wall
 --- !u!1 &605788450
 GameObject:
   m_ObjectHideFlags: 0
@@ -17140,6 +17761,7 @@ GameObject:
   - component: {fileID: 629396191}
   - component: {fileID: 629396190}
   - component: {fileID: 629396189}
+  - component: {fileID: 629396192}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -17210,7 +17832,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 629396190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 629396189}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stamp
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &629396190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17249,6 +17883,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629396187}
   m_CullTransparentMesh: 1
+--- !u!114 &629396192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629396187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Stamp
+  category: Table
 --- !u!1 &629467353
 GameObject:
   m_ObjectHideFlags: 0
@@ -18028,7 +18676,7 @@ Transform:
   m_GameObject: {fileID: 668824273}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06261596, y: 0.114192955, z: -0.51852125}
+  m_LocalPosition: {x: -0.06261596, y: 0.114192955, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18760,6 +19408,7 @@ GameObject:
   - component: {fileID: 692869410}
   - component: {fileID: 692869409}
   - component: {fileID: 692869408}
+  - component: {fileID: 692869411}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -18830,7 +19479,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 692869409}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 692869408}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stamp
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &692869409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18869,6 +19530,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692869406}
   m_CullTransparentMesh: 1
+--- !u!114 &692869411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692869406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Stamp
+  category: Counter
 --- !u!1 &692903553
 GameObject:
   m_ObjectHideFlags: 0
@@ -20757,6 +21432,7 @@ GameObject:
   - component: {fileID: 828736579}
   - component: {fileID: 828736578}
   - component: {fileID: 828736577}
+  - component: {fileID: 828736580}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -20827,7 +21503,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 828736578}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 828736577}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flower
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &828736578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20866,6 +21554,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828736575}
   m_CullTransparentMesh: 1
+--- !u!114 &828736580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828736575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Flower
+  category: Table
 --- !u!1 &832014515
 GameObject:
   m_ObjectHideFlags: 0
@@ -21427,7 +22129,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855021268}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -22074,6 +22776,7 @@ GameObject:
   - component: {fileID: 867585867}
   - component: {fileID: 867585866}
   - component: {fileID: 867585865}
+  - component: {fileID: 867585868}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -22144,7 +22847,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 867585866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 867585865}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Book
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &867585866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22183,6 +22898,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867585863}
   m_CullTransparentMesh: 1
+--- !u!114 &867585868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867585863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Book
+  category: Floor
 --- !u!1 &867868658
 GameObject:
   m_ObjectHideFlags: 0
@@ -22345,7 +23074,7 @@ Transform:
   m_GameObject: {fileID: 868624267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.10899815, y: 0.12532468, z: -0.51852125}
+  m_LocalPosition: {x: -0.10899815, y: 0.12532468, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22759,6 +23488,7 @@ GameObject:
   - component: {fileID: 884690714}
   - component: {fileID: 884690713}
   - component: {fileID: 884690712}
+  - component: {fileID: 884690715}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -22829,7 +23559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 884690713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 884690712}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &884690713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22868,6 +23610,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884690710}
   m_CullTransparentMesh: 1
+--- !u!114 &884690715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884690710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Car
+  category: Chair
 --- !u!1 &886334461
 GameObject:
   m_ObjectHideFlags: 0
@@ -23524,6 +24280,7 @@ GameObject:
   - component: {fileID: 912069314}
   - component: {fileID: 912069313}
   - component: {fileID: 912069312}
+  - component: {fileID: 912069315}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -23594,7 +24351,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912069313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 912069312}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Peace
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &912069313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23633,6 +24402,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912069310}
   m_CullTransparentMesh: 1
+--- !u!114 &912069315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912069310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Peace
+  category: Counter
 --- !u!1 &914842792
 GameObject:
   m_ObjectHideFlags: 0
@@ -24240,6 +25023,7 @@ GameObject:
   - component: {fileID: 930018147}
   - component: {fileID: 930018146}
   - component: {fileID: 930018145}
+  - component: {fileID: 930018148}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -24310,7 +25094,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 930018146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 930018145}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Peace
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &930018146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24349,6 +25145,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930018143}
   m_CullTransparentMesh: 1
+--- !u!114 &930018148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930018143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Peace
+  category: Table
 --- !u!1 &935735298
 GameObject:
   m_ObjectHideFlags: 0
@@ -24361,6 +25171,7 @@ GameObject:
   - component: {fileID: 935735302}
   - component: {fileID: 935735301}
   - component: {fileID: 935735300}
+  - component: {fileID: 935735303}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -24431,7 +25242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 935735301}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 935735300}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Diamond
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &935735301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24470,6 +25293,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935735298}
   m_CullTransparentMesh: 1
+--- !u!114 &935735303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935735298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Diamond
+  category: Chair
 --- !u!1 &937027763
 GameObject:
   m_ObjectHideFlags: 0
@@ -24631,7 +25468,7 @@ Transform:
   m_GameObject: {fileID: 937300046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25102,6 +25939,7 @@ GameObject:
   - component: {fileID: 955580357}
   - component: {fileID: 955580356}
   - component: {fileID: 955580355}
+  - component: {fileID: 955580358}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -25172,7 +26010,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 955580356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 955580355}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Diamond
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &955580356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25211,6 +26061,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955580353}
   m_CullTransparentMesh: 1
+--- !u!114 &955580358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955580353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Diamond
+  category: Floor
 --- !u!1 &962920366
 GameObject:
   m_ObjectHideFlags: 0
@@ -26876,6 +27740,7 @@ GameObject:
   - component: {fileID: 1019876521}
   - component: {fileID: 1019876520}
   - component: {fileID: 1019876519}
+  - component: {fileID: 1019876522}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -26946,7 +27811,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1019876520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1019876519}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaf
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1019876520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26985,6 +27862,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019876517}
   m_CullTransparentMesh: 1
+--- !u!114 &1019876522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019876517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Leaf
+  category: Chair
 --- !u!1 &1023082226
 GameObject:
   m_ObjectHideFlags: 0
@@ -27382,6 +28273,7 @@ GameObject:
   - component: {fileID: 1055113885}
   - component: {fileID: 1055113884}
   - component: {fileID: 1055113883}
+  - component: {fileID: 1055113886}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -27452,7 +28344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1055113884}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1055113883}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Anchor
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1055113884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27491,6 +28395,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055113881}
   m_CullTransparentMesh: 1
+--- !u!114 &1055113886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055113881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Anchor
+  category: Table
 --- !u!1 &1070907681
 GameObject:
   m_ObjectHideFlags: 0
@@ -27503,6 +28421,7 @@ GameObject:
   - component: {fileID: 1070907685}
   - component: {fileID: 1070907684}
   - component: {fileID: 1070907683}
+  - component: {fileID: 1070907686}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -27573,7 +28492,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1070907684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1070907683}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stamp
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1070907684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27612,6 +28543,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070907681}
   m_CullTransparentMesh: 1
+--- !u!114 &1070907686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070907681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Stamp
+  category: Chair
 --- !u!1 &1072209444
 GameObject:
   m_ObjectHideFlags: 0
@@ -28045,7 +28990,7 @@ Transform:
   m_GameObject: {fileID: 1083277354}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28065,6 +29010,7 @@ GameObject:
   - component: {fileID: 1100242054}
   - component: {fileID: 1100242053}
   - component: {fileID: 1100242052}
+  - component: {fileID: 1100242055}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -28135,7 +29081,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1100242053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1100242052}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Peace
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1100242053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28174,6 +29132,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100242050}
   m_CullTransparentMesh: 1
+--- !u!114 &1100242055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100242050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Peace
+  category: Floor
 --- !u!1 &1102834043
 GameObject:
   m_ObjectHideFlags: 0
@@ -28450,6 +29422,7 @@ GameObject:
   - component: {fileID: 1109849014}
   - component: {fileID: 1109849013}
   - component: {fileID: 1109849012}
+  - component: {fileID: 1109849015}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -28520,7 +29493,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1109849013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1109849012}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1109849013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28559,6 +29544,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109849010}
   m_CullTransparentMesh: 1
+--- !u!114 &1109849015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109849010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Bow
+  category: Table
 --- !u!1 &1112934631
 GameObject:
   m_ObjectHideFlags: 0
@@ -29879,6 +30878,7 @@ GameObject:
   - component: {fileID: 1209364670}
   - component: {fileID: 1209364669}
   - component: {fileID: 1209364668}
+  - component: {fileID: 1209364671}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -29949,7 +30949,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1209364669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1209364668}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Airplane
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1209364669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29988,6 +31000,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209364666}
   m_CullTransparentMesh: 1
+--- !u!114 &1209364671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209364666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Airplane
+  category: Counter
 --- !u!1 &1211335074
 GameObject:
   m_ObjectHideFlags: 0
@@ -30000,6 +31026,7 @@ GameObject:
   - component: {fileID: 1211335078}
   - component: {fileID: 1211335077}
   - component: {fileID: 1211335076}
+  - component: {fileID: 1211335079}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -30070,7 +31097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1211335077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1211335076}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Diamond
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1211335077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30109,6 +31148,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211335074}
   m_CullTransparentMesh: 1
+--- !u!114 &1211335079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211335074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Diamond
+  category: Wall
 --- !u!1 &1214380865
 GameObject:
   m_ObjectHideFlags: 0
@@ -31205,6 +32258,7 @@ GameObject:
   - component: {fileID: 1249985644}
   - component: {fileID: 1249985643}
   - component: {fileID: 1249985642}
+  - component: {fileID: 1249985645}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -31275,7 +32329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1249985643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1249985642}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1249985643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31314,6 +32380,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249985640}
   m_CullTransparentMesh: 1
+--- !u!114 &1249985645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249985640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Car
+  category: Counter
 --- !u!1 &1250740051
 GameObject:
   m_ObjectHideFlags: 0
@@ -31326,6 +32406,7 @@ GameObject:
   - component: {fileID: 1250740055}
   - component: {fileID: 1250740054}
   - component: {fileID: 1250740053}
+  - component: {fileID: 1250740056}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -31396,7 +32477,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1250740054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1250740053}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Peace
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1250740054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31435,6 +32528,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250740051}
   m_CullTransparentMesh: 1
+--- !u!114 &1250740056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250740051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Peace
+  category: Wall
 --- !u!1 &1261564068
 GameObject:
   m_ObjectHideFlags: 0
@@ -31673,6 +32780,7 @@ GameObject:
   - component: {fileID: 1264574139}
   - component: {fileID: 1264574138}
   - component: {fileID: 1264574137}
+  - component: {fileID: 1264574140}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -31743,7 +32851,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1264574138}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1264574137}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1264574138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31782,6 +32902,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264574135}
   m_CullTransparentMesh: 1
+--- !u!114 &1264574140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264574135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Default
+  category: Chair
 --- !u!1 &1266719850
 GameObject:
   m_ObjectHideFlags: 0
@@ -34485,6 +35619,7 @@ GameObject:
   - component: {fileID: 1388185023}
   - component: {fileID: 1388185022}
   - component: {fileID: 1388185021}
+  - component: {fileID: 1388185024}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -34555,7 +35690,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1388185022}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1388185021}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1388185022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34594,6 +35741,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388185019}
   m_CullTransparentMesh: 1
+--- !u!114 &1388185024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388185019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Car
+  category: Floor
 --- !u!1 &1390645969
 GameObject:
   m_ObjectHideFlags: 0
@@ -35811,6 +36972,7 @@ GameObject:
   - component: {fileID: 1440652163}
   - component: {fileID: 1440652162}
   - component: {fileID: 1440652161}
+  - component: {fileID: 1440652164}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -35881,7 +37043,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1440652162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1440652161}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Airplane
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1440652162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35920,6 +37094,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440652159}
   m_CullTransparentMesh: 1
+--- !u!114 &1440652164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440652159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Airplane
+  category: Table
 --- !u!1 &1441145378
 GameObject:
   m_ObjectHideFlags: 0
@@ -37175,6 +38363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1530991970}
   - component: {fileID: 1530991971}
+  - component: {fileID: 1530991972}
   m_Layer: 0
   m_Name: Shops
   m_TagString: Untagged
@@ -37226,6 +38415,19 @@ MonoBehaviour:
   - {fileID: 172753514}
   - {fileID: 1363670414}
   - {fileID: 1246518407}
+--- !u!114 &1530991972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530991969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05506bd9aaf083240bca8154d3ed7d02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCafeLayoutManager: {fileID: 1023155598}
 --- !u!1 &1532059519
 GameObject:
   m_ObjectHideFlags: 0
@@ -37479,6 +38681,7 @@ GameObject:
   - component: {fileID: 1538019635}
   - component: {fileID: 1538019634}
   - component: {fileID: 1538019633}
+  - component: {fileID: 1538019636}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -37549,7 +38752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1538019634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1538019633}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flower
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1538019634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37588,6 +38803,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538019631}
   m_CullTransparentMesh: 1
+--- !u!114 &1538019636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538019631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Flower
+  category: Wall
 --- !u!1 &1545692701
 GameObject:
   m_ObjectHideFlags: 0
@@ -37600,6 +38829,7 @@ GameObject:
   - component: {fileID: 1545692705}
   - component: {fileID: 1545692704}
   - component: {fileID: 1545692703}
+  - component: {fileID: 1545692706}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -37670,7 +38900,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1545692704}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1545692703}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaf
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1545692704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37709,6 +38951,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545692701}
   m_CullTransparentMesh: 1
+--- !u!114 &1545692706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545692701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Leaf
+  category: Counter
 --- !u!1 &1549887462
 GameObject:
   m_ObjectHideFlags: 0
@@ -37735,7 +38991,7 @@ Transform:
   m_GameObject: {fileID: 1549887462}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7, y: -1.1872913, z: -0.51852125}
+  m_LocalPosition: {x: -1.7, y: -1.1872913, z: -2}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 2.5926058}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -38300,6 +39556,7 @@ GameObject:
   - component: {fileID: 1575248809}
   - component: {fileID: 1575248808}
   - component: {fileID: 1575248807}
+  - component: {fileID: 1575248810}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -38370,7 +39627,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1575248808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1575248807}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaf
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1575248808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38409,6 +39678,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575248805}
   m_CullTransparentMesh: 1
+--- !u!114 &1575248810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575248805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Leaf
+  category: Wall
 --- !u!1 &1578248015
 GameObject:
   m_ObjectHideFlags: 0
@@ -38525,6 +39808,7 @@ GameObject:
   - component: {fileID: 1581829852}
   - component: {fileID: 1581829851}
   - component: {fileID: 1581829850}
+  - component: {fileID: 1581829853}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -38595,7 +39879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1581829851}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1581829850}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Airplane
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1581829851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38634,6 +39930,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581829848}
   m_CullTransparentMesh: 1
+--- !u!114 &1581829853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581829848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Airplane
+  category: Chair
 --- !u!1 &1585750005
 GameObject:
   m_ObjectHideFlags: 0
@@ -39524,6 +40834,7 @@ GameObject:
   - component: {fileID: 1610420178}
   - component: {fileID: 1610420177}
   - component: {fileID: 1610420176}
+  - component: {fileID: 1610420179}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -39594,7 +40905,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1610420177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1610420176}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flower
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1610420177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39633,6 +40956,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610420174}
   m_CullTransparentMesh: 1
+--- !u!114 &1610420179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610420174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Flower
+  category: Floor
 --- !u!1 &1616668468
 GameObject:
   m_ObjectHideFlags: 0
@@ -41539,6 +42876,7 @@ GameObject:
   - component: {fileID: 1684026223}
   - component: {fileID: 1684026222}
   - component: {fileID: 1684026221}
+  - component: {fileID: 1684026224}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -41609,7 +42947,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1684026222}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1684026221}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Coffin
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1684026222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41648,6 +42998,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684026219}
   m_CullTransparentMesh: 1
+--- !u!114 &1684026224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684026219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Coffin
+  category: Chair
 --- !u!1 &1684816596
 GameObject:
   m_ObjectHideFlags: 0
@@ -42063,6 +43427,7 @@ GameObject:
   - component: {fileID: 1706386569}
   - component: {fileID: 1706386568}
   - component: {fileID: 1706386567}
+  - component: {fileID: 1706386570}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -42133,7 +43498,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1706386568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1706386567}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Stamp
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1706386568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42172,6 +43549,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706386565}
   m_CullTransparentMesh: 1
+--- !u!114 &1706386570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706386565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Stamp
+  category: Wall
 --- !u!1 &1709014415
 GameObject:
   m_ObjectHideFlags: 0
@@ -43191,6 +44582,7 @@ GameObject:
   - component: {fileID: 1748852435}
   - component: {fileID: 1748852434}
   - component: {fileID: 1748852433}
+  - component: {fileID: 1748852436}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -43261,7 +44653,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1748852434}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1748852433}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Peace
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1748852434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43300,6 +44704,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748852431}
   m_CullTransparentMesh: 1
+--- !u!114 &1748852436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748852431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Peace
+  category: Chair
 --- !u!1 &1758179448
 GameObject:
   m_ObjectHideFlags: 0
@@ -44616,6 +46034,7 @@ GameObject:
   - component: {fileID: 1826000474}
   - component: {fileID: 1826000473}
   - component: {fileID: 1826000472}
+  - component: {fileID: 1826000475}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -44686,7 +46105,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1826000473}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1826000472}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Diamond
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1826000473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44725,6 +46156,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826000470}
   m_CullTransparentMesh: 1
+--- !u!114 &1826000475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826000470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Diamond
+  category: Table
 --- !u!1 &1830830797
 GameObject:
   m_ObjectHideFlags: 0
@@ -45632,6 +47077,7 @@ GameObject:
   - component: {fileID: 1859834299}
   - component: {fileID: 1859834298}
   - component: {fileID: 1859834297}
+  - component: {fileID: 1859834300}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -45702,7 +47148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1859834298}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1859834297}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Coffin
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1859834298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45741,6 +47199,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859834295}
   m_CullTransparentMesh: 1
+--- !u!114 &1859834300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859834295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Coffin
+  category: Table
 --- !u!1 &1861914173
 GameObject:
   m_ObjectHideFlags: 0
@@ -46801,6 +48273,7 @@ GameObject:
   - component: {fileID: 1890768197}
   - component: {fileID: 1890768196}
   - component: {fileID: 1890768195}
+  - component: {fileID: 1890768198}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -46871,7 +48344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1890768196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1890768195}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1890768196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46910,6 +48395,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890768193}
   m_CullTransparentMesh: 1
+--- !u!114 &1890768198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890768193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Bow
+  category: Counter
 --- !u!1 &1892210815
 GameObject:
   m_ObjectHideFlags: 0
@@ -46922,6 +48421,7 @@ GameObject:
   - component: {fileID: 1892210819}
   - component: {fileID: 1892210818}
   - component: {fileID: 1892210817}
+  - component: {fileID: 1892210820}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -46992,7 +48492,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1892210818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1892210817}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Coffin
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1892210818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47031,6 +48543,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892210815}
   m_CullTransparentMesh: 1
+--- !u!114 &1892210820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892210815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Coffin
+  category: Counter
 --- !u!1 &1903711463
 GameObject:
   m_ObjectHideFlags: 0
@@ -47283,6 +48809,7 @@ GameObject:
   - component: {fileID: 1914761355}
   - component: {fileID: 1914761354}
   - component: {fileID: 1914761353}
+  - component: {fileID: 1914761356}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -47353,7 +48880,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1914761354}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1914761353}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Airplane
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1914761354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47392,6 +48931,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914761351}
   m_CullTransparentMesh: 1
+--- !u!114 &1914761356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914761351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Airplane
+  category: Wall
 --- !u!1 &1917146353
 GameObject:
   m_ObjectHideFlags: 0
@@ -47404,6 +48957,7 @@ GameObject:
   - component: {fileID: 1917146357}
   - component: {fileID: 1917146356}
   - component: {fileID: 1917146355}
+  - component: {fileID: 1917146358}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -47474,7 +49028,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1917146356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1917146355}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Flower
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1917146356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47513,6 +49079,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917146353}
   m_CullTransparentMesh: 1
+--- !u!114 &1917146358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917146353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Flower
+  category: Chair
 --- !u!1 &1918022684
 GameObject:
   m_ObjectHideFlags: 0
@@ -47525,6 +49105,7 @@ GameObject:
   - component: {fileID: 1918022688}
   - component: {fileID: 1918022687}
   - component: {fileID: 1918022686}
+  - component: {fileID: 1918022689}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -47595,7 +49176,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1918022687}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1918022686}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1918022687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47634,6 +49227,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918022684}
   m_CullTransparentMesh: 1
+--- !u!114 &1918022689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918022684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Default
+  category: Wall
 --- !u!1 &1918611987
 GameObject:
   m_ObjectHideFlags: 0
@@ -49434,7 +51041,7 @@ Transform:
   m_GameObject: {fileID: 2006834575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12291282, y: 0.1281076, z: -0.51852125}
+  m_LocalPosition: {x: -0.12291282, y: 0.1281076, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50383,7 +51990,7 @@ Transform:
   m_GameObject: {fileID: 2047537723}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11549166, y: 0.11048238, z: -0.51852125}
+  m_LocalPosition: {x: -0.11549166, y: 0.11048238, z: -3}
   m_LocalScale: {x: 0.46382192, y: 0.46382192, z: 5.185212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50979,7 +52586,7 @@ Transform:
   m_GameObject: {fileID: 2070905411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51089,6 +52696,7 @@ GameObject:
   - component: {fileID: 2081348000}
   - component: {fileID: 2081347999}
   - component: {fileID: 2081347998}
+  - component: {fileID: 2081348001}
   m_Layer: 0
   m_Name: Shop Use Button
   m_TagString: Untagged
@@ -51159,7 +52767,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081347999}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530991972}
+        m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
+        m_MethodName: OnShopUseButtonSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2081347998}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Airplane
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2081347999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51198,6 +52818,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081347996}
   m_CullTransparentMesh: 1
+--- !u!114 &2081348001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081347996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1439aa9056d0b7742b27168290703af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: Airplane
+  category: Floor
 --- !u!1 &2090179595
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,6 @@ public class ShopSelector : MonoBehaviour
     public void OnShopButtonSelected(Button clickedButton) {
         SetAllButtonsInteractable();
         clickedButton.interactable = false;
-        viewSelector.showView(clickedButton.gameObject.name);
+        viewSelector.ShowView(clickedButton.gameObject.name);
     }
 }

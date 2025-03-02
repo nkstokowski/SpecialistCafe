@@ -67,16 +67,37 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
     }
 
     void UpdateCafe() {
-        tables[0].sprite = themesDict[currentTable].table;
-        tables[1].sprite = themesDict[currentTable].table;
+        SetTables(currentTable);
+        SetChairs(currentChair);
+        SetWall(currentWall);
+        SetFloor(currentFloor);
+        SetCounter(currentCounter);
+    }
 
-        chairs[0].sprite = themesDict[currentChair].chair;
-        chairs[1].sprite = themesDict[currentChair].chair;
+    public void SetTables(String theme) {
+        tables[0].sprite = themesDict[theme].table;
+        tables[1].sprite = themesDict[theme].table;
+        this.currentTable = theme;
+    }
 
-        wall.sprite = themesDict[currentWall].wall;
+    public void SetChairs(String theme) {
+        chairs[0].sprite = themesDict[theme].chair;
+        chairs[1].sprite = themesDict[theme].chair;
+        this.currentChair = theme;
+    }
 
-        floor.sprite = themesDict[currentFloor].floor;
+    public void SetWall(String theme) {
+        wall.sprite = themesDict[theme].wall;
+        this.currentWall = theme;
+    }
 
-        counter.sprite = themesDict[currentCounter].counter;
+    public void SetFloor(String theme) {
+        floor.sprite = themesDict[theme].floor;
+        this.currentFloor = theme;
+    }
+
+    public void SetCounter(String theme) {
+        counter.sprite = themesDict[theme].counter;
+        this.currentCounter = theme;
     }
 }
