@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: 170cc2af80cb74145b6117a60174b6d7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shop Menu Eucalyptus Tea Filled Extra Color_4
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 708
+        width: 441
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe9a452a5f5a254cb3364b035fd86fe
+      internalID: 1749489928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Shop Menu Eucalyptus Tea Filled Extra Color_0: 411380036
+      Shop Menu Eucalyptus Tea Filled Extra Color_1: 960716975
+      Shop Menu Eucalyptus Tea Filled Extra Color_10: 1637116113
+      Shop Menu Eucalyptus Tea Filled Extra Color_11: -210401669
+      Shop Menu Eucalyptus Tea Filled Extra Color_12: 1373693103
+      Shop Menu Eucalyptus Tea Filled Extra Color_13: 803417620
+      Shop Menu Eucalyptus Tea Filled Extra Color_14: 260258244
+      Shop Menu Eucalyptus Tea Filled Extra Color_15: 903335152
+      Shop Menu Eucalyptus Tea Filled Extra Color_16: 1066086209
+      Shop Menu Eucalyptus Tea Filled Extra Color_17: 1975993315
+      Shop Menu Eucalyptus Tea Filled Extra Color_18: 1251685279
+      Shop Menu Eucalyptus Tea Filled Extra Color_19: -671039775
+      Shop Menu Eucalyptus Tea Filled Extra Color_2: 1961939828
+      Shop Menu Eucalyptus Tea Filled Extra Color_20: 1528277355
+      Shop Menu Eucalyptus Tea Filled Extra Color_21: 1296280178
+      Shop Menu Eucalyptus Tea Filled Extra Color_22: 1610122554
+      Shop Menu Eucalyptus Tea Filled Extra Color_23: -1877796467
+      Shop Menu Eucalyptus Tea Filled Extra Color_24: 649918341
+      Shop Menu Eucalyptus Tea Filled Extra Color_25: -35076731
+      Shop Menu Eucalyptus Tea Filled Extra Color_26: -1376751005
+      Shop Menu Eucalyptus Tea Filled Extra Color_27: 2055034782
+      Shop Menu Eucalyptus Tea Filled Extra Color_28: -951721879
+      Shop Menu Eucalyptus Tea Filled Extra Color_29: -953210583
+      Shop Menu Eucalyptus Tea Filled Extra Color_3: -129417723
+      Shop Menu Eucalyptus Tea Filled Extra Color_4: 1749489928
+      Shop Menu Eucalyptus Tea Filled Extra Color_5: 869188954
+      Shop Menu Eucalyptus Tea Filled Extra Color_6: 1361935132
+      Shop Menu Eucalyptus Tea Filled Extra Color_7: -1851316488
+      Shop Menu Eucalyptus Tea Filled Extra Color_8: 1261520321
+      Shop Menu Eucalyptus Tea Filled Extra Color_9: -776523586
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
