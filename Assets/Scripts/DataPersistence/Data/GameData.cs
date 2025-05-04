@@ -7,8 +7,11 @@ using UnityEngine;
 public class GameData
 {
     public int currentMoney;
+    public int currentTickets;
 
     public String timeLastSaved;
+    public String timeLastIncome;
+
     public List<String> unlockedMenuItems;
     public List<String> currentMenuItems;
 
@@ -26,21 +29,25 @@ public class GameData
 
     public GameData() {
         this.currentMoney = 0;
-        timeLastSaved = DateTime.Now.ToString();
-        unlockedMenuItems = new List<String>();
-        currentMenuItems = new List<String>();
+        this.currentTickets = 0;
 
-        unlockedTables = new List<String>(){"Default"};
-        unlockedChairs = new List<String>(){"Default"};
-        unlockedWalls = new List<String>(){"Default"};
-        unlockedFloors = new List<String>(){"Default"};
-        unlockedCounters = new List<String>(){"Default"};
+        this.timeLastSaved = DateTime.Now.ToString();
+        this.timeLastIncome = DateTime.Now.ToString();
 
-        currentTable = "Default";
-        currentChair = "Default";
-        currentWall = "Default";
-        currentFloor = "Default";
-        currentCounter = "Default";
+        this.unlockedMenuItems = new List<String>();
+        this.currentMenuItems = new List<String>();
+
+        this.unlockedTables = new List<String>(){"Default"};
+        this.unlockedChairs = new List<String>(){"Default"};
+        this.unlockedWalls = new List<String>(){"Default"};
+        this.unlockedFloors = new List<String>(){"Default"};
+        this.unlockedCounters = new List<String>(){"Default"};
+
+        this.currentTable = "Default";
+        this.currentChair = "Default";
+        this.currentWall = "Default";
+        this.currentFloor = "Default";
+        this.currentCounter = "Default";
 
     }
 }

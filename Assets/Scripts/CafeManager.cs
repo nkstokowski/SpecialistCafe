@@ -21,7 +21,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     DateTime timeLastSaved;
 
-    public MoneyText moneyText;
+    public MoneyManager moneyManager;
 
 
     void Start() {
@@ -45,6 +45,8 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         if(this.currentMenuItems.Count > 0) {
             PopulateCafe();
         }
+
+        this.UpdateShopButtons();
     }
 
     public void SaveData(ref GameData data)
@@ -52,6 +54,16 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         data.unlockedMenuItems = this.unlockedMenuItems;
         data.currentMenuItems = this.currentMenuItems;
         data.timeLastSaved = DateTime.Now.ToString();
+    }
+
+    public void UpdateShopButtons() {
+        MenuButtonData[] allShopButtonDatas = GameObject.FindObjectsOfType<MenuButtonData>(true);
+        foreach(MenuButtonData shopButtonData in allShopButtonDatas) {
+            bool unlocked = this.unlockedMenuItems.Contains(shopButtonData.theme);
+            shopButtonData.purchased = unlocked;
+            shopButtonData.myState = unlocked ? ShopButtonState.Active : ShopButtonState.NotPurchased;
+            shopButtonData.UpdateText();
+        }
     }
 
     private void ShowActiveIngridients() {
@@ -99,5 +111,13 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         }
         Debug.Log("Total income earned over " + hoursPassed + " hours = " + income);
         return income;
+    }
+
+    public bool TryPurchase(ButtonData data) {
+        if (!moneyManager.TryAddMenuItem(data.cost)) return false;
+
+        this.unlockedMenuItems.Add(data.theme);
+
+        return true;
     }
 }

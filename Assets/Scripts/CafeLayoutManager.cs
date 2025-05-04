@@ -30,7 +30,7 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
     public SpriteRenderer wall;
     public SpriteRenderer floor;
 
-    public MoneyText moneyText;
+    public MoneyManager moneyManager;
 
     public void LoadData(GameData data)
     {
@@ -73,32 +73,43 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
     }
 
     void UpdateShopButtons() {
-        ButtonData[] allShopButtonDatas = GameObject.FindObjectsOfType<ButtonData>(true);
-        foreach(ButtonData shopButtonData in allShopButtonDatas) {
-            TMP_Text shopButtonText = shopButtonData.GameObject().GetComponentInChildren<TMP_Text>();
+        FurnitureButtonData[] allShopButtonDatas = GameObject.FindObjectsOfType<FurnitureButtonData>(true);
+        foreach(FurnitureButtonData shopButtonData in allShopButtonDatas) {
 
             bool unlocked = false;
+            bool current = false;
 
             switch(shopButtonData.category) {
-            case "Table":
-                unlocked = unlockedTables.Contains(shopButtonData.theme);
-                break;
-            case "Chair":
-                unlocked = unlockedChairs.Contains(shopButtonData.theme);
-                break;
-            case "Wall":
-                unlocked = unlockedWalls.Contains(shopButtonData.theme);
-                break;
-            case "Floor":
-                unlocked = unlockedFloors.Contains(shopButtonData.theme);
-                break;
-            case "Counter":
-                unlocked = unlockedCounters.Contains(shopButtonData.theme);
-                break;
+                case "Table":
+                    unlocked = unlockedTables.Contains(shopButtonData.theme);
+                    current = currentTable == shopButtonData.name;
+                    break;
+                case "Chair":
+                    unlocked = unlockedChairs.Contains(shopButtonData.theme);
+                    current = currentChair == shopButtonData.name;
+                    break;
+                case "Wall":
+                    unlocked = unlockedWalls.Contains(shopButtonData.theme);
+                    current = currentWall == shopButtonData.name;
+                    break;
+                case "Floor":
+                    unlocked = unlockedFloors.Contains(shopButtonData.theme);
+                    current = currentFloor == shopButtonData.name;
+                    break;
+                case "Counter":
+                    unlocked = unlockedCounters.Contains(shopButtonData.theme);
+                    current = currentCounter == shopButtonData.name;
+                    break;
             }
 
-            shopButtonText.text = unlocked ? "Use" : "Buy";
             shopButtonData.purchased = unlocked;
+            if (unlocked) {
+                shopButtonData.myState = current ? ShopButtonState.Active : ShopButtonState.NotActive;
+            } else {
+                shopButtonData.myState = ShopButtonState.NotPurchased;
+            }
+
+            shopButtonData.UpdateText();
         }
     }
 
@@ -137,12 +148,10 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         this.currentCounter = theme;
     }
 
-    internal bool TryPurchase(ButtonData data)
-    {
-        if(moneyText.currentMoney >= data.cost) {
-            moneyText.currentMoney -= data.cost;
+    public bool TryPurchase(ButtonData data) {
+        if (!moneyManager.TryPurchaseFurniture(data.cost)) return false;
 
-            switch(data.category) {
+        switch(data.category) {
             case "Table":
                 unlockedTables.Add(data.theme);
                 break;
@@ -158,11 +167,8 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
             case "Counter":
                 unlockedCounters.Add(data.theme);
                 break;
-            }
-
-            return true;
         }
-        
-        return false;
+
+        return true;
     }
 }
