@@ -5,10 +5,15 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
 
-    public List<GameObject> screenCanvasObjects;
+    public GameObject shop;
 
-    public void TransitionScreenUI(int previousScreen, int newScreen) {
-        screenCanvasObjects[previousScreen].SetActive(false);
-        screenCanvasObjects[newScreen].SetActive(true);
+    public void ShowShop()
+    {
+        shop.SetActive(true);
+    }
+
+    public void HideShop()
+    {
+        shop.SetActive(false);
     }
 }

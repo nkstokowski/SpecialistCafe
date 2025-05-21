@@ -17,5 +17,6 @@ MonoBehaviour:
   guestSprite: {fileID: 580920868, guid: 2f88dc9e7833d154b922b514ed10d5e9, type: 3}
   tableSprite: {fileID: -199330782, guid: 3a00b62afcb755045a193c468be0d9f4, type: 3}
   chalkText: {fileID: 394566029, guid: 92dbb7d629ba41945906fc898675a937, type: 3}
-  rarity: 0.25
+  rarity: 0.15
   hourlyRate: 0
+  theme: Peace

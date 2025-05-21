@@ -65,21 +65,26 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         data.currentCounter = this.currentCounter;
     }
 
-    void Awake() {
+    void Awake()
+    {
         themesDict = new Dictionary<String, Theme>();
-        foreach(Theme themeObj in allThemes) {
+        foreach (Theme themeObj in allThemes)
+        {
             themesDict.Add(themeObj.name, themeObj);
         }
     }
 
-    void UpdateShopButtons() {
+    void UpdateShopButtons()
+    {
         FurnitureButtonData[] allShopButtonDatas = GameObject.FindObjectsOfType<FurnitureButtonData>(true);
-        foreach(FurnitureButtonData shopButtonData in allShopButtonDatas) {
+        foreach (FurnitureButtonData shopButtonData in allShopButtonDatas)
+        {
 
             bool unlocked = false;
             bool current = false;
 
-            switch(shopButtonData.category) {
+            switch (shopButtonData.category)
+            {
                 case "Table":
                     unlocked = unlockedTables.Contains(shopButtonData.theme);
                     current = currentTable == shopButtonData.name;
@@ -103,9 +108,12 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
             }
 
             shopButtonData.purchased = unlocked;
-            if (unlocked) {
+            if (unlocked)
+            {
                 shopButtonData.myState = current ? ShopButtonState.Active : ShopButtonState.NotActive;
-            } else {
+            }
+            else
+            {
                 shopButtonData.myState = ShopButtonState.NotPurchased;
             }
 
@@ -113,7 +121,8 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         }
     }
 
-    void UpdateCafe() {
+    void UpdateCafe()
+    {
         SetTables(currentTable);
         SetChairs(currentChair);
         SetWall(currentWall);
@@ -121,37 +130,44 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         SetCounter(currentCounter);
     }
 
-    public void SetTables(String theme) {
+    public void SetTables(String theme)
+    {
         tables[0].sprite = themesDict[theme].table;
         tables[1].sprite = themesDict[theme].table;
         this.currentTable = theme;
     }
 
-    public void SetChairs(String theme) {
+    public void SetChairs(String theme)
+    {
         chairs[0].sprite = themesDict[theme].chair;
         chairs[1].sprite = themesDict[theme].chair;
         this.currentChair = theme;
     }
 
-    public void SetWall(String theme) {
+    public void SetWall(String theme)
+    {
         wall.sprite = themesDict[theme].wall;
         this.currentWall = theme;
     }
 
-    public void SetFloor(String theme) {
+    public void SetFloor(String theme)
+    {
         floor.sprite = themesDict[theme].floor;
         this.currentFloor = theme;
     }
 
-    public void SetCounter(String theme) {
+    public void SetCounter(String theme)
+    {
         counter.sprite = themesDict[theme].counter;
         this.currentCounter = theme;
     }
 
-    public bool TryPurchase(ButtonData data) {
+    public bool TryPurchase(ButtonData data)
+    {
         if (!moneyManager.TryPurchaseFurniture(data.cost)) return false;
 
-        switch(data.category) {
+        switch (data.category)
+        {
             case "Table":
                 unlockedTables.Add(data.theme);
                 break;
@@ -170,5 +186,19 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         }
 
         return true;
+    }
+
+    public float GetThemeMultiplier(String theme)
+    {
+        float finalMultiplier = 1.0f;
+        float themeBonus = 0.2f;
+
+        if (currentTable == theme) finalMultiplier += themeBonus;
+        if (currentChair == theme) finalMultiplier += themeBonus;
+        if (currentCounter == theme) finalMultiplier += themeBonus;
+        if (currentWall == theme) finalMultiplier += themeBonus;
+        if (currentFloor == theme) finalMultiplier += themeBonus;
+
+        return finalMultiplier;
     }
 }

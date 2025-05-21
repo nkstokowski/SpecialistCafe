@@ -17,5 +17,6 @@ MonoBehaviour:
   guestSprite: {fileID: -1487249558, guid: c2f4cef07ff7d524cb3dde1014371330, type: 3}
   tableSprite: {fileID: 1884955321, guid: 9803f014010b2c541abfd7aa610cb27e, type: 3}
   chalkText: {fileID: 628959927, guid: 9233c660e69f27d44ab7cc2713335a67, type: 3}
-  rarity: 0.75
+  rarity: 0.5
   hourlyRate: 0
+  theme: Coffin

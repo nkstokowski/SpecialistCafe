@@ -17,5 +17,6 @@ MonoBehaviour:
   guestSprite: {fileID: 1363586021, guid: 8cae10400bcc6ff4aaccd232d7e05f6c, type: 3}
   tableSprite: {fileID: 1305162117, guid: 1c955148bba01fb4183f7921d54597db, type: 3}
   chalkText: {fileID: 729332875, guid: eeefc633a87532c45bf185f669e2c513, type: 3}
-  rarity: 0.25
+  rarity: 0.15
   hourlyRate: 0
+  theme: Airplane

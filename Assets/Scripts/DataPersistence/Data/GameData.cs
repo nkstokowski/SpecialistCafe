@@ -13,7 +13,6 @@ public class GameData
     public String timeLastIncome;
 
     public List<String> unlockedMenuItems;
-    public List<String> currentMenuItems;
 
     public List<String> unlockedTables;
     public List<String> unlockedChairs;
@@ -35,7 +34,6 @@ public class GameData
         this.timeLastIncome = DateTime.Now.ToString();
 
         this.unlockedMenuItems = new List<String>();
-        this.currentMenuItems = new List<String>();
 
         this.unlockedTables = new List<String>(){"Default"};
         this.unlockedChairs = new List<String>(){"Default"};

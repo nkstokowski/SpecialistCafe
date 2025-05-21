@@ -17,5 +17,6 @@ MonoBehaviour:
   guestSprite: {fileID: 1207056605, guid: a215efb2203537b4089b6a8e1eed00a9, type: 3}
   tableSprite: {fileID: -287041237, guid: 4d19016b8d46a674086d3d8de4ffa6ac, type: 3}
   chalkText: {fileID: 1353214433, guid: 3cfb6470c49c9654a8e502d01162bdea, type: 3}
-  rarity: 0.75
+  rarity: 0.5
   hourlyRate: 0
+  theme: Leaf

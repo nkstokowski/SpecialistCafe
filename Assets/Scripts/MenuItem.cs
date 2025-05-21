@@ -14,6 +14,7 @@ public class MenuItem : ScriptableObject
     public float rarity;
 
     public float hourlyRate;
+    public String theme;
 
 
 }

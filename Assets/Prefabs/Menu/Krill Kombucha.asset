@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
-  m_Name: Prairie Dog
+  m_Name: Krill Kombucha
   m_EditorClassIdentifier: 
-  itemName: Prairie Dog
-  guestName: Black Footed Ferret
-  guestSprite: {fileID: 954705302, guid: 0890d0b69dd8ffc42aff06b8c4d7541b, type: 3}
-  tableSprite: {fileID: 1989062044, guid: acec3448459693e46a85c7954b0fbf22, type: 3}
-  chalkText: {fileID: -387113588, guid: b02b42385c699874bbe1f6004069c556, type: 3}
-  rarity: 0.75
+  itemName: Krill Kombucha
+  guestName: Blue Whale
+  guestSprite: {fileID: -1600266199, guid: f5cf2345330fb8b4ea46262b9a4a97e5, type: 3}
+  tableSprite: {fileID: -218103718, guid: 41bca8a6b05a0de47b8244769edca303, type: 3}
+  chalkText: {fileID: 1285282956, guid: 4f99c08a18591774782973123db68356, type: 3}
+  rarity: 0.35
   hourlyRate: 0
+  theme: Diamond
