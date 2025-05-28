@@ -6,25 +6,34 @@ using UnityEngine;
 
 public class CafeManager : MonoBehaviour, IDataPersistence
 {
+
+    // Ingridients & Menu
     private GameObject[] ingridientShelfObjects;
     public List<string> unlockedMenuItems;
     public List<MenuItem> allMenuItems;
     private Dictionary<String, MenuItem> menuItemsDict;
+    public string upperItem;
+    public string lowerItem;
 
+    // Positions
     Vector3 upperGuestPos = new Vector3(-1.05999994f, -1.85000002f, -1f);
     Vector3 lowerGuestPos = new Vector3(0.829999983f, -3.81999993f, -1f);
-
     Vector3 upperDrinkPos = new Vector3(-1.06900001f, -1.14999998f, -1f);
     Vector3 lowerDrinkPos = new Vector3(0.779999971f, -3.1099999f, -2f);
 
-    DateTime timeLastSaved;
+    // Time & income
+    int lastUpdateHour;
+    public int updateCycleHours = 3;
 
+    // Manager
     public MoneyManager moneyManager;
     public CafeLayoutManager cafeLayoutManager;
 
 
-    void Start()
+    void Awake()
     {
+        EnforceMinUpdateCycle();
+
         ingridientShelfObjects = GameObject.FindGameObjectsWithTag("Ingridient");
         menuItemsDict = new Dictionary<string, MenuItem>();
         foreach (MenuItem item in allMenuItems)
@@ -38,8 +47,10 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     {
         this.unlockedMenuItems = data.unlockedMenuItems;
 
-        this.timeLastSaved = DateTime.Parse(data.timeLastSaved);
-        CalculateIncome(timeLastSaved);
+        this.lastUpdateHour = data.lastUpdateHour;
+
+        this.upperItem = data.lastItemUpper;
+        this.lowerItem = data.lastItemLower;
 
         ShowActiveIngridients();
         if (this.unlockedMenuItems.Count > 0)
@@ -53,7 +64,9 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData data)
     {
         data.unlockedMenuItems = this.unlockedMenuItems;
-        data.timeLastSaved = DateTime.Now.ToString();
+        data.lastUpdateHour = this.lastUpdateHour;
+        data.lastItemUpper = this.upperItem;
+        data.lastItemLower = this.lowerItem;
     }
 
     public void UpdateShopButtons()
@@ -78,12 +91,59 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     private void PopulateCafe()
     {
-        spawnGuest(menuItemsDict[GetRandomMenuItem()], false);
-        spawnGuest(menuItemsDict[GetRandomMenuItem()], true);
+        if (GuestsShouldUpdate())
+        {
+            upperItem = GetRandomMenuItem();
+            lowerItem = GetRandomMenuItem();
+        }
+
+        spawnGuest(upperItem, false);
+        spawnGuest(lowerItem, true);
     }
 
-    private void spawnGuest(MenuItem menuItem, Boolean lowerGuest)
+    private bool GuestsShouldUpdate()
     {
+        EnforceMinUpdateCycle();
+
+        // Get the needed time of day values
+        DateTime currentTime = DateTime.Now;
+        Debug.Log("Current Time: " + currentTime);
+        DateTime lastUpdateTime = DateTime.Today.AddHours(lastUpdateHour);
+        Debug.Log("Last Time Updated: " + lastUpdateTime);
+        TimeSpan difference = currentTime - lastUpdateTime;
+        Debug.Log("Time since last update: " + difference);
+
+        // Determine if we have passed an update cycle
+        if (difference.TotalHours > updateCycleHours)
+        {
+            // Update our internal tracker of the most recent update hour
+            int hour = currentTime.Hour;
+            Debug.Log("Current hour of day: " + hour);
+            int mostRecentUpdateCycle = hour / updateCycleHours;
+            Debug.Log("Last update cycle of today: " + mostRecentUpdateCycle);
+            lastUpdateHour = mostRecentUpdateCycle * updateCycleHours;
+            Debug.Log("New Last Time Updated: " + DateTime.Today.AddHours(lastUpdateHour));
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private void EnforceMinUpdateCycle()
+    {
+        if (updateCycleHours <= 0)
+        {
+            Debug.Log("Update Cycle must be greater than 0. Setting to 1");
+            updateCycleHours = 1;
+        }
+    }
+
+    private void spawnGuest(string menuItemName, Boolean lowerGuest)
+    {
+        if (menuItemName == "None") return;
+
+        MenuItem menuItem = menuItemsDict[menuItemName];
 
         // Guest
         GameObject guest = new GameObject(menuItem.guestName, typeof(SpriteRenderer));
@@ -105,17 +165,17 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         TimeSpan span = DateTime.Now.Subtract(startTime);
         int hoursPassed = span.Hours;
-        Debug.Log("Hours passed: " + hoursPassed);
+        //Debug.Log("Hours passed: " + hoursPassed);
 
         int income = 0;
         foreach (String item in unlockedMenuItems)
         {
-            Debug.Log("Calculating income from " + item);
+            //Debug.Log("Calculating income from " + item);
             float incomeFromItem = menuItemsDict[item].rarity * hoursPassed * menuItemsDict[item].hourlyRate;
-            Debug.Log(item + " earned " + incomeFromItem);
+            //Debug.Log(item + " earned " + incomeFromItem);
             income += (int)incomeFromItem;
         }
-        Debug.Log("Total income earned over " + hoursPassed + " hours = " + income);
+        //Debug.Log("Total income earned over " + hoursPassed + " hours = " + income);
         return income;
     }
 
@@ -128,13 +188,13 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         return true;
     }
 
-    String GetRandomMenuItem()
+    string GetRandomMenuItem()
     {
         float weightedSum = 0f;
-        Dictionary<String, float> menuWeights = new Dictionary<String, float>();
-        Dictionary<String, float> menuOdds = new Dictionary<String, float>();
+        Dictionary<string, float> menuWeights = new Dictionary<string, float>();
+        Dictionary<string, float> menuOdds = new Dictionary<string, float>();
 
-        foreach (String item in unlockedMenuItems)
+        foreach (string item in unlockedMenuItems)
         {
             float rarity = menuItemsDict[item].rarity;
             float themeMultiplier = cafeLayoutManager.GetThemeMultiplier(menuItemsDict[item].theme);
@@ -142,29 +202,29 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
             menuWeights[item] = weightedRarity;
             weightedSum += weightedRarity;
-            Debug.Log("Menu item: " + item + ". Rarity: " + rarity + ". Theme Bonus: " + themeMultiplier + ". Weighted Rarity: " + weightedRarity + ".");
+            //Debug.Log("Menu item: " + item + ". Rarity: " + rarity + ". Theme Bonus: " + themeMultiplier + ". Weighted Rarity: " + weightedRarity + ".");
         }
 
-        Debug.Log("Sum of weighted menu rarities: " + weightedSum);
+        //Debug.Log("Sum of weighted menu rarities: " + weightedSum);
 
-        foreach (String item in unlockedMenuItems)
+        foreach (string item in unlockedMenuItems)
         {
             menuOdds[item] = (menuWeights[item] / weightedSum) * 100f;
-            Debug.Log("Final Rarity for " + item + ": " + menuOdds[item] + ".");
+            //Debug.Log("Final Rarity for " + item + ": " + menuOdds[item] + ".");
         }
 
         float roll = UnityEngine.Random.Range(0f, 100f);
-        Debug.Log("Roll: " + roll);
+        //Debug.Log("Roll: " + roll);
 
         float cumulative = 0f;
 
-        foreach (String item in unlockedMenuItems)
+        foreach (string item in unlockedMenuItems)
         {
             cumulative += menuOdds[item];
             if (roll < cumulative)
             {
                 // i is the selected index
-                Debug.Log("Selected choice: " + item);
+                //Debug.Log("Selected choice: " + item);
                 return item;
             }
         }

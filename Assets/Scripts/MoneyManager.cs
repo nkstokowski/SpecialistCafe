@@ -10,8 +10,6 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
     public int currentMoney = 0;
     public int currentTickets = 0;
 
-    DateTime timeLastSaved;
-    DateTime timeLastIncome;
     public CafeManager cafeManager;
 
     public TextMeshProUGUI moneyText;
@@ -24,23 +22,12 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
 
         this.moneyText.text = this.currentMoney.ToString();
         this.ticketText.text = this.currentTickets.ToString();
-
-        this.timeLastSaved = DateTime.Parse(data.timeLastSaved);
-        this.timeLastIncome = DateTime.Parse(data.timeLastIncome);
-        CalculateIncome(timeLastSaved);
     }
 
     public void SaveData(ref GameData data)
     {
-        data.timeLastSaved = DateTime.Now.ToString();
-
         data.currentMoney = this.currentMoney;
         data.currentTickets = this.currentTickets;
-    }
-
-    void CalculateIncome(DateTime startTime) {
-        TimeSpan span = DateTime.Now.Subtract(startTime);
-        Debug.Log("Hours passed: " + span.Hours);
     }
 
     public bool TryPurchaseFurniture(int cost) {

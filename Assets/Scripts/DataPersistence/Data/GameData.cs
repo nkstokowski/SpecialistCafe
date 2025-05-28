@@ -9,43 +9,47 @@ public class GameData
     public int currentMoney;
     public int currentTickets;
 
-    public String timeLastSaved;
-    public String timeLastIncome;
+    public int lastUpdateHour;
 
-    public List<String> unlockedMenuItems;
+    public List<string> unlockedMenuItems;
 
-    public List<String> unlockedTables;
-    public List<String> unlockedChairs;
-    public List<String> unlockedWalls;
-    public List<String> unlockedFloors;
-    public List<String> unlockedCounters;
+    public List<string> unlockedTables;
+    public List<string> unlockedChairs;
+    public List<string> unlockedWalls;
+    public List<string> unlockedFloors;
+    public List<string> unlockedCounters;
 
-    public String currentTable;
-    public String currentChair;
-    public String currentWall;
-    public String currentFloor;
-    public String currentCounter;
+    public string currentTable;
+    public string currentChair;
+    public string currentWall;
+    public string currentFloor;
+    public string currentCounter;
+    
+    public string lastItemUpper;
+    public string lastItemLower;
 
-    public GameData() {
+
+    public GameData()
+    {
         this.currentMoney = 0;
         this.currentTickets = 0;
+        this.lastUpdateHour = 0;
 
-        this.timeLastSaved = DateTime.Now.ToString();
-        this.timeLastIncome = DateTime.Now.ToString();
-
-        this.unlockedMenuItems = new List<String>();
-
-        this.unlockedTables = new List<String>(){"Default"};
-        this.unlockedChairs = new List<String>(){"Default"};
-        this.unlockedWalls = new List<String>(){"Default"};
-        this.unlockedFloors = new List<String>(){"Default"};
-        this.unlockedCounters = new List<String>(){"Default"};
+        this.unlockedMenuItems = new List<string>();
+        this.unlockedTables = new List<string>() { "Default" };
+        this.unlockedChairs = new List<string>() { "Default" };
+        this.unlockedWalls = new List<string>() { "Default" };
+        this.unlockedFloors = new List<string>() { "Default" };
+        this.unlockedCounters = new List<string>() { "Default" };
 
         this.currentTable = "Default";
         this.currentChair = "Default";
         this.currentWall = "Default";
         this.currentFloor = "Default";
         this.currentCounter = "Default";
+
+        this.lastItemUpper = "None";
+        this.lastItemLower = "None";
 
     }
 }
