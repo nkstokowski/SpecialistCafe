@@ -20,3 +20,4 @@ MonoBehaviour:
   rarity: 0.5
   hourlyRate: 0
   theme: Coffin
+  coinsPrefab: {fileID: 2934980145861451005, guid: a05394b02bd70b04db05f142a8b52795, type: 3}

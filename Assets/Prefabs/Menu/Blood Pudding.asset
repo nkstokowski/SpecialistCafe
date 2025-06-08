@@ -20,3 +20,4 @@ MonoBehaviour:
   rarity: 0.35
   hourlyRate: 0
   theme: Book
+  coinsPrefab: {fileID: 165200570805967297, guid: 1c48f8aaec44e154ebb3f80c17d4ac7f, type: 3}

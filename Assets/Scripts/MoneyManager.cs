@@ -13,7 +13,7 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
     public CafeManager cafeManager;
 
     public TextMeshProUGUI moneyText;
-    public TextMeshProUGUI ticketText; 
+    public TextMeshProUGUI ticketText;
 
     public void LoadData(GameData data)
     {
@@ -30,7 +30,8 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
         data.currentTickets = this.currentTickets;
     }
 
-    public bool TryPurchaseFurniture(int cost) {
+    public bool TryPurchaseFurniture(int cost)
+    {
         if (this.currentMoney < cost) return false;
 
         this.currentMoney -= cost;
@@ -38,12 +39,19 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
         return true;
     }
 
-    public bool TryAddMenuItem(int cost) {
+    public bool TryAddMenuItem(int cost)
+    {
         if (this.currentTickets < cost) return false;
 
         this.currentTickets -= cost;
         this.ticketText.text = this.currentTickets.ToString();
         return true;
+    }
+
+    public void AddMoney(int amount)
+    {
+        this.currentMoney += amount;
+        this.moneyText.text = this.currentMoney.ToString();
     }
 
 }

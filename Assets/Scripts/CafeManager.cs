@@ -20,10 +20,14 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     Vector3 lowerGuestPos = new Vector3(0.829999983f, -3.81999993f, -1f);
     Vector3 upperDrinkPos = new Vector3(-1.06900001f, -1.14999998f, -1f);
     Vector3 lowerDrinkPos = new Vector3(0.779999971f, -3.1099999f, -2f);
+    Vector3 upperCoinPos = new Vector3(0.620000005f,-1.03100002f,-2f);
+    Vector3 lowerCoinPos = new Vector3(-0.741999984f,-2.95700002f,0f);
 
     // Time & income
     int lastUpdateHour;
     public int updateCycleHours = 3;
+    public bool upperCoinCollected;
+    public bool lowerCoinCollected;
 
     // Manager
     public MoneyManager moneyManager;
@@ -52,6 +56,9 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         this.upperItem = data.lastItemUpper;
         this.lowerItem = data.lastItemLower;
 
+        this.upperCoinCollected = data.upperCoinCollected;
+        this.lowerCoinCollected = data.lowerCoinCollected;
+
         ShowActiveIngridients();
         if (this.unlockedMenuItems.Count > 0)
         {
@@ -67,6 +74,8 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         data.lastUpdateHour = this.lastUpdateHour;
         data.lastItemUpper = this.upperItem;
         data.lastItemLower = this.lowerItem;
+        data.upperCoinCollected = this.upperCoinCollected;
+        data.lowerCoinCollected = this.lowerCoinCollected;
     }
 
     public void UpdateShopButtons()
@@ -91,14 +100,21 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     private void PopulateCafe()
     {
+
+        bool spawnUpperCoins = !this.upperCoinCollected;
+        bool spawnLowerCoins = !this.lowerCoinCollected;
+
         if (GuestsShouldUpdate())
         {
             upperItem = GetRandomMenuItem();
             lowerItem = GetRandomMenuItem();
+
+            spawnUpperCoins = true;
+            spawnLowerCoins = true;
         }
 
-        spawnGuest(upperItem, false);
-        spawnGuest(lowerItem, true);
+        spawnGuest(upperItem, false, spawnUpperCoins);
+        spawnGuest(lowerItem, true, spawnLowerCoins);
     }
 
     private bool GuestsShouldUpdate()
@@ -107,22 +123,22 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         // Get the needed time of day values
         DateTime currentTime = DateTime.Now;
-        Debug.Log("Current Time: " + currentTime);
+        //Debug.Log("Current Time: " + currentTime);
         DateTime lastUpdateTime = DateTime.Today.AddHours(lastUpdateHour);
-        Debug.Log("Last Time Updated: " + lastUpdateTime);
+        //Debug.Log("Last Time Updated: " + lastUpdateTime);
         TimeSpan difference = currentTime - lastUpdateTime;
-        Debug.Log("Time since last update: " + difference);
+        //Debug.Log("Time since last update: " + difference);
 
         // Determine if we have passed an update cycle
         if (difference.TotalHours > updateCycleHours)
         {
             // Update our internal tracker of the most recent update hour
             int hour = currentTime.Hour;
-            Debug.Log("Current hour of day: " + hour);
+            //Debug.Log("Current hour of day: " + hour);
             int mostRecentUpdateCycle = hour / updateCycleHours;
-            Debug.Log("Last update cycle of today: " + mostRecentUpdateCycle);
+            //Debug.Log("Last update cycle of today: " + mostRecentUpdateCycle);
             lastUpdateHour = mostRecentUpdateCycle * updateCycleHours;
-            Debug.Log("New Last Time Updated: " + DateTime.Today.AddHours(lastUpdateHour));
+            //Debug.Log("New Last Time Updated: " + DateTime.Today.AddHours(lastUpdateHour));
 
             return true;
         }
@@ -139,7 +155,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         }
     }
 
-    private void spawnGuest(string menuItemName, Boolean lowerGuest)
+    private void spawnGuest(string menuItemName, bool lowerGuest, bool spawnCoins)
     {
         if (menuItemName == "None") return;
 
@@ -158,6 +174,17 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         drink.GetComponent<SpriteRenderer>().flipX = lowerGuest;
         drink.transform.position = lowerGuest ? lowerDrinkPos : upperDrinkPos;
         drink.transform.localScale = new Vector3(.5f, .5f, 1f);
+
+        // Coins
+        if (spawnCoins)
+        {
+            GameObject coins = Instantiate(menuItem.coinsPrefab);
+            coins.transform.position = lowerGuest ? lowerCoinPos : upperCoinPos;
+            coins.GetComponent<SpriteRenderer>().flipX = lowerGuest;
+            coins.GetComponent<CoinLogic>().lowerCoin = lowerGuest;
+            if (lowerGuest) this.lowerCoinCollected = false;
+            if (!lowerGuest) this.upperCoinCollected = false;
+        }
     }
 
     public int CalculateIncome(DateTime startTime)
@@ -230,5 +257,17 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         }
 
         return "";
+    }
+
+    public void CoinCollected(bool isLowerCoin)
+    {
+        if (isLowerCoin)
+        {
+            this.lowerCoinCollected = true;
+        }
+        else
+        {
+            this.upperCoinCollected = true;
+        }
     }
 }

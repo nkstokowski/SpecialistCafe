@@ -16,5 +16,6 @@ public class MenuItem : ScriptableObject
     public float hourlyRate;
     public String theme;
 
+    public GameObject coinsPrefab;
 
 }

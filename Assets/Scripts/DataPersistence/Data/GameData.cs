@@ -28,6 +28,9 @@ public class GameData
     public string lastItemUpper;
     public string lastItemLower;
 
+    public bool upperCoinCollected;
+    public bool lowerCoinCollected;
+
 
     public GameData()
     {
@@ -50,6 +53,9 @@ public class GameData
 
         this.lastItemUpper = "None";
         this.lastItemLower = "None";
+
+        this.upperCoinCollected = true;
+        this.lowerCoinCollected = true;
 
     }
 }

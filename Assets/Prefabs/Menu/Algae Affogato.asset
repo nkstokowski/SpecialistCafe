@@ -20,3 +20,4 @@ MonoBehaviour:
   rarity: 0.15
   hourlyRate: 0
   theme: Airplane
+  coinsPrefab: {fileID: 8598961538836084803, guid: acdc35a35cef1f04ea2530184fc994f9, type: 3}
