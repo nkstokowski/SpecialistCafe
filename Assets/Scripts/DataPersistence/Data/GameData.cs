@@ -9,7 +9,7 @@ public class GameData
     public int currentMoney;
     public int currentTickets;
 
-    public int lastUpdateHour;
+    public String lastUpdateTime;
 
     public List<string> unlockedMenuItems;
 
@@ -36,7 +36,7 @@ public class GameData
     {
         this.currentMoney = 0;
         this.currentTickets = 0;
-        this.lastUpdateHour = 0;
+        this.lastUpdateTime = DateTime.Now.ToString();
 
         this.unlockedMenuItems = new List<string>();
         this.unlockedTables = new List<string>() { "Default" };

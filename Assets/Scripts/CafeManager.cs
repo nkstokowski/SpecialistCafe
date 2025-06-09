@@ -24,7 +24,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     Vector3 lowerCoinPos = new Vector3(-0.741999984f,-2.95700002f,0f);
 
     // Time & income
-    int lastUpdateHour;
+    DateTime lastUpdateTime;
     public int updateCycleHours = 3;
     public bool upperCoinCollected;
     public bool lowerCoinCollected;
@@ -51,7 +51,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     {
         this.unlockedMenuItems = data.unlockedMenuItems;
 
-        this.lastUpdateHour = data.lastUpdateHour;
+        this.lastUpdateTime = DateTime.Parse(data.lastUpdateTime);
 
         this.upperItem = data.lastItemUpper;
         this.lowerItem = data.lastItemLower;
@@ -71,7 +71,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData data)
     {
         data.unlockedMenuItems = this.unlockedMenuItems;
-        data.lastUpdateHour = this.lastUpdateHour;
+        data.lastUpdateTime = this.lastUpdateTime.ToString();
         data.lastItemUpper = this.upperItem;
         data.lastItemLower = this.lowerItem;
         data.upperCoinCollected = this.upperCoinCollected;
@@ -123,22 +123,17 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         // Get the needed time of day values
         DateTime currentTime = DateTime.Now;
-        //Debug.Log("Current Time: " + currentTime);
-        DateTime lastUpdateTime = DateTime.Today.AddHours(lastUpdateHour);
-        //Debug.Log("Last Time Updated: " + lastUpdateTime);
+        Debug.Log("Current Time: " + currentTime);
+        Debug.Log("Last Time Updated: " + lastUpdateTime);
         TimeSpan difference = currentTime - lastUpdateTime;
-        //Debug.Log("Time since last update: " + difference);
+        Debug.Log("Time since last update: " + difference);
 
         // Determine if we have passed an update cycle
         if (difference.TotalHours > updateCycleHours)
         {
             // Update our internal tracker of the most recent update hour
-            int hour = currentTime.Hour;
-            //Debug.Log("Current hour of day: " + hour);
-            int mostRecentUpdateCycle = hour / updateCycleHours;
-            //Debug.Log("Last update cycle of today: " + mostRecentUpdateCycle);
-            lastUpdateHour = mostRecentUpdateCycle * updateCycleHours;
-            //Debug.Log("New Last Time Updated: " + DateTime.Today.AddHours(lastUpdateHour));
+            lastUpdateTime = currentTime;
+            Debug.Log("New Last Time Updated: " + lastUpdateTime);
 
             return true;
         }
@@ -211,6 +206,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         if (!moneyManager.TryAddMenuItem(data.cost)) return false;
 
         this.unlockedMenuItems.Add(data.theme);
+        ShowActiveIngridients();
 
         return true;
     }

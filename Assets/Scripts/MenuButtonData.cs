@@ -10,7 +10,7 @@ public class MenuButtonData : ButtonData
     public void UpdateText() {
         switch(myState) {
             case ShopButtonState.NotPurchased:
-                buttonText.SetText("Purchase");
+                buttonText.SetText("Purchase - " + cost + " ticket(s)");
                 break;
             case ShopButtonState.NotActive:
             case ShopButtonState.Active:
