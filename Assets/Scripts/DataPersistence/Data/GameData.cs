@@ -24,7 +24,7 @@ public class GameData
     public string currentWall;
     public string currentFloor;
     public string currentCounter;
-    
+
     public string lastItemUpper;
     public string lastItemLower;
 
@@ -32,7 +32,7 @@ public class GameData
     public bool lowerCoinCollected;
 
 
-    public GameData()
+    /*public GameData()
     {
         this.currentMoney = 0;
         this.currentTickets = 0;
@@ -56,6 +56,33 @@ public class GameData
 
         this.upperCoinCollected = true;
         this.lowerCoinCollected = true;
+
+    }*/
+    
+    public GameData()
+    {
+        this.currentMoney = 100;
+        this.currentTickets = 10;
+        this.lastUpdateTime = DateTime.Now.ToString();
+
+        this.unlockedMenuItems = new List<string>() { "Bamboo Boba", "Eucalyptus Tea", "Snowshoe Hare Pop", "Prairie Puppuccino" };
+        this.unlockedTables = new List<string>() { "Default", "Airplane", "Book" };
+        this.unlockedChairs = new List<string>() { "Default", "Airplane", "Book"  };
+        this.unlockedWalls = new List<string>() { "Default", "Airplane", "Book"  };
+        this.unlockedFloors = new List<string>() { "Default", "Airplane", "Book"  };
+        this.unlockedCounters = new List<string>() { "Default", "Airplane", "Book"  };
+
+        this.currentTable = "Airplane";
+        this.currentChair = "Book";
+        this.currentWall = "Book";
+        this.currentFloor = "Airplane";
+        this.currentCounter = "Book";
+
+        this.lastItemUpper = "Bamboo Boba";
+        this.lastItemLower = "Bamboo Boba";
+
+        this.upperCoinCollected = false;
+        this.lowerCoinCollected = false;
 
     }
 }
