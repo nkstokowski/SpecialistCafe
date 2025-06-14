@@ -9,7 +9,8 @@ public class ShopViewSelector : MonoBehaviour
 
     public void ShowView(String viewName)
     {
-        foreach(GameObject view in shopViews) {
+        foreach (GameObject view in shopViews)
+        {
             view.SetActive(view.name == viewName);
         }
     }

@@ -21,7 +21,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     Vector3 upperDrinkPos = new Vector3(-1.06900001f, -1.14999998f, -1f);
     Vector3 lowerDrinkPos = new Vector3(0.779999971f, -3.1099999f, -2f);
     Vector3 upperCoinPos = new Vector3(0.620000005f,-1.03100002f,-2f);
-    Vector3 lowerCoinPos = new Vector3(-0.741999984f,-2.95700002f,0f);
+    Vector3 lowerCoinPos = new Vector3(-0.741999984f,-2.95700002f,-1f);
 
     // Time & income
     DateTime lastUpdateTime;

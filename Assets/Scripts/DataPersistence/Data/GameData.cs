@@ -79,7 +79,7 @@ public class GameData
         this.currentCounter = "Book";
 
         this.lastItemUpper = "Bamboo Boba";
-        this.lastItemLower = "Bamboo Boba";
+        this.lastItemLower = "Prairie Puppuccino";
 
         this.upperCoinCollected = false;
         this.lowerCoinCollected = false;
