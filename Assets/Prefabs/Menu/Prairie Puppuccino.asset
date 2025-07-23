@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Prairie Puppuccino
   guestName: Black Footed Ferret
   guestSprite: {fileID: 954705302, guid: 0890d0b69dd8ffc42aff06b8c4d7541b, type: 3}
-  tableSprite: {fileID: 1989062044, guid: acec3448459693e46a85c7954b0fbf22, type: 3}
+  drinkSprite: {fileID: 1989062044, guid: acec3448459693e46a85c7954b0fbf22, type: 3}
   chalkText: {fileID: -387113588, guid: b02b42385c699874bbe1f6004069c556, type: 3}
   rarity: 0.5
   hourlyRate: 0
   theme: Flower
-  coinsPrefab: {fileID: 2934980145861451005, guid: a05394b02bd70b04db05f142a8b52795, type: 3}
+  coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
+  coinValue: 3

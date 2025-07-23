@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Krill Kombucha
   guestName: Blue Whale
   guestSprite: {fileID: -1600266199, guid: f5cf2345330fb8b4ea46262b9a4a97e5, type: 3}
-  tableSprite: {fileID: -218103718, guid: 41bca8a6b05a0de47b8244769edca303, type: 3}
+  drinkSprite: {fileID: -218103718, guid: 41bca8a6b05a0de47b8244769edca303, type: 3}
   chalkText: {fileID: 1285282956, guid: 4f99c08a18591774782973123db68356, type: 3}
   rarity: 0.35
   hourlyRate: 0
   theme: Diamond
-  coinsPrefab: {fileID: 165200570805967297, guid: 1c48f8aaec44e154ebb3f80c17d4ac7f, type: 3}
+  coinSprite: {fileID: 1621787491, guid: f8b359af5d6288947b1cb2fd4ef49fbd, type: 3}
+  coinValue: 4

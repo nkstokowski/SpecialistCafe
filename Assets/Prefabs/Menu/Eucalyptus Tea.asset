@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Eucalyptus Tea
   guestName: Koala
   guestSprite: {fileID: -1487249558, guid: c2f4cef07ff7d524cb3dde1014371330, type: 3}
-  tableSprite: {fileID: 1884955321, guid: 9803f014010b2c541abfd7aa610cb27e, type: 3}
+  drinkSprite: {fileID: 1884955321, guid: 9803f014010b2c541abfd7aa610cb27e, type: 3}
   chalkText: {fileID: 628959927, guid: 9233c660e69f27d44ab7cc2713335a67, type: 3}
   rarity: 0.5
   hourlyRate: 0
   theme: Coffin
-  coinsPrefab: {fileID: 2934980145861451005, guid: a05394b02bd70b04db05f142a8b52795, type: 3}
+  coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
+  coinValue: 3

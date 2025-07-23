@@ -16,7 +16,7 @@ MonoBehaviour:
   unlocked: 0
   table: {fileID: -716767916, guid: e058571f0d62f49419988e7c40b1c24b, type: 3}
   chair: {fileID: -1286297965, guid: b5033032a6823ec46afe72c09fed1fb0, type: 3}
-  wall: {fileID: 1678002687, guid: 5815c8dddd2f2904389ddec96b062ea7, type: 3}
+  wall: {fileID: 21300000, guid: 5815c8dddd2f2904389ddec96b062ea7, type: 3}
   counter: {fileID: 828099421, guid: 4a94d4fe343718642a064051576ca154, type: 3}
   floor: {fileID: 1857582093, guid: a8ea45baa1d622042b214f6f7f20d887, type: 3}
   icon: {fileID: -1326938727, guid: 717d1590fe481ef49a28b615eb862991, type: 3}

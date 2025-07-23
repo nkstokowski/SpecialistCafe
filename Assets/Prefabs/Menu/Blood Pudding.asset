@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Blood Pudding
   guestName: Vampire Bat
   guestSprite: {fileID: -576308714, guid: cd2e6e24096e11145b9687752d71923c, type: 3}
-  tableSprite: {fileID: -1582318045, guid: 166c4abb21b00a944a3fbd943ebe24b8, type: 3}
+  drinkSprite: {fileID: -1582318045, guid: 166c4abb21b00a944a3fbd943ebe24b8, type: 3}
   chalkText: {fileID: 1023724678, guid: 5ca79783ef741624c8e6612629f9aa8c, type: 3}
   rarity: 0.35
   hourlyRate: 0
   theme: Book
-  coinsPrefab: {fileID: 165200570805967297, guid: 1c48f8aaec44e154ebb3f80c17d4ac7f, type: 3}
+  coinSprite: {fileID: 1621787491, guid: f8b359af5d6288947b1cb2fd4ef49fbd, type: 3}
+  coinValue: 4

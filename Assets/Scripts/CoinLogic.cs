@@ -6,20 +6,13 @@ using UnityEngine.EventSystems;
 public class CoinLogic : MonoBehaviour, IPointerClickHandler
 {
 
-    SoundManager soundManager;
-    MoneyManager moneyManager;
+    public SoundManager soundManager;
+    public MoneyManager moneyManager;
 
-    CafeManager cafeManager;
+    public CafeManager cafeManager;
     public int value;
 
     public bool lowerCoin;
-
-    void Start()
-    {
-        moneyManager = GameObject.Find("MoneyManager").GetComponent<MoneyManager>();
-        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
-        cafeManager = GameObject.Find("CafeManager").GetComponent<CafeManager>();
-    }
 
     public void OnPointerClick(PointerEventData eventData)
     {

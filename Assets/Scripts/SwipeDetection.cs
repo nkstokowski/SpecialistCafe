@@ -24,16 +24,15 @@ public class SwipeDetection : MonoBehaviour
     private Vector2 endPosition;
     private float endTime;
 
+    public bool useTrail;
+
     private Coroutine trailCoroutine;
 
     public UIScreen currentScreen = UIScreen.Center;
 
     public enum UIScreen { Left, Center, Right }
-    Dictionary<UIScreen, Vector3> screenPositions = new Dictionary<UIScreen, Vector3>(){
-        {UIScreen.Left, new Vector3(-5.66f,0f,-10f)},
-        {UIScreen.Center, new Vector3(0f,0f,-10f)},
-        {UIScreen.Right, new Vector3(5.66f,0f,-10f)}
-    };
+    public float aspectScaler;
+    float baseScreenPosX = 10.8f;
 
     bool moving = false;
 
@@ -61,15 +60,21 @@ public class SwipeDetection : MonoBehaviour
     {
         startPosition = position;
         startTime = time;
-        trail.SetActive(true);
-        trail.transform.position = position;
-        trailCoroutine = StartCoroutine(Trail());
+        if (useTrail)
+        {
+            trail.SetActive(true);
+            trail.transform.position = position;
+            trailCoroutine = StartCoroutine(Trail());  
+        }
     }
 
     private void SwipeEnd(Vector2 position, float time)
     {
-        trail.SetActive(false);
-        StopCoroutine(trailCoroutine);
+        if (useTrail)
+        {
+            trail.SetActive(false);
+            StopCoroutine(trailCoroutine);
+        }
         endPosition = position;
         endTime = time;
         DetectSwipe();
@@ -122,7 +127,19 @@ public class SwipeDetection : MonoBehaviour
     private void OnSwipe(bool forward)
     {
         UIScreen newScreen = nextScreen(forward);
-        Vector3 newLocation = screenPositions[newScreen];
+
+        float newScreenXPos = aspectScaler * baseScreenPosX;
+        switch (newScreen)
+        {
+            case UIScreen.Left:
+                newScreenXPos = -newScreenXPos;
+                break;
+            case UIScreen.Center:
+                newScreenXPos = 0f;
+                break;
+        }
+        Vector3 newLocation = new Vector3(newScreenXPos, 0f, -10f);
+
         if (!moving && newScreen != currentScreen)
         {
             if (newScreen != UIScreen.Right) uiManager.HideShop();

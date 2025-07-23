@@ -9,13 +9,14 @@ public class MenuItem : ScriptableObject
     public String itemName;
     public String guestName;
     public Sprite guestSprite;
-    public Sprite tableSprite;
+    public Sprite drinkSprite;
     public Sprite chalkText;
     public float rarity;
 
     public float hourlyRate;
     public String theme;
 
-    public GameObject coinsPrefab;
+    public Sprite coinSprite;
+    public int coinValue;
 
 }

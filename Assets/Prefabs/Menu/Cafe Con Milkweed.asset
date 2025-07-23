@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Cafe Con Milkweed
   guestName: Monarch Caterpillar
   guestSprite: {fileID: -160101880, guid: 96edc1cd364091448aeaaee32ee67bb1, type: 3}
-  tableSprite: {fileID: -561756251, guid: 476a38fce139def429a3a3b052362dad, type: 3}
+  drinkSprite: {fileID: -561756251, guid: 476a38fce139def429a3a3b052362dad, type: 3}
   chalkText: {fileID: 1648826823, guid: 2a3c7f66c8786e441af697acd2d87a33, type: 3}
   rarity: 0.35
   hourlyRate: 0
   theme: Bow
-  coinsPrefab: {fileID: 165200570805967297, guid: 1c48f8aaec44e154ebb3f80c17d4ac7f, type: 3}
+  coinSprite: {fileID: 1621787491, guid: f8b359af5d6288947b1cb2fd4ef49fbd, type: 3}
+  coinValue: 4

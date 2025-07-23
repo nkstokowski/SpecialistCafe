@@ -16,12 +16,8 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     public string lowerItem;
 
     // Positions
-    Vector3 upperGuestPos = new Vector3(-1.05999994f, -1.85000002f, -1f);
-    Vector3 lowerGuestPos = new Vector3(0.829999983f, -3.81999993f, -1f);
-    Vector3 upperDrinkPos = new Vector3(-1.06900001f, -1.14999998f, -1f);
-    Vector3 lowerDrinkPos = new Vector3(0.779999971f, -3.1099999f, -2f);
-    Vector3 upperCoinPos = new Vector3(0.620000005f,-1.03100002f,-2f);
-    Vector3 lowerCoinPos = new Vector3(-0.741999984f,-2.95700002f,-1f);
+    float aspectScaler;
+    float baseTableUnitY = -9f;
 
     // Time & income
     DateTime lastUpdateTime;
@@ -32,6 +28,12 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     // Manager
     public MoneyManager moneyManager;
     public CafeLayoutManager cafeLayoutManager;
+
+    // Object management
+    public Transform screensTransform;
+    public Transform centerTransform;
+    public TableUnit upperUnit;
+    public TableUnit lowerUnit;
 
 
     void Awake()
@@ -80,7 +82,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     public void UpdateShopButtons()
     {
-        MenuButtonData[] allShopButtonDatas = GameObject.FindObjectsOfType<MenuButtonData>(true);
+        MenuButtonData[] allShopButtonDatas = GameObject.FindObjectsByType<MenuButtonData>(FindObjectsSortMode.None);
         foreach (MenuButtonData shopButtonData in allShopButtonDatas)
         {
             bool unlocked = this.unlockedMenuItems.Contains(shopButtonData.theme);
@@ -113,8 +115,12 @@ public class CafeManager : MonoBehaviour, IDataPersistence
             spawnLowerCoins = true;
         }
 
-        spawnGuest(upperItem, false, spawnUpperCoins);
-        spawnGuest(lowerItem, true, spawnLowerCoins);
+        upperUnit.SetMenu(menuItemsDict[upperItem]);
+        upperUnit.SetCoins(spawnUpperCoins);
+        
+
+        lowerUnit.SetMenu(menuItemsDict[lowerItem]);
+        lowerUnit.SetCoins(spawnLowerCoins);
     }
 
     private bool GuestsShouldUpdate()
@@ -147,38 +153,6 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         {
             Debug.Log("Update Cycle must be greater than 0. Setting to 1");
             updateCycleHours = 1;
-        }
-    }
-
-    private void spawnGuest(string menuItemName, bool lowerGuest, bool spawnCoins)
-    {
-        if (menuItemName == "None") return;
-
-        MenuItem menuItem = menuItemsDict[menuItemName];
-
-        // Guest
-        GameObject guest = new GameObject(menuItem.guestName, typeof(SpriteRenderer));
-        guest.GetComponent<SpriteRenderer>().sprite = menuItem.guestSprite;
-        guest.GetComponent<SpriteRenderer>().flipX = lowerGuest;
-        guest.transform.position = lowerGuest ? lowerGuestPos : upperGuestPos;
-        guest.transform.localScale = new Vector3(.5f, .5f, 1f);
-
-        // Drink
-        GameObject drink = new GameObject(menuItem.guestName + " Drink", typeof(SpriteRenderer));
-        drink.GetComponent<SpriteRenderer>().sprite = menuItem.tableSprite;
-        drink.GetComponent<SpriteRenderer>().flipX = lowerGuest;
-        drink.transform.position = lowerGuest ? lowerDrinkPos : upperDrinkPos;
-        drink.transform.localScale = new Vector3(.5f, .5f, 1f);
-
-        // Coins
-        if (spawnCoins)
-        {
-            GameObject coins = Instantiate(menuItem.coinsPrefab);
-            coins.transform.position = lowerGuest ? lowerCoinPos : upperCoinPos;
-            coins.GetComponent<SpriteRenderer>().flipX = lowerGuest;
-            coins.GetComponent<CoinLogic>().lowerCoin = lowerGuest;
-            if (lowerGuest) this.lowerCoinCollected = false;
-            if (!lowerGuest) this.upperCoinCollected = false;
         }
     }
 
@@ -265,5 +239,26 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         {
             this.upperCoinCollected = true;
         }
+    }
+
+    internal void SetScreensRatio(float aspectScaler)
+    {
+        screensTransform.localScale = new Vector3(aspectScaler, 1f, 1f);
+        centerTransform.localScale = new Vector3(1f, aspectScaler, 1f);
+
+        float scaledTableUnitY = baseTableUnitY / aspectScaler;
+        //Debug.Log("Scaled table y unit: " + scaledTableUnitY);
+
+        upperUnit.transform.localPosition = new Vector3(
+            upperUnit.transform.position.x,
+            scaledTableUnitY / 2,
+            upperUnit.transform.position.z
+        );
+
+        lowerUnit.transform.localPosition = new Vector3(
+            lowerUnit.transform.position.x,
+            scaledTableUnitY,
+            lowerUnit.transform.position.z
+        );
     }
 }

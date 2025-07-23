@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Snowshoe Hare Pop
   guestName: Canadian Lynx
   guestSprite: {fileID: 1207056605, guid: a215efb2203537b4089b6a8e1eed00a9, type: 3}
-  tableSprite: {fileID: -287041237, guid: 4d19016b8d46a674086d3d8de4ffa6ac, type: 3}
+  drinkSprite: {fileID: -287041237, guid: 4d19016b8d46a674086d3d8de4ffa6ac, type: 3}
   chalkText: {fileID: 1353214433, guid: 3cfb6470c49c9654a8e502d01162bdea, type: 3}
   rarity: 0.5
   hourlyRate: 0
   theme: Leaf
-  coinsPrefab: {fileID: 2934980145861451005, guid: a05394b02bd70b04db05f142a8b52795, type: 3}
+  coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
+  coinValue: 3

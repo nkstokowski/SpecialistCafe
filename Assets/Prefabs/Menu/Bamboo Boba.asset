@@ -15,9 +15,10 @@ MonoBehaviour:
   itemName: Bamboo Boba
   guestName: Panda
   guestSprite: {fileID: 1465245311, guid: 2c092b99e708a414a9d72c5ab8ee0394, type: 3}
-  tableSprite: {fileID: -171704004, guid: 8b8858d2c9937e04b98f70f80498a41a, type: 3}
+  drinkSprite: {fileID: -171704004, guid: 8b8858d2c9937e04b98f70f80498a41a, type: 3}
   chalkText: {fileID: -207003524, guid: 0196960b81f235543b96cc07026a27b8, type: 3}
   rarity: 0.5
   hourlyRate: 0
   theme: Anchor
-  coinsPrefab: {fileID: 2934980145861451005, guid: a05394b02bd70b04db05f142a8b52795, type: 3}
+  coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
+  coinValue: 3
