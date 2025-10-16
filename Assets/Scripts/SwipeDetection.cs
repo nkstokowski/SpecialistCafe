@@ -143,6 +143,7 @@ public class SwipeDetection : MonoBehaviour
         if (!moving && newScreen != currentScreen)
         {
             if (newScreen != UIScreen.Right) uiManager.HideShop();
+            if (newScreen != UIScreen.Left) uiManager.HideIA();
             currentScreen = newScreen;
             moving = true;
             StartCoroutine(SmoothMove(inputManager.mainCamera.transform.position, newLocation, .5f));
@@ -160,6 +161,7 @@ public class SwipeDetection : MonoBehaviour
         }
         moving = false;
         if (currentScreen == UIScreen.Right) uiManager.ShowShop();
+        if (currentScreen == UIScreen.Left) uiManager.ShowIA();
     }
 
     UIScreen nextScreen(bool forward)

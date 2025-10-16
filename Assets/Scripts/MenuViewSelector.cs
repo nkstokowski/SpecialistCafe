@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopViewSelector : MonoBehaviour
+public class MenuViewSelector : MonoBehaviour
 {
     public GameObject[] shopViews;
 

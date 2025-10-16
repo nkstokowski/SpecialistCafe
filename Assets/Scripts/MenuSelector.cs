@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShopSelector : MonoBehaviour
+public class MenuSelector : MonoBehaviour
 {
 
     public Button[] buttons;
-    public ShopViewSelector viewSelector;
+    public MenuViewSelector viewSelector;
+    public MenuViewSelector titleSelector;
 
     void SetAllButtonsInteractable() {
         foreach(Button b in buttons) {
@@ -16,9 +17,13 @@ public class ShopSelector : MonoBehaviour
         }
     }
 
-    public void OnShopButtonSelected(Button clickedButton) {
+    public void OnShopButtonSelected(Button clickedButton)
+    {
         SetAllButtonsInteractable();
         clickedButton.interactable = false;
         viewSelector.ShowView(clickedButton.gameObject.name);
+        if (titleSelector != null) {
+            titleSelector.ShowView(clickedButton.gameObject.name);
+        }
     }
 }
