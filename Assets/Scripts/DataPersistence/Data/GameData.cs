@@ -31,6 +31,8 @@ public class GameData
     public bool upperCoinCollected;
     public bool lowerCoinCollected;
 
+    public List<int> unlockedAchievements;
+
 
     /*public GameData()
     {
@@ -56,6 +58,8 @@ public class GameData
 
         this.upperCoinCollected = true;
         this.lowerCoinCollected = true;
+
+        unlockedAchievements = new List<int>() {};
 
     }*/
     
@@ -83,6 +87,8 @@ public class GameData
 
         this.upperCoinCollected = false;
         this.lowerCoinCollected = false;
+
+        unlockedAchievements = new List<int>() {1, 3, 5};
 
     }
 }
