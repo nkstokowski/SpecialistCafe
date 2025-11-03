@@ -28,6 +28,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     // Manager
     public MoneyManager moneyManager;
     public CafeLayoutManager cafeLayoutManager;
+    public IAManager achManager;
 
     // Object management
     public Transform screensTransform;
@@ -121,6 +122,8 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         lowerUnit.SetMenu(menuItemsDict[lowerItem]);
         lowerUnit.SetCoins(spawnLowerCoins);
+
+        achManager.CheckGuests(upperUnit.GetGuest(), lowerUnit.GetGuest());
     }
 
     private bool GuestsShouldUpdate()

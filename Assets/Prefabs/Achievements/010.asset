@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c378f23db1071594d8252758cec1aa3e, type: 3}
+  m_Name: 010
+  m_EditorClassIdentifier: Assembly-CSharp::Achievement
+  achievementID: 10
+  requirements:
+  - Parrotfish
+  - Yucca Moth Larva
+  leftImage: {fileID: 2315922051963361724, guid: 5f1d3be967144e84e9182b94f2c407e3, type: 3}
+  rightImage: {fileID: 7692345550978125717, guid: 30a4895f35cc9264797a351aaed95213, type: 3}
+  title: Ecosystem Engineers
+  description: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cafe Con Milkweed
   m_EditorClassIdentifier: 
   itemName: Cafe Con Milkweed
-  guestName: Monarch Caterpillar
+  guestName: Monarch Butterfly Caterpillar
   guestSprite: {fileID: -160101880, guid: 96edc1cd364091448aeaaee32ee67bb1, type: 3}
   drinkSprite: {fileID: -561756251, guid: 476a38fce139def429a3a3b052362dad, type: 3}
   chalkText: {fileID: 1648826823, guid: 2a3c7f66c8786e441af697acd2d87a33, type: 3}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TableUnit : MonoBehaviour
@@ -31,5 +32,10 @@ public class TableUnit : MonoBehaviour
     public void SetChair(Sprite chairSprite)
     {
         this.chair.sprite = chairSprite;
+    }
+
+    public String GetGuest()
+    {
+        return this.menuItem.guestName;
     }
 }

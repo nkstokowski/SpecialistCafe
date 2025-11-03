@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Snowshoe Hare Pop
   m_EditorClassIdentifier: 
   itemName: Snowshoe Hare Pop
-  guestName: Canadian Lynx
+  guestName: Canada Lynx
   guestSprite: {fileID: 1207056605, guid: a215efb2203537b4089b6a8e1eed00a9, type: 3}
   drinkSprite: {fileID: -287041237, guid: 4d19016b8d46a674086d3d8de4ffa6ac, type: 3}
   chalkText: {fileID: 1353214433, guid: 3cfb6470c49c9654a8e502d01162bdea, type: 3}

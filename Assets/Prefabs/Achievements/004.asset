@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c378f23db1071594d8252758cec1aa3e, type: 3}
+  m_Name: 004
+  m_EditorClassIdentifier: Assembly-CSharp::Achievement
+  achievementID: 4
+  requirements:
+  - Sword Billed Hummingbird
+  - Vampire Bat
+  leftImage: {fileID: 5693412966561729958, guid: 3d8ba910a1707eb4fb30c323ace592ff, type: 3}
+  rightImage: {fileID: 740499030616240719, guid: f3cb544ef5d83b045a9ffa8626614428, type: 3}
+  title: 'Fearless Fliers '
+  description: 

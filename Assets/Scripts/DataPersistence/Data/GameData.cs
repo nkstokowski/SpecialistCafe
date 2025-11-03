@@ -88,7 +88,7 @@ public class GameData
         this.upperCoinCollected = false;
         this.lowerCoinCollected = false;
 
-        unlockedAchievements = new List<int>() {1, 3, 5};
+        unlockedAchievements = new List<int>() {};
 
     }
 }

@@ -9,7 +9,8 @@ public class IAManager : MonoBehaviour, IDataPersistence
     // Achievements
     public List<int> unlockedAchievements;
     public List<Achievement> achievementList;
-    public AchievementDisplay[] achievementDisplays;
+    public GameObject achDisplayContainer;
+    Dictionary<int, AchievementDisplay> achievementDisplayDict;
 
     // Info
     public List<String> unlockedMenuItems;
@@ -19,9 +20,16 @@ public class IAManager : MonoBehaviour, IDataPersistence
     void Start()
     {
         infoDisplayDict = new Dictionary<String, InfoDisplay>();
-        foreach(InfoDisplay infDis in allInfoBoxes)
+        foreach (InfoDisplay infDis in allInfoBoxes)
         {
             infoDisplayDict.Add(infDis.unlockMenuItem, infDis);
+        }
+
+        achievementDisplayDict = new Dictionary<int, AchievementDisplay>();
+        foreach(AchievementDisplay achDis in achDisplayContainer.GetComponentsInChildren<AchievementDisplay>())
+        {
+            achievementDisplayDict.Add(achDis.achievementID, achDis);
+            //Debug.Log("Found Achievement with ID: " + achDis.achievementID);
         }
     }
 
@@ -51,14 +59,14 @@ public class IAManager : MonoBehaviour, IDataPersistence
     {
         foreach (int index in this.unlockedAchievements)
         {
-            if (index >= achievementDisplays.Length)
+
+            if (!achievementDisplayDict.ContainsKey(index))
             {
-                Debug.Log("Error: Tried to unlock achievement at index " + index + ". Only " + achievementDisplays.Length + " are known.");
+                Debug.Log("Error: Achivement with ID " + index + " not found in achivement dictionary");
             }
             else
             {
-                Debug.Log("Setting achievement " + index + " to unlocked.");
-                achievementDisplays[index].SetStatus(true);
+                achievementDisplayDict[index].SetStatus(true);
             }
         }
     }
@@ -71,15 +79,32 @@ public class IAManager : MonoBehaviour, IDataPersistence
             return false;
         }
 
-        if (index >= achievementDisplays.Length)
+        if (!achievementDisplayDict.ContainsKey(index))
         {
-            Debug.Log("Error: Tried to unlock achievement at index " + index + ". Only " + achievementDisplays.Length + " are known.");
+            Debug.Log("Error: Achievement Id: " + index + " not recognized.");
             return false;
         }
 
         this.unlockedAchievements.Add(index);
-        achievementDisplays[index].SetStatus(true);
+        achievementDisplayDict[index].SetStatus(true);
+        Debug.Log("Unlocked Achievement: " + index);
         return true;
+    }
+
+    public bool CheckGuests(String firstGuest, String secondGuest)
+    {
+        foreach (Achievement achievement in this.achievementList)
+        {
+            if (!this.unlockedAchievements.Contains(achievement.achievementID))
+            {
+                if (achievement.VerifyRequirements(firstGuest, secondGuest))
+                {
+                    UnlockAchievement(achievement.achievementID);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public void UpdateUnlockedInfoBoxes()
@@ -88,7 +113,7 @@ public class IAManager : MonoBehaviour, IDataPersistence
         {
             if (!infoDisplayDict.ContainsKey(menuItem))
             {
-                Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes array.");
+                Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes dictionary.");
             }
             else
             {
@@ -101,7 +126,7 @@ public class IAManager : MonoBehaviour, IDataPersistence
     {
         if (!infoDisplayDict.ContainsKey(menuItem))
         {
-            Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes array.");
+            Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes dictionary.");
             return false;
         }
 

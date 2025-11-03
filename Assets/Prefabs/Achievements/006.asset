@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c378f23db1071594d8252758cec1aa3e, type: 3}
+  m_Name: 006
+  m_EditorClassIdentifier: Assembly-CSharp::Achievement
+  achievementID: 6
+  requirements:
+  - Vampire Bat
+  - Canada Lynx
+  leftImage: {fileID: 740499030616240719, guid: f3cb544ef5d83b045a9ffa8626614428, type: 3}
+  rightImage: {fileID: 1080580093304513810, guid: da072420d7505b944be882316cdee584, type: 3}
+  title: Night Stalkers
+  description: 
