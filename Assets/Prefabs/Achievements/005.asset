@@ -18,5 +18,6 @@ MonoBehaviour:
   - Giant Panda
   leftImage: {fileID: 2991705472082456940, guid: db381498a5aeb1343a70157eba1624d1, type: 3}
   rightImage: {fileID: 4891699955598359951, guid: 5c52a7a7d9fd0034da0095e467fd7a46, type: 3}
+  border: {fileID: 4807054259369115520, guid: 628bae0020f19ac4389efca3b3a24fac, type: 3}
   title: Tree Huggers
   description: 

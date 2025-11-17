@@ -18,5 +18,6 @@ MonoBehaviour:
   - Giant Panda
   leftImage: {fileID: 5964688412254303516, guid: 718cd40aec482524f8c1243da0e394f0, type: 3}
   rightImage: {fileID: 4891699955598359951, guid: 5c52a7a7d9fd0034da0095e467fd7a46, type: 3}
+  border: {fileID: -3403518745970925151, guid: ab283474399ff8a4d8d232657759b21d, type: 3}
   title: Gentle Giants
   description: 

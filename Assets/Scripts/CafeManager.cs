@@ -83,7 +83,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     public void UpdateShopButtons()
     {
-        MenuButtonData[] allShopButtonDatas = GameObject.FindObjectsByType<MenuButtonData>(FindObjectsSortMode.None);
+        MenuButtonData[] allShopButtonDatas = GameObject.FindObjectsByType<MenuButtonData>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (MenuButtonData shopButtonData in allShopButtonDatas)
         {
             bool unlocked = this.unlockedMenuItems.Contains(shopButtonData.theme);
@@ -184,6 +184,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         this.unlockedMenuItems.Add(data.theme);
         ShowActiveIngridients();
+        achManager.UnlockInfo(data.theme);
 
         return true;
     }

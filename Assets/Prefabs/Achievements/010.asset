@@ -18,5 +18,6 @@ MonoBehaviour:
   - Yucca Moth Larva
   leftImage: {fileID: 2315922051963361724, guid: 5f1d3be967144e84e9182b94f2c407e3, type: 3}
   rightImage: {fileID: 7692345550978125717, guid: 30a4895f35cc9264797a351aaed95213, type: 3}
+  border: {fileID: 795081982234091658, guid: a42c1ed357f98f14d8bb995aeb804f9b, type: 3}
   title: Ecosystem Engineers
   description: 

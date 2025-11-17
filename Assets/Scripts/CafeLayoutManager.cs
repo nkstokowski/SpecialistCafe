@@ -76,7 +76,7 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
 
     void UpdateShopButtons()
     {
-        FurnitureButtonData[] allShopButtonDatas = GameObject.FindObjectsOfType<FurnitureButtonData>(true);
+        FurnitureButtonData[] allShopButtonDatas = GameObject.FindObjectsByType<FurnitureButtonData>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (FurnitureButtonData shopButtonData in allShopButtonDatas)
         {
 

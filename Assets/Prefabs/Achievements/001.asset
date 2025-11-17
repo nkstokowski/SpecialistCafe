@@ -18,5 +18,6 @@ MonoBehaviour:
   - Monarch Butterfly Caterpillar
   leftImage: {fileID: 7692345550978125717, guid: 30a4895f35cc9264797a351aaed95213, type: 3}
   rightImage: {fileID: 5731572304593397345, guid: 08f32165832cbbb43bfea1abb05e744c, type: 3}
+  border: {fileID: 5563154432215769089, guid: 2dd889befa9d6b447b0f9f88c03d804c, type: 3}
   title: Insane Insects
   description: 

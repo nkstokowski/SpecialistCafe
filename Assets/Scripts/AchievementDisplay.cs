@@ -22,13 +22,13 @@ public class AchievementDisplay : MonoBehaviour
 
     void Initialize()
     {
-        this.displayElements[1].sprite = this.achievement.leftImage;
-        this.displayElements[2].sprite = this.achievement.rightImage;
+        //this.displayElements[1].sprite = this.achievement.leftImage;
+        //this.displayElements[2].sprite = this.achievement.rightImage;
 
-        this.textElements[0].text = this.achievement.title;
+        //this.textElements[0].text = this.achievement.title;
 
-        this.textElements[1].text = this.achievement.description == "" ?
-            "Have a " + this.achievement.requirements[0] + "and a " + this.achievement.requirements[1] + " visit your cafe at the same time" :
+        this.textElements[0].text = this.achievement.description == "" ?
+            "Have a " + this.achievement.requirements[0] + " and a " + this.achievement.requirements[1] + " visit your cafe at the same time" :
             this.achievement.description;
     }
 

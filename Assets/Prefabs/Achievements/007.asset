@@ -18,5 +18,6 @@ MonoBehaviour:
   - Black Footed Ferret
   leftImage: {fileID: 2991705472082456940, guid: db381498a5aeb1343a70157eba1624d1, type: 3}
   rightImage: {fileID: 5466606319635001359, guid: 72c70336c5c962b42b88de9cee564ddc, type: 3}
-  title: Hidden Dwellers
+  border: {fileID: 969980466918481669, guid: e1bb0ab7f3469ce489dca03d4d6819db, type: 3}
+  title: Claws and Paws
   description: 

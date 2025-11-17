@@ -11,6 +11,7 @@ public class Achievement : ScriptableObject
     public List<String> requirements;
     public Sprite leftImage;
     public Sprite rightImage;
+    public Sprite border;
     public String title;
     public String description;
 

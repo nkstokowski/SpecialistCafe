@@ -18,5 +18,6 @@ MonoBehaviour:
   - Canada Lynx
   leftImage: {fileID: 740499030616240719, guid: f3cb544ef5d83b045a9ffa8626614428, type: 3}
   rightImage: {fileID: 1080580093304513810, guid: da072420d7505b944be882316cdee584, type: 3}
+  border: {fileID: -6387469579290932461, guid: c728e298aaf78e441a9e0d18fd85b480, type: 3}
   title: Night Stalkers
   description: 

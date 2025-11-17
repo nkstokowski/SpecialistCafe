@@ -18,5 +18,6 @@ MonoBehaviour:
   - Vampire Bat
   leftImage: {fileID: 5693412966561729958, guid: 3d8ba910a1707eb4fb30c323ace592ff, type: 3}
   rightImage: {fileID: 740499030616240719, guid: f3cb544ef5d83b045a9ffa8626614428, type: 3}
+  border: {fileID: 7901105901032674546, guid: fa3421d42c5db9f4291e2a225f74ac51, type: 3}
   title: 'Fearless Fliers '
   description: 

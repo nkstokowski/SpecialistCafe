@@ -18,5 +18,6 @@ MonoBehaviour:
   - Sword Billed Hummingbird
   leftImage: {fileID: 5731572304593397345, guid: 08f32165832cbbb43bfea1abb05e744c, type: 3}
   rightImage: {fileID: 5693412966561729958, guid: 3d8ba910a1707eb4fb30c323ace592ff, type: 3}
+  border: {fileID: -5898640315282670327, guid: b8030f5c10a6197499112e66b8284a5a, type: 3}
   title: Floral Faithfuls
   description: 
