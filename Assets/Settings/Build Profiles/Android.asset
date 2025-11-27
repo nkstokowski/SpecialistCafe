@@ -167,7 +167,11 @@ MonoBehaviour:
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
     - line: '|   bundleVersion: 1.1.0'
-    - line: '|   preloadedAssets: []'
+    - line: '|   preloadedAssets:'
+    - line: '|   - {fileID: 11400000, guid: bd4fdf1f2726625438f0b750156523e8, type:
+        2}'
+    - line: '|   - {fileID: -1615485307715522250, guid: 55e4e78446ab66641b1d55f3effc7141,
+        type: 2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'
@@ -323,7 +327,7 @@ MonoBehaviour:
     - line: '|   - m_BuildTarget: '
     - line: '|     m_Icons:'
     - line: '|     - serializedVersion: 2'
-    - line: '|       m_Icon: {fileID: 2800000, guid: 5b4ecfb1f65bc6348bcf09fa7243a9e3,
+    - line: '|       m_Icon: {fileID: 2800000, guid: 9e3eb937fa74e5c4a939109cfd4ab8dc,
         type: 3}'
     - line: '|       m_Width: 128'
     - line: '|       m_Height: 128'
@@ -394,7 +398,7 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: 77cd3b22ae6a5ec4b9aab7f0f7730db3,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: 949558d204586a54a8855080a7c70dd4,
+    - line: '|       - {fileID: 2800000, guid: 73927af0049711f4e9f80ce68f5a2567,
         type: 3}'
     - line: '|       m_Width: 432'
     - line: '|       m_Height: 432'
@@ -403,7 +407,7 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: 9b8efdafc4d3e604392f5f85ca1adb03,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: 7f860a6c630caea479a6a4fb10c96085,
+    - line: '|       - {fileID: 2800000, guid: c26da4d1cdf536441b32181d9fbdf709,
         type: 3}'
     - line: '|       m_Width: 324'
     - line: '|       m_Height: 324'
@@ -412,7 +416,7 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: e78f08a3e859526459462e642e0445b8,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: 88954aebcd61f4b45b0f5f1000237406,
+    - line: '|       - {fileID: 2800000, guid: cf18c95cfbb737848afd92b509885f4e,
         type: 3}'
     - line: '|       m_Width: 216'
     - line: '|       m_Height: 216'
@@ -421,7 +425,7 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: 5c6852d717476984eb8e543786aa7158,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: 28b5c4e606e01874f9b23e1c06dea0f8,
+    - line: '|       - {fileID: 2800000, guid: b018fe4b38a8f7548bfc7bf688de2435,
         type: 3}'
     - line: '|       m_Width: 162'
     - line: '|       m_Height: 162'
@@ -430,7 +434,7 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: 266f08ce15eecbb4790d94991c7977b2,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: c1dc42d3bebad04419dbdcfc9b69eebc,
+    - line: '|       - {fileID: 2800000, guid: e736e5423db9f2b40bb9f7588d703eb3,
         type: 3}'
     - line: '|       m_Width: 108'
     - line: '|       m_Height: 108'
@@ -439,7 +443,7 @@ MonoBehaviour:
     - line: '|     - m_Textures:'
     - line: '|       - {fileID: 2800000, guid: ea743cf9dfd7c2b46b916cd376723d15,
         type: 3}'
-    - line: '|       - {fileID: 2800000, guid: f2844bcbd70102a49b2bf8d8e693472b,
+    - line: '|       - {fileID: 2800000, guid: 3be274a4b97b6f34cb798dee5d4c9625,
         type: 3}'
     - line: '|       m_Width: 81'
     - line: '|       m_Height: 81'
