@@ -33,6 +33,9 @@ public class GameData
 
     public List<int> unlockedAchievements;
 
+    public int currentLevel;
+    public int expWithinCurrentLevel;
+
 
     /*public GameData()
     {
@@ -60,6 +63,9 @@ public class GameData
         this.lowerCoinCollected = true;
 
         unlockedAchievements = new List<int>() {};
+
+        this.currentLevel = 0;
+        this.expWithinCurrentLevel = 0;
 
     }*/
     
@@ -89,6 +95,9 @@ public class GameData
         this.lowerCoinCollected = false;
 
         unlockedAchievements = new List<int>() {};
+
+        this.currentLevel = 0;
+        this.expWithinCurrentLevel = 0;
 
     }
 }

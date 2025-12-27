@@ -9,7 +9,6 @@ public class MenuSelector : MonoBehaviour
 
     public Button[] buttons;
     public MenuViewSelector viewSelector;
-    public MenuViewSelector titleSelector;
 
     void SetAllButtonsInteractable() {
         foreach(Button b in buttons) {
@@ -22,8 +21,5 @@ public class MenuSelector : MonoBehaviour
         SetAllButtonsInteractable();
         clickedButton.interactable = false;
         viewSelector.ShowView(clickedButton.gameObject.name);
-        if (titleSelector != null) {
-            titleSelector.ShowView(clickedButton.gameObject.name);
-        }
     }
 }
