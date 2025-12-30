@@ -29,6 +29,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     public MoneyManager moneyManager;
     public CafeLayoutManager cafeLayoutManager;
     public IAManager achManager;
+    public ExpManager expManager;
 
     // Object management
     public Transform screensTransform;
@@ -180,7 +181,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     public bool TryPurchase(ButtonData data)
     {
-        if (!moneyManager.TryAddMenuItem(data.cost)) return false;
+        if (!expManager.TryAddMenuItem(data.cost)) return false;
 
         this.unlockedMenuItems.Add(data.theme);
         ShowActiveIngridients();

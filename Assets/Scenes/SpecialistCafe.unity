@@ -1131,7 +1131,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -2605,7 +2605,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -3648,7 +3648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -4398,7 +4398,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -5910,7 +5910,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -6091,7 +6091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 705.57324, y: -2409}
+  m_AnchoredPosition: {x: 648.2727, y: -2409}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204549518
@@ -6252,7 +6252,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -6619,7 +6619,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -6723,6 +6723,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 56}
   m_SizeDelta: {x: 388, y: 275.68}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &224323098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224323099}
+  - component: {fileID: 224323100}
+  m_Layer: 0
+  m_Name: PurchaseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224323099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224323098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1024573149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224323100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224323098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05506bd9aaf083240bca8154d3ed7d02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCafeLayoutManager: {fileID: 1023155598}
+  myCafeManager: {fileID: 1413110607}
 --- !u!1 &227011895
 GameObject:
   m_ObjectHideFlags: 0
@@ -7087,7 +7133,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -7314,7 +7360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -7634,7 +7680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -7808,12 +7854,12 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 583528864}
-  m_Father: {fileID: 308007978}
+  m_Father: {fileID: 1198967517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 0}
-  m_SizeDelta: {x: 230, y: 79}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 114, y: -39.5}
+  m_SizeDelta: {x: 228, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260936936
 MonoBehaviour:
@@ -7835,7 +7881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1987165128, guid: b2f8a501fa763ca4cb7a45e2f641aab7, type: 3}
+  m_Sprite: {fileID: 1378673856500498318, guid: 9949e3965f29d3840b25e280e84e5a9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8025,7 +8071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 705.57324, y: -1966}
+  m_AnchoredPosition: {x: 648.2727, y: -1966}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267396542
@@ -8682,7 +8728,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -9005,9 +9051,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1995828555}
   - {fileID: 1937180796}
-  - {fileID: 260936935}
+  - {fileID: 1995828555}
   m_Father: {fileID: 1832998301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -9141,7 +9186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -9259,7 +9304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.86274517, g: 0.8431373, b: 0.8313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10184,7 +10229,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -11046,7 +11091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5732, y: -1080}
+  m_AnchoredPosition: {x: 205.27267, y: -1080}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384379922
@@ -11422,7 +11467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -13006,7 +13051,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -14486,7 +14531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -14638,7 +14683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -15216,7 +15261,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -15320,7 +15365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 705.57324, y: -1080}
+  m_AnchoredPosition: {x: 648.2727, y: -1080}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508702385
@@ -16039,7 +16084,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -16685,7 +16730,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -17002,7 +17047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5732, y: -1966}
+  m_AnchoredPosition: {x: 205.27267, y: -1966}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &542421831
@@ -17164,7 +17209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -17352,7 +17397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -17973,7 +18018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.69874, y: -260.7749}
+  m_AnchoredPosition: {x: 0.69874, y: -322}
   m_SizeDelta: {x: 870.96, y: 84.2054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &581516885
@@ -18864,7 +18909,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -19016,7 +19061,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -19547,7 +19592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 151.88002, y: -179.13849}
+  m_AnchoredPosition: {x: 719.08, y: -78.33849}
   m_SizeDelta: {x: 261.9, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608600810
@@ -20244,7 +20289,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -20628,7 +20673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5732, y: -637}
+  m_AnchoredPosition: {x: 205.27267, y: -637}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634065963
@@ -21657,7 +21702,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -22099,7 +22144,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -23403,6 +23448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745233949}
   - component: {fileID: 745233950}
+  - component: {fileID: 745233951}
   m_Layer: 0
   m_Name: IAManager
   m_TagString: Untagged
@@ -23462,6 +23508,24 @@ MonoBehaviour:
   - {fileID: 1499767306}
   - {fileID: 1614435940}
   - {fileID: 1907677904}
+--- !u!114 &745233951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745233948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403e5764e5376db44aeeba6b9c40d27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExpManager
+  currentTickets: 0
+  currentExp: 0
+  currentLevel: 1
+  expText: {fileID: 1405818575}
+  expSlider: {fileID: 1074197695}
+  ticketText: {fileID: 583528862}
 --- !u!1 &754735936
 GameObject:
   m_ObjectHideFlags: 0
@@ -23608,7 +23672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 719.08, y: -179.13849}
+  m_AnchoredPosition: {x: 435.48004, y: -179.13849}
   m_SizeDelta: {x: 261.9, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &757404564
@@ -25061,7 +25125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 435.48004, y: -179.13849}
+  m_AnchoredPosition: {x: 151.88002, y: -179.13849}
   m_SizeDelta: {x: 261.9, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828343177
@@ -25242,7 +25306,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -27043,7 +27107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -27613,7 +27677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -28569,7 +28633,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -29217,7 +29281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -29369,7 +29433,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -30165,7 +30229,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -30764,7 +30828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5732, y: -2409}
+  m_AnchoredPosition: {x: 205.27267, y: -2409}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964918973
@@ -31701,7 +31765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5732, y: -194}
+  m_AnchoredPosition: {x: 205.27267, y: -194}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014588527
@@ -31916,7 +31980,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -32172,6 +32236,7 @@ Transform:
   - {fileID: 1106511652}
   - {fileID: 324121901}
   - {fileID: 745233949}
+  - {fileID: 224323099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025194617
@@ -33015,7 +33080,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -33303,7 +33368,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -34360,7 +34425,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -34587,7 +34652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -34852,10 +34917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMoney: 0
-  currentTickets: 0
   cafeManager: {fileID: 1413110607}
   moneyText: {fileID: 589843237}
-  ticketText: {fileID: 583528862}
 --- !u!1 &1109801849
 GameObject:
   m_ObjectHideFlags: 0
@@ -35030,7 +35093,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -35604,7 +35667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -36100,8 +36163,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1074197694}
   - {fileID: 1405818574}
+  - {fileID: 1074197694}
   m_Father: {fileID: 957670407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -36427,7 +36490,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -37142,6 +37205,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1963449207}
+  - {fileID: 260936935}
   m_Father: {fileID: 724009974}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -37236,7 +37300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 705.57324, y: -637}
+  m_AnchoredPosition: {x: 648.2727, y: -637}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201034046
@@ -37459,7 +37523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -37611,7 +37675,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -37879,8 +37943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -616.7654}
-  m_SizeDelta: {x: 0, y: 1233.5298}
+  m_AnchoredPosition: {x: 0, y: -502.9348}
+  m_SizeDelta: {x: 0, y: 1005.86975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220436968
 MonoBehaviour:
@@ -39262,7 +39326,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -39414,7 +39478,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -39804,7 +39868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -40176,7 +40240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.69874, y: -347.41077}
+  m_AnchoredPosition: {x: 0.69874, y: -378.78}
   m_SizeDelta: {x: 870.96, y: 257.477}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296238494
@@ -41499,8 +41563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -114.76}
-  m_SizeDelta: {x: 0, y: -376.23}
+  m_AnchoredPosition: {x: 0, y: -132.5475}
+  m_SizeDelta: {x: 0, y: -411.80502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351724616
 MonoBehaviour:
@@ -42659,7 +42723,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -43242,7 +43306,7 @@ GameObject:
   - component: {fileID: 1405818576}
   - component: {fileID: 1405818575}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: XP Bar Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43264,8 +43328,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -268, y: 50.9}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -199.07156, y: 50.9}
+  m_SizeDelta: {x: 337.8569, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405818575
 MonoBehaviour:
@@ -43287,7 +43351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Next ticket:'
+  m_text: 0 EXP to next level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -43582,6 +43646,7 @@ MonoBehaviour:
   moneyManager: {fileID: 1106511653}
   cafeLayoutManager: {fileID: 1023155598}
   achManager: {fileID: 745233950}
+  expManager: {fileID: 745233951}
   screensTransform: {fileID: 132509329}
   centerTransform: {fileID: 855021269}
   upperUnit: {fileID: 406635225}
@@ -43670,7 +43735,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -43822,7 +43887,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -44109,7 +44174,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -44903,7 +44968,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -45749,7 +45814,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1530991970}
   - component: {fileID: 1530991971}
-  - component: {fileID: 1530991972}
   m_Layer: 0
   m_Name: Shops
   m_TagString: Untagged
@@ -45778,8 +45842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -201.398}
-  m_SizeDelta: {x: 0, y: -549.495}
+  m_AnchoredPosition: {x: 0, y: -214.82524}
+  m_SizeDelta: {x: 0, y: -576.3495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530991971
 MonoBehaviour:
@@ -45800,20 +45864,6 @@ MonoBehaviour:
   - {fileID: 172753514}
   - {fileID: 1363670414}
   - {fileID: 1246518407}
---- !u!114 &1530991972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530991969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05506bd9aaf083240bca8154d3ed7d02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCafeLayoutManager: {fileID: 1023155598}
-  myCafeManager: {fileID: 1413110607}
 --- !u!1 &1532059519
 GameObject:
   m_ObjectHideFlags: 0
@@ -46150,7 +46200,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -46538,7 +46588,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -47642,7 +47692,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -47871,7 +47921,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -48676,7 +48726,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -49590,7 +49640,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopMenuUseButtonSelected
         m_Mode: 2
@@ -50534,7 +50584,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -50750,7 +50800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 705.57324, y: -194}
+  m_AnchoredPosition: {x: 648.2727, y: -194}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694610992
@@ -50962,7 +51012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -52301,7 +52351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -52914,7 +52964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.5732, y: -1523}
+  m_AnchoredPosition: {x: 205.27267, y: -1523}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798475727
@@ -53766,7 +53816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -55128,7 +55178,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -56440,7 +56490,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -56592,7 +56642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -56919,7 +56969,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -57071,7 +57121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -57223,7 +57273,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -58270,9 +58320,9 @@ RectTransform:
   - {fileID: 589843235}
   m_Father: {fileID: 308007978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 114, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 114, y: -39.5}
   m_SizeDelta: {x: 228, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1937180797
@@ -59179,15 +59229,15 @@ RectTransform:
   m_GameObject: {fileID: 1963449206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.40000004, y: 0.40000007, z: 0.4}
+  m_LocalScale: {x: 1.45, y: 1.45, z: 1.45}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1198967517}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 418.96}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 45}
+  m_SizeDelta: {x: 223, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963449208
 MonoBehaviour:
@@ -59209,7 +59259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -752727657774595293, guid: 86901a2c9d4e7ff4e82a769708ac1213, type: 3}
+  m_Sprite: {fileID: -752727657774595293, guid: d099e9dacb0bf4f44b856bcf926cf325, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -59732,15 +59782,15 @@ RectTransform:
   m_GameObject: {fileID: 1995828554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.40000004, y: 0.40000007, z: 0.4}
+  m_LocalScale: {x: 1.45, y: 1.45, z: 1.45}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 308007978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 418.96}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 45}
+  m_SizeDelta: {x: 251, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1995828557
 CanvasRenderer:
@@ -59770,7 +59820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0df7156046beef4193f39f2ab9f1ea4, type: 3}
+  m_Sprite: {fileID: 2237686161390443198, guid: 254880d39b7bc674bb5cd453b9bb22ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -61477,7 +61527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 705.57324, y: -1523}
+  m_AnchoredPosition: {x: 648.2727, y: -1523}
   m_SizeDelta: {x: 388, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050656564
@@ -62162,7 +62212,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1530991972}
+      - m_Target: {fileID: 224323100}
         m_TargetAssemblyTypeName: ShopUseButtonManager, Assembly-CSharp
         m_MethodName: OnShopUseButtonSelected
         m_Mode: 2
@@ -63207,7 +63257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38823533, g: 0.37254903, b: 0.3647059, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

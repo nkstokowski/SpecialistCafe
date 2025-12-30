@@ -35,6 +35,7 @@ public class GameData
 
     public int currentLevel;
     public int expWithinCurrentLevel;
+    public List<int> expPerLevel;
 
 
     /*public GameData()
@@ -64,8 +65,9 @@ public class GameData
 
         unlockedAchievements = new List<int>() {};
 
-        this.currentLevel = 0;
+        this.currentLevel = 1;
         this.expWithinCurrentLevel = 0;
+        this.expPerLevel = new List<int>() {10, 15, 25, 40, 60, 85, 115, 150, 190}
 
     }*/
     
@@ -96,8 +98,8 @@ public class GameData
 
         unlockedAchievements = new List<int>() {};
 
-        this.currentLevel = 0;
+        this.currentLevel = 1;
         this.expWithinCurrentLevel = 0;
-
+        this.expPerLevel = new List<int>() {10, 15, 25, 40, 60, 85, 115, 150, 190};
     }
 }
