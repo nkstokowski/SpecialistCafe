@@ -6,11 +6,18 @@ using UnityEngine;
 public class IAManager : MonoBehaviour, IDataPersistence
 {
 
+    bool loaded = false;
+
+
     // Achievements
     public List<int> unlockedAchievements;
     public List<Achievement> achievementList;
     public GameObject achDisplayContainer;
     Dictionary<int, AchievementDisplay> achievementDisplayDict;
+    public ExpManager expManager;
+    public const int EXP_PER_ACHIEVEMENT = 20;
+    String firstGuest;
+    String secondGuest;
 
     // Info
     public List<String> unlockedMenuItems;
@@ -35,12 +42,25 @@ public class IAManager : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.unlockedAchievements = data.unlockedAchievements;
+        //this.unlockedAchievements = data.unlockedAchievements;
+        foreach(int ach in data.unlockedAchievements)
+        {
+            if (!this.unlockedAchievements.Contains(ach))
+            {
+                this.unlockedAchievements.Add(ach);
+            }
+        }
+
         this.unlockedMenuItems = data.unlockedMenuItems;
 
         //UpdateAchievementList();
         UpdateUnlockedAchievements();
         UpdateUnlockedInfoBoxes();
+        if (firstGuest != null)
+        {
+            CheckGuests();
+        }
+        loaded = true;
     }
 
     public void SaveData(ref GameData data)
@@ -88,10 +108,22 @@ public class IAManager : MonoBehaviour, IDataPersistence
         this.unlockedAchievements.Add(index);
         achievementDisplayDict[index].SetStatus(true);
         Debug.Log("Unlocked Achievement: " + index);
+        expManager.ModifyExp(EXP_PER_ACHIEVEMENT);
         return true;
     }
 
-    public bool CheckGuests(String firstGuest, String secondGuest)
+    public void SetGuests(String guestA, String guestB)
+    {
+        this.firstGuest = guestA;
+        this.secondGuest = guestB;
+
+        if(loaded)
+        {
+            CheckGuests();
+        }
+    }
+
+    bool CheckGuests()
     {
         foreach (Achievement achievement in this.achievementList)
         {

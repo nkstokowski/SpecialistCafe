@@ -16,9 +16,9 @@ public class ResolutionManager : MonoBehaviour
         float baselineAspect = baselineAspectWidth / baselineAspectHeight;
         float aspectScaler = (cameraAspect / baselineAspect);
 
-        Debug.Log("Baseline Aspect: " + baselineAspect);
-        Debug.Log("Current Aspect: " + cameraAspect);
-        Debug.Log("Aspect Percentage: " + aspectScaler);
+        //Debug.Log("Baseline Aspect: " + baselineAspect);
+        //Debug.Log("Current Aspect: " + cameraAspect);
+        //Debug.Log("Aspect Percentage: " + aspectScaler);
 
         cafeManager.SetScreensRatio(aspectScaler);
         swipeDetection.aspectScaler = aspectScaler;

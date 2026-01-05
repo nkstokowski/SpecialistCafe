@@ -10,10 +10,12 @@ public class ShopUseButtonManager : MonoBehaviour
 {
     public CafeLayoutManager myCafeLayoutManager;
     public CafeManager myCafeManager;
+    public ExpManager myExpManager;
+    public const int EXP_PER_SHOP_PURCHASE = 3;
 
     public void OnShopMenuUseButtonSelected(Button button) {
         MenuButtonData data = button.gameObject.GetComponent<MenuButtonData>();
-        Debug.Log("Menu button pressed: " + data.theme);
+        //Debug.Log("Menu button pressed: " + data.theme);
 
         switch (data.myState) {
             case ShopButtonState.NotPurchased:
@@ -37,6 +39,7 @@ public class ShopUseButtonManager : MonoBehaviour
             case ShopButtonState.NotPurchased:
                 bool itemPurchased = myCafeLayoutManager.TryPurchase(data);
                 if (!itemPurchased) return;
+                myExpManager.ModifyExp(EXP_PER_SHOP_PURCHASE);
                 data.myState = ShopButtonState.Active;
                 break;
             case ShopButtonState.NotActive:

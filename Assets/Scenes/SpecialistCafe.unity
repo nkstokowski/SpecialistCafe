@@ -6769,6 +6769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCafeLayoutManager: {fileID: 1023155598}
   myCafeManager: {fileID: 1413110607}
+  myExpManager: {fileID: 745233951}
 --- !u!1 &227011895
 GameObject:
   m_ObjectHideFlags: 0
@@ -23483,7 +23484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db354be1e7b33ca469be0b6695ccf5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IAManager
-  unlockedAchievements: 00000000
+  unlockedAchievements: 
   achievementList:
   - {fileID: 11400000, guid: 5e7f98f68a2d23a4d83a8f459f3a8955, type: 2}
   - {fileID: 11400000, guid: 62fe5d288db753b4f81c2a04182ca7a1, type: 2}
@@ -23496,6 +23497,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 89abf83f89e653e46850798c6b52d231, type: 2}
   - {fileID: 11400000, guid: 144677ad27bc4004eb22c297f0b64b66, type: 2}
   achDisplayContainer: {fileID: 58948658}
+  expManager: {fileID: 745233951}
   unlockedMenuItems: []
   allInfoBoxes:
   - {fileID: 2111862676}
@@ -23523,6 +23525,7 @@ MonoBehaviour:
   currentTickets: 0
   currentExp: 0
   currentLevel: 1
+  expPerLevel: 0a000000190000002d000000460000006400000087000000af000000dc0000000e010000
   expText: {fileID: 1405818575}
   expSlider: {fileID: 1074197695}
   ticketText: {fileID: 583528862}
@@ -41580,6 +41583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCafeLayoutManager: {fileID: 1023155598}
   myCafeManager: {fileID: 1413110607}
+  myExpManager: {fileID: 0}
 --- !u!114 &1351724617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57797,7 +57801,7 @@ MonoBehaviour:
   moneyManager: {fileID: 1106511653}
   cafeManager: {fileID: 1413110607}
   value: 3
-  lowerCoin: 0
+  lowerCoin: 1
 --- !u!61 &1927853262
 BoxCollider2D:
   m_ObjectHideFlags: 0

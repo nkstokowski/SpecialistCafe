@@ -124,7 +124,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         lowerUnit.SetMenu(menuItemsDict[lowerItem]);
         lowerUnit.SetCoins(spawnLowerCoins);
 
-        achManager.CheckGuests(upperUnit.GetGuest(), lowerUnit.GetGuest());
+        achManager.SetGuests(upperUnit.GetGuest(), lowerUnit.GetGuest());
     }
 
     private bool GuestsShouldUpdate()
@@ -133,10 +133,10 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         // Get the needed time of day values
         DateTime currentTime = DateTime.Now;
-        Debug.Log("Current Time: " + currentTime);
-        Debug.Log("Last Time Updated: " + lastUpdateTime);
+        //Debug.Log("Current Time: " + currentTime);
+        //Debug.Log("Last Time Updated: " + lastUpdateTime);
         TimeSpan difference = currentTime - lastUpdateTime;
-        Debug.Log("Time since last update: " + difference);
+        //Debug.Log("Time since last update: " + difference);
 
         // Determine if we have passed an update cycle
         if (difference.TotalHours > updateCycleHours)

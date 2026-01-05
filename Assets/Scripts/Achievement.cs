@@ -17,7 +17,14 @@ public class Achievement : ScriptableObject
 
     public bool VerifyRequirements(String firstGuest, String secondGuest)
     {
-        return requirements.Contains(firstGuest) && requirements.Contains(secondGuest);
+        foreach(String requiredGuest in this.requirements)
+        {
+            if ((requiredGuest != firstGuest) && (requiredGuest != secondGuest))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

@@ -11,7 +11,7 @@ public class ExpManager : MonoBehaviour, IDataPersistence
     public int currentExp = 0;
     public int currentLevel = 1;
 
-    List<int> expPerLevel;
+    public List<int> expPerLevel;
 
     // UI Objects
     public TMP_Text expText;
@@ -22,9 +22,8 @@ public class ExpManager : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.currentTickets = data.currentTickets;
-        this.currentExp = data.expWithinCurrentLevel;
+        this.currentExp = data.currentExp;
         this.currentLevel = data.currentLevel;
-        this.expPerLevel = data.expPerLevel;
 
         this.ticketText.text = this.currentTickets.ToString();
         SetExpBar();
@@ -33,31 +32,48 @@ public class ExpManager : MonoBehaviour, IDataPersistence
     public void SaveData(ref GameData data)
     {
         data.currentTickets = this.currentTickets;
-        data.expWithinCurrentLevel = this.currentExp;
+        data.currentExp = this.currentExp;
         data.currentLevel = this.currentLevel;
     }
 
     void SetExpBar()
     {
-        String expBarText = "Max Level Reached!";
+        String expBarText = "All tickets earned!";
         
         if (this.currentLevel < this.expPerLevel.Count)
         {
-            int expToNextLevel = this.expPerLevel[this.currentLevel - 1];
-            int expRemaining = expToNextLevel - this.currentExp;
-            expBarText = expRemaining + " EXP to next level";
+            int expRemaining = this.expPerLevel[this.currentLevel - 1] - this.currentExp;
+            expBarText = expRemaining + " EXP to next ticket";
 
-            expSlider.maxValue = expToNextLevel;
+            expSlider.minValue = (this.currentLevel <= 1) ? 0 : this.expPerLevel[this.currentLevel - 2];
+            expSlider.maxValue = this.expPerLevel[this.currentLevel - 1];
             expSlider.value = this.currentExp;
         }
         else
         {
+            expSlider.minValue = 0;
             expSlider.maxValue = 1;
             expSlider.value = 1;
         }
 
         expText.text = expBarText;
     }
+
+    public void ModifyExp(int amount)
+    {
+        this.currentExp += amount;
+        for(int i=0; i<this.expPerLevel.Count; i++)
+        {
+            if (this.currentExp < this.expPerLevel[i])
+            {
+                this.currentLevel = (i + 1);
+                Debug.Log("Setting player level to: " + this.currentLevel);
+                break;
+            }
+        }
+        SetExpBar();
+    }
+
 
     public bool TryAddMenuItem(int cost)
     {
