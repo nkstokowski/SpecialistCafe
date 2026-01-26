@@ -15,7 +15,7 @@ public class IAManager : MonoBehaviour, IDataPersistence
     public GameObject achDisplayContainer;
     Dictionary<int, AchievementDisplay> achievementDisplayDict;
     public ExpManager expManager;
-    public const int EXP_PER_ACHIEVEMENT = 20;
+    public const int EXP_PER_ACHIEVEMENT = 10;
     String firstGuest;
     String secondGuest;
 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 3d13bb254215ca548a28a113eeb79de4
+guid: ee8af650e47eb7b4096df13a84e62242
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2996303086076813141
-    second: barista_stand_arm_down_0
+      213: -4716091981014894441
+    second: coffee machine off_0
+  - first:
+      213: -2931654041054964141
+    second: coffee machine off_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +129,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barista_stand_arm_down_0
+      name: coffee machine off_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 1116
-        width: 266
-        height: 462
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 518
+        y: 1265
+        width: 445
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55fd30d18c1059920800000000000000
-      internalID: 2996303086076813141
+      spriteID: 798f98784531d8eb0800000000000000
+      internalID: -4716091981014894441
       vertices: []
       indices: 
       edges: []
@@ -151,7 +154,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 213f696c8fec0f44fbb34cb282993f4e
+    spriteID: 9d28d18c21545d3428b8629d5e4f3b25
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +164,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      barista_stand_arm_down_0: 2996303086076813141
+      coffee machine off_0: -4716091981014894441
+      coffee machine off_1: -2931654041054964141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

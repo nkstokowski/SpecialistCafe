@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Bamboo Boba
   m_EditorClassIdentifier: 
+  id: 1
   itemName: Bamboo Boba
   guestName: Giant Panda
   guestSprite: {fileID: 1465245311, guid: 2c092b99e708a414a9d72c5ab8ee0394, type: 3}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Prairie Puppuccino
   m_EditorClassIdentifier: 
+  id: 3
   itemName: Prairie Puppuccino
   guestName: Black Footed Ferret
   guestSprite: {fileID: 954705302, guid: 0890d0b69dd8ffc42aff06b8c4d7541b, type: 3}

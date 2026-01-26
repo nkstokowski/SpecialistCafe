@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Krill Kombucha
   m_EditorClassIdentifier: 
+  id: 6
   itemName: Krill Kombucha
   guestName: Blue Whale
   guestSprite: {fileID: -1600266199, guid: f5cf2345330fb8b4ea46262b9a4a97e5, type: 3}

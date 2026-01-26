@@ -996,7 +996,7 @@ Transform:
   m_GameObject: {fileID: 45858752}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.391, y: 5.708, z: -0.15}
+  m_LocalPosition: {x: 0, y: 2.74, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20679,7 +20679,7 @@ Transform:
   m_GameObject: {fileID: 630881244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.77, y: 4.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23705,7 +23705,7 @@ MonoBehaviour:
   currentTickets: 0
   currentExp: 0
   currentLevel: 1
-  expPerLevel: 0a000000190000002d000000460000006400000087000000af000000dc0000000e010000
+  expPerLevel: 050000000b000000120000001a000000230000002d0000003800000044000000510000005f0000006e0000007e0000008f000000a1000000b4000000c8000000dd000000
   expText: {fileID: 1405818575}
   expSlider: {fileID: 1074197695}
   ticketText: {fileID: 583528862}
@@ -26461,6 +26461,8 @@ Transform:
   - {fileID: 2048811248}
   - {fileID: 1324598626}
   - {fileID: 1943949911}
+  - {fileID: 1572035452}
+  - {fileID: 928251395}
   m_Father: {fileID: 855021269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859266054
@@ -27649,7 +27651,7 @@ Transform:
   m_GameObject: {fileID: 876520586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29437,6 +29439,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926119343}
   m_CullTransparentMesh: 1
+--- !u!1 &928251394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928251395}
+  m_Layer: 0
+  m_Name: BaristaCoffee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &928251395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928251394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.96, y: 1.62, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 859060289}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &930018143
 GameObject:
   m_ObjectHideFlags: 0
@@ -40910,6 +40943,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324598626}
+  - component: {fileID: 1324598627}
+  - component: {fileID: 1324598628}
   m_Layer: 0
   m_Name: BaristaContainer
   m_TagString: Untagged
@@ -40926,13 +40961,58 @@ Transform:
   m_GameObject: {fileID: 1324598625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.69, y: 1.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 876520587}
   m_Father: {fileID: 859060289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1324598627
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324598625}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6aa473c9f04f7004aa367a6733016d4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1324598628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324598625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d13cb48efb6672548b0ffb2e3099839a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  startPoint: {fileID: 1572035452}
+  endPoint: {fileID: 928251395}
+  moveDuration: 3
+  interactSeconds: 4
+  minWaitTime: 2
+  maxWaitTime: 5
+  animator: {fileID: 876520588}
+  movingBoolName: isWalking
+  interactBoolName: isInteracting
+  baristaSpriteRenderer: {fileID: 630881246}
+  hatSpriteRenderer: {fileID: 45858754}
 --- !u!1 &1326707197
 GameObject:
   m_ObjectHideFlags: 0
@@ -47609,6 +47689,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569104516}
   m_CullTransparentMesh: 1
+--- !u!1 &1572035451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1572035452}
+  m_Layer: 0
+  m_Name: BaristaStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1572035452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572035451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.69, y: 1.62, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 859060289}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572455912
 GameObject:
   m_ObjectHideFlags: 0

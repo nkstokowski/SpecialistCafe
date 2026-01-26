@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Curuba Italian Soda
   m_EditorClassIdentifier: 
+  id: 9
   itemName: Curuba Italian Soda
   guestName: Sword Billed Hummingbird
   guestSprite: {fileID: -1033695744, guid: 19a58b7ec51591c498ab16b3e095e30e, type: 3}

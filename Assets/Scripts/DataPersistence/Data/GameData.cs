@@ -18,12 +18,14 @@ public class GameData
     public List<string> unlockedWalls;
     public List<string> unlockedFloors;
     public List<string> unlockedCounters;
+    public List<string> unlockedHats;
 
     public string currentTable;
     public string currentChair;
     public string currentWall;
     public string currentFloor;
     public string currentCounter;
+    public string currentHat;
 
     public string lastItemUpper;
     public string lastItemLower;
@@ -49,12 +51,15 @@ public class GameData
         this.unlockedWalls = new List<string>() { "Default" };
         this.unlockedFloors = new List<string>() { "Default" };
         this.unlockedCounters = new List<string>() { "Default" };
+        this.unlockedHats = new List<string>() { "None" };
 
         this.currentTable = "Default";
         this.currentChair = "Default";
         this.currentWall = "Default";
         this.currentFloor = "Default";
         this.currentCounter = "Default";
+        this.currentHat = "None";
+
 
         this.lastItemUpper = "None";
         this.lastItemLower = "None";
@@ -81,12 +86,14 @@ public class GameData
         this.unlockedWalls = new List<string>() { "Default", "Airplane", "Book"  };
         this.unlockedFloors = new List<string>() { "Default", "Airplane", "Book"  };
         this.unlockedCounters = new List<string>() { "Default", "Airplane", "Book"  };
+        this.unlockedHats = new List<string>() { "None" };
 
         this.currentTable = "Airplane";
         this.currentChair = "Book";
         this.currentWall = "Book";
         this.currentFloor = "Airplane";
         this.currentCounter = "Book";
+        this.currentHat = "None";
 
         this.lastItemUpper = "Bamboo Boba";
         this.lastItemLower = "Prairie Puppuccino";

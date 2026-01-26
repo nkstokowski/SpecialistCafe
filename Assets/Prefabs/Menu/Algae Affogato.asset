@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Algae Affogato
   m_EditorClassIdentifier: 
+  id: 7
   itemName: Algae Affogato
   guestName: Parrotfish
   guestSprite: {fileID: 1363586021, guid: 8cae10400bcc6ff4aaccd232d7e05f6c, type: 3}

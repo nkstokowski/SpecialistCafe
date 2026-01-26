@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Menu Item", menuName = "Menu Item")]
 public class MenuItem : ScriptableObject
 {
+    public int id;
     public String itemName;
     public String guestName;
     public Sprite guestSprite;

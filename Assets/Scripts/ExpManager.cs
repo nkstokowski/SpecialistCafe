@@ -61,6 +61,8 @@ public class ExpManager : MonoBehaviour, IDataPersistence
 
     public void ModifyExp(int amount)
     {
+        int levelBeforeModify = this.currentLevel;
+        
         this.currentExp += amount;
         for(int i=0; i<this.expPerLevel.Count; i++)
         {
@@ -71,6 +73,14 @@ public class ExpManager : MonoBehaviour, IDataPersistence
                 break;
             }
         }
+
+        // Award Tickets
+        if(this.currentLevel > levelBeforeModify)
+        {
+            this.currentTickets += this.currentLevel - levelBeforeModify;
+            this.ticketText.text = this.currentTickets.ToString();
+        }
+
         SetExpBar();
     }
 

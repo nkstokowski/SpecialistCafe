@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Snowshoe Hare Pop
   m_EditorClassIdentifier: 
+  id: 2
   itemName: Snowshoe Hare Pop
   guestName: Canada Lynx
   guestSprite: {fileID: 1207056605, guid: a215efb2203537b4089b6a8e1eed00a9, type: 3}

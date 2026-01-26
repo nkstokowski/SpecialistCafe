@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Blood Pudding
   m_EditorClassIdentifier: 
+  id: 5
   itemName: Blood Pudding
   guestName: Vampire Bat
   guestSprite: {fileID: -576308714, guid: cd2e6e24096e11145b9687752d71923c, type: 3}
