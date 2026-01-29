@@ -9,7 +9,7 @@ public class BaristaController : MonoBehaviour
     [SerializeField] private Transform endPoint;
     [SerializeField] private float moveDuration = 1.5f;
 
-    [Header("Pause")]
+    [Header("Brew")]
     [SerializeField] private float interactSeconds = 1f;
 
     [Header("Random Wait Time")]
@@ -17,9 +17,11 @@ public class BaristaController : MonoBehaviour
     [SerializeField] private float maxWaitTime = 5f;
 
     [Header("Animation")]
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator baristaAnimator;
+    [SerializeField] private Animator machineAnimator;
     [SerializeField] private string movingBoolName = "isWalking";
     [SerializeField] private string interactBoolName = "isInteracting";
+    [SerializeField] private string brewingBoolName = "isBrewing";
 
     [Header("Sprite")]
     [SerializeField] private SpriteRenderer baristaSpriteRenderer;
@@ -53,27 +55,29 @@ public class BaristaController : MonoBehaviour
         isBusy = true;
 
         // ---- Move Forward ----
-        animator.SetBool(movingBoolName, true);
+        baristaAnimator.SetBool(movingBoolName, true);
         yield return StartCoroutine(MoveCoroutine(
             startPoint.position,
             endPoint.position
         ));
-        animator.SetBool(movingBoolName, false);
+        baristaAnimator.SetBool(movingBoolName, false);
 
-        // ---- Pause ----
-        animator.SetBool(interactBoolName, true);
+        // ---- Brew ----
+        baristaAnimator.SetBool(interactBoolName, true);
+        machineAnimator.SetBool(brewingBoolName, true);
         yield return new WaitForSeconds(interactSeconds);
-        animator.SetBool(interactBoolName, false);
+        machineAnimator.SetBool(brewingBoolName, false);
+        baristaAnimator.SetBool(interactBoolName, false);
 
         // ---- Move Backward ----
         baristaSpriteRenderer.flipX = true;
         hatSpriteRenderer.flipX = true;
-        animator.SetBool(movingBoolName, true);
+        baristaAnimator.SetBool(movingBoolName, true);
         yield return StartCoroutine(MoveCoroutine(
             endPoint.position,
             startPoint.position
         ));
-        animator.SetBool(movingBoolName, false);
+        baristaAnimator.SetBool(movingBoolName, false);
         baristaSpriteRenderer.flipX = false;
         hatSpriteRenderer.flipX = false;
 
