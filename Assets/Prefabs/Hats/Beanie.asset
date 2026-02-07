@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8003e4ac208c4faff74a536b0d57f, type: 3}
+  m_Name: Beanie
+  m_EditorClassIdentifier: Assembly-CSharp::Hat
+  id: 1
+  themeName: Beanie
+  unlocked: 0
+  hatSprite: {fileID: -3815486036126200508, guid: b787fdd626cfdd545bd7c44debc80ae1, type: 3}
+  shopSprite: {fileID: 5547311118617546480, guid: a42dc4c76484db545b8a835485aec8c3, type: 3}

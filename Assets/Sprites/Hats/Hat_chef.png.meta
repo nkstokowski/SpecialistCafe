@@ -129,12 +129,12 @@ TextureImporter:
       name: Hat_chef_0
       rect:
         serializedVersion: 2
-        x: 142
+        x: 141
         y: 1382
         width: 362
         height: 293
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.53, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8ce7f7ef5dfc3cb499428c87b9451fca
     internalID: 0
     vertices: []
     indices: 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8003e4ac208c4faff74a536b0d57f, type: 3}
+  m_Name: Propeller
+  m_EditorClassIdentifier: Assembly-CSharp::Hat
+  id: 11
+  themeName: Propeller
+  unlocked: 0
+  hatSprite: {fileID: 5234501582228733298, guid: d0bd256fd2024a942a00a039f2deb298, type: 3}
+  shopSprite: {fileID: -2339964929505361929, guid: 79c6a3654575bab4f9a05489b2e1e81b, type: 3}

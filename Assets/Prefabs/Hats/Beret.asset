@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8003e4ac208c4faff74a536b0d57f, type: 3}
+  m_Name: Beret
+  m_EditorClassIdentifier: Assembly-CSharp::Hat
+  id: 2
+  themeName: Beret
+  unlocked: 0
+  hatSprite: {fileID: 2571476759461271538, guid: 4b63074a7f78b1947a92eafc4687875e, type: 3}
+  shopSprite: {fileID: -6448838368632601091, guid: 88c3533010d2ef9408f8ef8712197af1, type: 3}

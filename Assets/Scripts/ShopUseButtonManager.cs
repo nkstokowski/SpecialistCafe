@@ -15,7 +15,7 @@ public class ShopUseButtonManager : MonoBehaviour
 
     public void OnShopMenuUseButtonSelected(Button button) {
         MenuButtonData data = button.gameObject.GetComponent<MenuButtonData>();
-        //Debug.Log("Menu button pressed: " + data.theme);
+        Debug.Log("Menu button pressed: " + data.theme);
 
         switch (data.myState) {
             case ShopButtonState.NotPurchased:
@@ -34,19 +34,24 @@ public class ShopUseButtonManager : MonoBehaviour
 
     public void OnShopUseButtonSelected(Button button) {
         FurnitureButtonData data = button.gameObject.GetComponent<FurnitureButtonData>();
+        //Debug.Log("Button pushed: " + data.theme);
 
         switch (data.myState) {
             case ShopButtonState.NotPurchased:
+                //Debug.Log("Attempting to purchase");
                 bool itemPurchased = myCafeLayoutManager.TryPurchase(data);
                 if (!itemPurchased) return;
+                //Debug.Log("Purchasing");
                 myExpManager.ModifyExp(EXP_PER_SHOP_PURCHASE);
                 data.myState = ShopButtonState.Active;
                 break;
             case ShopButtonState.NotActive:
+                //Debug.Log("Already owned, setting to active");
                 data.myState = ShopButtonState.Active;
                 break;
             case ShopButtonState.Active:
-                return;
+                //Debug.Log("Already active");
+                break;
         }
 
         switch (data.category) {
@@ -64,6 +69,9 @@ public class ShopUseButtonManager : MonoBehaviour
                 break;
             case "Counter":
                 myCafeLayoutManager.SetCounter(data.theme);
+                break;
+            case "Hat":
+                myCafeLayoutManager.SetHat(data.theme);
                 break;
         }
 

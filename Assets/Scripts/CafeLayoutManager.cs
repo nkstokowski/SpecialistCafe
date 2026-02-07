@@ -14,21 +14,26 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
     public List<string> unlockedWalls;
     public List<string> unlockedFloors;
     public List<string> unlockedCounters;
+    public List<string> unlockedHats;
 
     public string currentTable;
     public string currentChair;
     public string currentWall;
     public string currentFloor;
     public string currentCounter;
+    public string currentHat;
 
     public Theme[] allThemes;
+    public Hat[] allHats;
     Dictionary<string, Theme> themesDict;
+    Dictionary<string, Hat> hatsDict;
 
     public SpriteRenderer[] tables;
     public SpriteRenderer[] chairs;
     public SpriteRenderer counter;
     public SpriteRenderer wall;
     public SpriteRenderer floor;
+    public SpriteRenderer hat;
 
     public MoneyManager moneyManager;
 
@@ -39,12 +44,14 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         this.unlockedWalls = data.unlockedWalls;
         this.unlockedFloors = data.unlockedFloors;
         this.unlockedCounters = data.unlockedCounters;
+        this.unlockedHats = data.unlockedHats;
 
         this.currentTable = data.currentTable;
         this.currentChair = data.currentChair;
         this.currentWall = data.currentWall;
         this.currentFloor = data.currentFloor;
         this.currentCounter = data.currentCounter;
+        this.currentHat = data.currentHat;
 
         UpdateCafe();
         UpdateShopButtons();
@@ -57,12 +64,13 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         data.unlockedWalls = this.unlockedWalls;
         data.unlockedFloors = this.unlockedFloors;
         data.unlockedCounters = this.unlockedCounters;
+        data.unlockedHats = this.unlockedHats;
 
         data.currentTable = this.currentTable;
         data.currentChair = this.currentChair;
         data.currentWall = this.currentWall;
         data.currentFloor = this.currentFloor;
-        data.currentCounter = this.currentCounter;
+        data.currentHat = this.currentHat;
     }
 
     void Awake()
@@ -70,8 +78,15 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         themesDict = new Dictionary<String, Theme>();
         foreach (Theme themeObj in allThemes)
         {
-            themesDict.Add(themeObj.name, themeObj);
+            themesDict.Add(themeObj.themeName, themeObj);
         }
+
+        hatsDict = new Dictionary<String, Hat>();
+        foreach (Hat hatObj in allHats)
+        {
+            hatsDict.Add(hatObj.themeName, hatObj);
+        }
+
     }
 
     void UpdateShopButtons()
@@ -105,6 +120,10 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
                     unlocked = unlockedCounters.Contains(shopButtonData.theme);
                     current = currentCounter == shopButtonData.name;
                     break;
+                case "Hat":
+                    unlocked = unlockedHats.Contains(shopButtonData.theme);
+                    current = currentHat == shopButtonData.name;
+                    break;
             }
 
             shopButtonData.purchased = unlocked;
@@ -128,6 +147,7 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         SetWall(currentWall);
         SetFloor(currentFloor);
         SetCounter(currentCounter);
+        SetHat(currentHat);
     }
 
     public void SetTables(String theme)
@@ -162,6 +182,21 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         this.currentCounter = theme;
     }
 
+    public void SetHat(String theme)
+    {
+        //Debug.Log("Setting Hat: " + theme);
+        if (theme == "None")
+        {
+            hat.sprite = null;
+        }
+        else
+        {
+            hat.sprite = hatsDict[theme].hatSprite;
+        }
+        
+        this.currentHat = theme;
+    }
+
     public bool TryPurchase(ButtonData data)
     {
         if (!moneyManager.TryPurchaseFurniture(data.cost)) return false;
@@ -182,6 +217,9 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
                 break;
             case "Counter":
                 unlockedCounters.Add(data.theme);
+                break;
+            case "Hat":
+                unlockedHats.Add(data.theme);
                 break;
         }
 

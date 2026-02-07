@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8003e4ac208c4faff74a536b0d57f, type: 3}
+  m_Name: Sailor
+  m_EditorClassIdentifier: Assembly-CSharp::Hat
+  id: 12
+  themeName: Sailor
+  unlocked: 0
+  hatSprite: {fileID: 5730817002970475599, guid: 77ea43a1c2b80f74b99c6f5011beba66, type: 3}
+  shopSprite: {fileID: 5099349214638370547, guid: 199923ee527b0cb4ca343f62a1d2d141, type: 3}

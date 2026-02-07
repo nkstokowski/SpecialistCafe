@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8003e4ac208c4faff74a536b0d57f, type: 3}
+  m_Name: Cowboy
+  m_EditorClassIdentifier: Assembly-CSharp::Hat
+  id: 5
+  themeName: Cowboy
+  unlocked: 0
+  hatSprite: {fileID: 7672017225026708932, guid: a51d4ef3e7a6c8e459cd3acf5d321fe8, type: 3}
+  shopSprite: {fileID: -4736001783137914643, guid: 1c760d1f10cbe274bbb58d3779f032c9, type: 3}
