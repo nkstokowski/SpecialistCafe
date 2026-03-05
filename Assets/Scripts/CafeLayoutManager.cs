@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CafeLayoutManager : MonoBehaviour, IDataPersistence
@@ -36,6 +37,9 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
     public SpriteRenderer hat;
 
     public MoneyManager moneyManager;
+
+    // Data
+    public UnityEvent onSaveGame;
 
     public void LoadData(GameData data)
     {
@@ -223,6 +227,7 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
                 break;
         }
 
+        InvokeSaveGame();
         return true;
     }
 
@@ -238,5 +243,10 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         if (currentFloor == theme) finalMultiplier += themeBonus;
 
         return finalMultiplier;
+    }
+
+    private void InvokeSaveGame()
+    {
+        onSaveGame.Invoke();
     }
 }

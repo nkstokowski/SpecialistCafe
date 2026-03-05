@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CafeManager : MonoBehaviour, IDataPersistence
 {
@@ -36,6 +37,9 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     public Transform centerTransform;
     public TableUnit upperUnit;
     public TableUnit lowerUnit;
+
+    // Data
+    public UnityEvent onSaveGame;
 
 
     void Awake()
@@ -106,7 +110,9 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     {
 
         bool spawnUpperCoins = !this.upperCoinCollected;
+        //Debug.Log("Because this.upperCoinCollected is " + this.upperCoinCollected.ToString() + ". spawnUpperCoins was set to: " + spawnUpperCoins.ToString());
         bool spawnLowerCoins = !this.lowerCoinCollected;
+        //Debug.Log("Because this.upperCoinCollected is " + this.lowerCoinCollected.ToString() + ". spawnLowerCoins was set to: " + spawnLowerCoins.ToString());
 
         if (GuestsShouldUpdate())
         {
@@ -115,6 +121,11 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
             spawnUpperCoins = true;
             spawnLowerCoins = true;
+
+            this.upperCoinCollected = false;
+            this.lowerCoinCollected = false;
+
+            //Debug.Log("Guests are being updated. Setting both spawn bools to true.");
         }
 
         upperUnit.SetMenu(menuItemsDict[upperItem]);
@@ -125,6 +136,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         lowerUnit.SetCoins(spawnLowerCoins);
 
         achManager.SetGuests(upperUnit.GetGuest(), lowerUnit.GetGuest());
+        InvokeSaveGame();
     }
 
     private bool GuestsShouldUpdate()
@@ -239,11 +251,14 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         if (isLowerCoin)
         {
             this.lowerCoinCollected = true;
+            //Debug.Log("Lower coin collected. Value should be saved.");
         }
         else
         {
             this.upperCoinCollected = true;
+            //Debug.Log("Upper coin collected. Value should be saved.");
         }
+        InvokeSaveGame();
     }
 
     internal void SetScreensRatio(float aspectScaler)
@@ -265,5 +280,10 @@ public class CafeManager : MonoBehaviour, IDataPersistence
             scaledTableUnitY,
             lowerUnit.transform.position.z
         );
+    }
+
+    private void InvokeSaveGame()
+    {
+        onSaveGame.Invoke();
     }
 }

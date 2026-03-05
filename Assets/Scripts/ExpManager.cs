@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ExpManager : MonoBehaviour, IDataPersistence
@@ -17,6 +18,9 @@ public class ExpManager : MonoBehaviour, IDataPersistence
     public TMP_Text expText;
     public Slider expSlider;
     public TMP_Text ticketText;
+
+    // Data
+    public UnityEvent onSaveGame;
 
 
     public void LoadData(GameData data)
@@ -82,6 +86,7 @@ public class ExpManager : MonoBehaviour, IDataPersistence
         }
 
         SetExpBar();
+        InvokeSaveGame();
     }
 
 
@@ -91,6 +96,12 @@ public class ExpManager : MonoBehaviour, IDataPersistence
 
         this.currentTickets -= cost;
         this.ticketText.text = this.currentTickets.ToString();
+        InvokeSaveGame();
         return true;
+    }
+
+    private void InvokeSaveGame()
+    {
+        onSaveGame.Invoke();
     }
 }

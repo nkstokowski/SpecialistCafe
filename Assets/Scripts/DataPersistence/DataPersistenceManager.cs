@@ -10,6 +10,10 @@ public class DataPersistenceManager : MonoBehaviour
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
 
+    [SerializeField]
+    private float saveIntervalSeconds = 10f;
+    private float timer = 0f;
+
     private GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
     private FileDataHandler dataHandler;
@@ -28,6 +32,17 @@ public class DataPersistenceManager : MonoBehaviour
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
+    }
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= saveIntervalSeconds)
+        {
+            SaveGame();
+            timer = 0f;
+        }
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
@@ -67,5 +82,16 @@ public class DataPersistenceManager : MonoBehaviour
 
         // save that data to a file using data handler
         dataHandler.Save(this.gameData);
+    }
+
+    public void SaveComponent(String component)
+    {
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) {
+            if (component == dataPersistenceObj.gameObject.name)
+            {
+                dataPersistenceObj.SaveData(ref gameData);
+                dataHandler.Save(this.gameData);
+            }
+        }
     }
 }

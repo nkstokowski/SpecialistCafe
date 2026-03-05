@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class IAManager : MonoBehaviour, IDataPersistence
 {
@@ -23,6 +24,9 @@ public class IAManager : MonoBehaviour, IDataPersistence
     public List<String> unlockedMenuItems;
     public List<InfoDisplay> allInfoBoxes;
     Dictionary<String, InfoDisplay> infoDisplayDict;
+
+    // Data
+    public UnityEvent onSaveGame;
 
     void Start()
     {
@@ -107,7 +111,8 @@ public class IAManager : MonoBehaviour, IDataPersistence
 
         this.unlockedAchievements.Add(index);
         achievementDisplayDict[index].SetStatus(true);
-        Debug.Log("Unlocked Achievement: " + index);
+        InvokeSaveGame();
+        //Debug.Log("Unlocked Achievement: " + index);
         expManager.ModifyExp(EXP_PER_ACHIEVEMENT);
         return true;
     }
@@ -164,5 +169,10 @@ public class IAManager : MonoBehaviour, IDataPersistence
 
         infoDisplayDict[menuItem].SetStatus(true);
         return true;
+    }
+
+    private void InvokeSaveGame()
+    {
+        onSaveGame.Invoke();
     }
 }

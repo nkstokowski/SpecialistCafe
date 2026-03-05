@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MoneyManager : MonoBehaviour, IDataPersistence
 {
@@ -13,6 +14,9 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
     public CafeManager cafeManager;
 
     public TextMeshProUGUI moneyText;
+
+    // Data
+    public UnityEvent onSaveGame;
 
     public void LoadData(GameData data)
     {
@@ -33,6 +37,7 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
 
         this.currentMoney -= cost;
         this.moneyText.text = this.currentMoney.ToString();
+        InvokeSaveGame();
         return true;
     }
 
@@ -40,6 +45,12 @@ public class MoneyManager : MonoBehaviour, IDataPersistence
     {
         this.currentMoney += amount;
         this.moneyText.text = this.currentMoney.ToString();
+        InvokeSaveGame();
+    }
+
+    private void InvokeSaveGame()
+    {
+        onSaveGame.Invoke();
     }
 
 }
