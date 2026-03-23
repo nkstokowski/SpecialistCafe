@@ -10,22 +10,28 @@ public class SoundManager : MonoBehaviour
     public String[] clipNames;
     public AudioClip[] clips;
     Dictionary<String, AudioClip> soundDict;
-    AudioSource audioSource;
+    public AudioSource soundEffectSource;
+    public AudioSource jazzSource;
+    public AudioSource cafeSource;
+
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        // Set up Sound Effects
         soundDict = new Dictionary<String, AudioClip>();
         int maxClipsIndex = Math.Min(clipNames.Length, clips.Length);
         for (int i = 0; i < maxClipsIndex; i++)
         {
             soundDict.Add(clipNames[i], clips[i]);
         }
+
+        // Set up Music
+        
     }
 
     public void PlaySound(String soundName)
     {
-        audioSource.clip = soundDict[soundName];
-        audioSource.Play();
+        soundEffectSource.clip = soundDict[soundName];
+        soundEffectSource.Play();
     }
 }

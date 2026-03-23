@@ -14,7 +14,7 @@ public class FurnitureButtonData : ButtonData
     public void UpdateText() {
         switch(myState) {
             case ShopButtonState.NotPurchased:
-                buttonText.SetText("Purchase");
+                buttonText.SetText("Purchase - " + cost + " coins");
                 break;
             case ShopButtonState.NotActive:
             case ShopButtonState.Active:

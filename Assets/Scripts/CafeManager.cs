@@ -31,6 +31,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     public CafeLayoutManager cafeLayoutManager;
     public IAManager achManager;
     public ExpManager expManager;
+    public ChalkTextLayout chalkManager;
 
     // Object management
     public Transform screensTransform;
@@ -68,6 +69,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         this.lowerCoinCollected = data.lowerCoinCollected;
 
         ShowActiveIngridients();
+
         if (this.unlockedMenuItems.Count > 0)
         {
             PopulateCafe();
@@ -102,7 +104,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
     {
         foreach (GameObject ingridient in ingridientShelfObjects)
         {
-            ingridient.SetActive(unlockedMenuItems.Contains(ingridient.name));
+            ingridient.SetActive(this.unlockedMenuItems.Contains(ingridient.name));
         }
     }
 
@@ -180,7 +182,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         //Debug.Log("Hours passed: " + hoursPassed);
 
         int income = 0;
-        foreach (String item in unlockedMenuItems)
+        foreach (String item in this.unlockedMenuItems)
         {
             //Debug.Log("Calculating income from " + item);
             float incomeFromItem = menuItemsDict[item].rarity * hoursPassed * menuItemsDict[item].hourlyRate;
@@ -193,11 +195,13 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
     public bool TryPurchase(ButtonData data)
     {
+        //Debug.Log("TryPurchase -- " + data.theme);
         if (!expManager.TryAddMenuItem(data.cost)) return false;
 
         this.unlockedMenuItems.Add(data.theme);
         ShowActiveIngridients();
         achManager.UnlockInfo(data.theme);
+        chalkManager.AddMenuItem(data.theme);
 
         return true;
     }
@@ -208,7 +212,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         Dictionary<string, float> menuWeights = new Dictionary<string, float>();
         Dictionary<string, float> menuOdds = new Dictionary<string, float>();
 
-        foreach (string item in unlockedMenuItems)
+        foreach (string item in this.unlockedMenuItems)
         {
             float rarity = menuItemsDict[item].rarity;
             float themeMultiplier = cafeLayoutManager.GetThemeMultiplier(menuItemsDict[item].theme);
@@ -221,7 +225,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         //Debug.Log("Sum of weighted menu rarities: " + weightedSum);
 
-        foreach (string item in unlockedMenuItems)
+        foreach (string item in this.unlockedMenuItems)
         {
             menuOdds[item] = (menuWeights[item] / weightedSum) * 100f;
             //Debug.Log("Final Rarity for " + item + ": " + menuOdds[item] + ".");
@@ -232,7 +236,7 @@ public class CafeManager : MonoBehaviour, IDataPersistence
 
         float cumulative = 0f;
 
-        foreach (string item in unlockedMenuItems)
+        foreach (string item in this.unlockedMenuItems)
         {
             cumulative += menuOdds[item];
             if (roll < cumulative)

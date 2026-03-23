@@ -1500,9 +1500,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0007324219}
+  m_AnchoredPosition: {x: 5.484558, y: 155.78638}
   m_SizeDelta: {x: 0, y: 1159.52}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1.128}
 --- !u!114 &58948660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2724,7 +2724,7 @@ MonoBehaviour:
   theme: Book
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 797955456}
   myState: 0
 --- !u!1 &95129772
@@ -3051,7 +3051,7 @@ MonoBehaviour:
   theme: Default
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 625798824}
   myState: 0
 --- !u!1 &103681972
@@ -4094,7 +4094,7 @@ MonoBehaviour:
   theme: Car
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 784815942}
   myState: 0
 --- !u!1 &132509328
@@ -4921,7 +4921,7 @@ MonoBehaviour:
   theme: Book
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1743429639}
   myState: 0
 --- !u!1 &160204847
@@ -5634,13 +5634,14 @@ GameObject:
   m_Component:
   - component: {fileID: 170557274}
   - component: {fileID: 170557275}
+  - component: {fileID: 170557276}
   m_Layer: 0
   m_Name: Curuba Italian Soda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &170557274
 Transform:
   m_ObjectHideFlags: 0
@@ -5714,6 +5715,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &170557276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170557273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 18
+  menuItem: Curuba Italian Soda
 --- !u!1 &172753514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,7 +6649,7 @@ MonoBehaviour:
   theme: Coffin
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 983223994}
   myState: 0
 --- !u!1 &200986424
@@ -6976,7 +6991,7 @@ MonoBehaviour:
   theme: Stamp
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 859868140}
   myState: 0
 --- !u!1 &208452938
@@ -7343,7 +7358,7 @@ MonoBehaviour:
   theme: Bow
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 677313434}
   myState: 0
 --- !u!1 &213583397
@@ -7971,7 +7986,7 @@ MonoBehaviour:
   theme: Default
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 408617971}
   myState: 0
 --- !u!1 &243388027
@@ -8198,7 +8213,7 @@ MonoBehaviour:
   theme: Diamond
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 426262221}
   myState: 0
 --- !u!1 &250861833
@@ -8518,7 +8533,7 @@ MonoBehaviour:
   theme: Anchor
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 832014517}
   myState: 0
 --- !u!1 &255158616
@@ -9704,7 +9719,7 @@ MonoBehaviour:
   theme: Anchor
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 503874355}
   myState: 0
 --- !u!1 &285170283
@@ -10162,7 +10177,7 @@ MonoBehaviour:
   theme: Car
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1348432942}
   myState: 0
 --- !u!1 &316859962
@@ -10251,6 +10266,8 @@ GameObject:
   - component: {fileID: 324121901}
   - component: {fileID: 324121903}
   - component: {fileID: 324121902}
+  - component: {fileID: 324121905}
+  - component: {fileID: 324121904}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -10386,6 +10403,203 @@ MonoBehaviour:
   - coin
   clips:
   - {fileID: 8300000, guid: 5e27729c75ee7d843a2940641c547763, type: 3}
+  soundEffectSource: {fileID: 324121902}
+  jazzSource: {fileID: 324121905}
+  cafeSource: {fileID: 324121904}
+--- !u!82 &324121904
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324121900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 214ea8865b87e9a4e8e3c5a4b18d5dbb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.18
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &324121905
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324121900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a2e91eea51b0605469d39cc238e289b5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.07
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &325456986
 GameObject:
   m_ObjectHideFlags: 0
@@ -11205,7 +11419,7 @@ MonoBehaviour:
   theme: Anchor
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 944674276}
   myState: 0
 --- !u!1 &350094423
@@ -12596,7 +12810,7 @@ MonoBehaviour:
   theme: Anchor
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1072209446}
   myState: 0
 --- !u!1 &405632379
@@ -14429,7 +14643,7 @@ MonoBehaviour:
   theme: Book
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 435649777}
   myState: 0
 --- !u!1 &450903334
@@ -14636,7 +14850,7 @@ MonoBehaviour:
   theme: Sailor
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 2099413595}
   myState: 0
 --- !u!114 &452277987
@@ -16363,7 +16577,7 @@ MonoBehaviour:
   theme: Leaf
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 503777198}
   myState: 0
 --- !u!1 &493414275
@@ -16515,7 +16729,7 @@ MonoBehaviour:
   theme: Bow
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1372604463}
   myState: 0
 --- !u!1 &503777196
@@ -18167,7 +18381,7 @@ MonoBehaviour:
   theme: Default
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 714607353}
   myState: 0
 --- !u!1 &528105071
@@ -18813,7 +19027,7 @@ MonoBehaviour:
   theme: Leaf
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1011150703}
   myState: 0
 --- !u!1 &541519886
@@ -19367,7 +19581,7 @@ MonoBehaviour:
   theme: Book
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 160204849}
   myState: 0
 --- !u!1 &549085723
@@ -19555,7 +19769,7 @@ MonoBehaviour:
   theme: Flower
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 170384188}
   myState: 0
 --- !u!1 &551333275
@@ -20530,7 +20744,7 @@ Transform:
   m_GameObject: {fileID: 589648865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 3.26, z: -8}
+  m_LocalPosition: {x: 1.11, y: 3.26, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21205,7 +21419,7 @@ MonoBehaviour:
   theme: Bow
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 194206850}
   myState: 0
 --- !u!1 &600418944
@@ -21357,7 +21571,7 @@ MonoBehaviour:
   theme: Coffin
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1815938188}
   myState: 0
 --- !u!1 &601941568
@@ -21660,13 +21874,14 @@ GameObject:
   m_Component:
   - component: {fileID: 606239041}
   - component: {fileID: 606239042}
+  - component: {fileID: 606239043}
   m_Layer: 0
   m_Name: Blood Pudding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &606239041
 Transform:
   m_ObjectHideFlags: 0
@@ -21740,6 +21955,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &606239043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606239040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 27
+  menuItem: Blood Pudding
 --- !u!1 &607437851
 GameObject:
   m_ObjectHideFlags: 0
@@ -22752,7 +22981,7 @@ MonoBehaviour:
   theme: Stamp
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1457415947}
   myState: 0
 --- !u!1 &629467353
@@ -24842,7 +25071,7 @@ MonoBehaviour:
   theme: Stamp
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1149001622}
   myState: 0
 --- !u!1 &692903553
@@ -27338,7 +27567,7 @@ MonoBehaviour:
   theme: Beanie
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 1701761636}
   myState: 0
 --- !u!114 &788706636
@@ -27966,7 +28195,7 @@ MonoBehaviour:
   theme: None
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 81747222}
   myState: 0
 --- !u!114 &816898873
@@ -28595,7 +28824,7 @@ MonoBehaviour:
   theme: Flower
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1357836719}
   myState: 0
 --- !u!1 &832014515
@@ -29431,7 +29660,7 @@ MonoBehaviour:
   theme: Beret
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 257294703}
   myState: 0
 --- !u!114 &854560550
@@ -30766,7 +30995,7 @@ MonoBehaviour:
   theme: Book
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 475069781}
   myState: 0
 --- !u!1 &867868658
@@ -31052,7 +31281,7 @@ MonoBehaviour:
   theme: Holiday
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 586269578}
   myState: 0
 --- !u!114 &870227285
@@ -31544,7 +31773,7 @@ MonoBehaviour:
   theme: Car
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1930671853}
   myState: 0
 --- !u!1 &886334461
@@ -32361,13 +32590,14 @@ GameObject:
   m_Component:
   - component: {fileID: 909386740}
   - component: {fileID: 909386741}
+  - component: {fileID: 909386742}
   m_Layer: 0
   m_Name: Snowshoe Hare Pop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &909386740
 Transform:
   m_ObjectHideFlags: 0
@@ -32441,6 +32671,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &909386742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909386739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 18
+  menuItem: Snowshoe Hare Pop
 --- !u!1 &909649174
 GameObject:
   m_ObjectHideFlags: 0
@@ -32742,7 +32986,7 @@ MonoBehaviour:
   theme: Peace
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 578001195}
   myState: 0
 --- !u!1 &914842792
@@ -33421,7 +33665,7 @@ MonoBehaviour:
   theme: Peace
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 2026001379}
   myState: 0
 --- !u!1 &935735298
@@ -33573,7 +33817,7 @@ MonoBehaviour:
   theme: Diamond
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 937027765}
   myState: 0
 --- !u!1 &937027763
@@ -34445,7 +34689,7 @@ MonoBehaviour:
   theme: Diamond
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 374869142}
   myState: 0
 --- !u!1 &957670406
@@ -36384,7 +36628,7 @@ MonoBehaviour:
   theme: Leaf
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 541905871}
   myState: 0
 --- !u!1 &1023082226
@@ -36694,13 +36938,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1031652204}
   - component: {fileID: 1031652205}
+  - component: {fileID: 1031652206}
   m_Layer: 0
   m_Name: Yucca Seed Shaken Espresso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1031652204
 Transform:
   m_ObjectHideFlags: 0
@@ -36774,6 +37019,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1031652206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031652203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 38
+  menuItem: Yucca Seed Shaken Espresso
 --- !u!1 &1033704564
 GameObject:
   m_ObjectHideFlags: 0
@@ -37608,7 +37867,7 @@ MonoBehaviour:
   theme: Anchor
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 388370297}
   myState: 0
 --- !u!1 &1069454241
@@ -37896,7 +38155,7 @@ MonoBehaviour:
   theme: Stamp
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 2090179597}
   myState: 0
 --- !u!1 &1072021621
@@ -39181,7 +39440,7 @@ MonoBehaviour:
   theme: Peace
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1890343371}
   myState: 0
 --- !u!1 &1100884744
@@ -39864,7 +40123,7 @@ MonoBehaviour:
   theme: Bow
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1955857167}
   myState: 0
 --- !u!1 &1111581495
@@ -40344,7 +40603,7 @@ MonoBehaviour:
   theme: Fedora
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 2119676998}
   myState: 0
 --- !u!114 &1140880969
@@ -41693,7 +41952,7 @@ MonoBehaviour:
   theme: Top
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 1694354220}
   myState: 0
 --- !u!114 &1175000805
@@ -42168,9 +42427,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -599.454}
+  m_AnchoredPosition: {x: 5.484558, y: 186.10205}
   m_SizeDelta: {x: 0, y: 1198.8}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1.11}
 --- !u!114 &1190416075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42909,7 +43168,7 @@ MonoBehaviour:
   theme: Airplane
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 103681974}
   myState: 0
 --- !u!1 &1211335074
@@ -43061,7 +43320,7 @@ MonoBehaviour:
   theme: Diamond
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 607437853}
   myState: 0
 --- !u!1 &1213149904
@@ -44787,7 +45046,7 @@ MonoBehaviour:
   theme: Car
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 455048926}
   myState: 0
 --- !u!1 &1250740051
@@ -44939,7 +45198,7 @@ MonoBehaviour:
   theme: Peace
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1532059521}
   myState: 0
 --- !u!1 &1252126904
@@ -45329,7 +45588,7 @@ MonoBehaviour:
   theme: Default
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 2056501950}
   myState: 0
 --- !u!1 &1266719850
@@ -46182,8 +46441,8 @@ MonoBehaviour:
   endPoint: {fileID: 928251395}
   moveDuration: 3
   interactSeconds: 4
-  minWaitTime: 2
-  maxWaitTime: 5
+  minWaitTime: 12
+  maxWaitTime: 16
   baristaAnimator: {fileID: 876520588}
   machineAnimator: {fileID: 2138698558}
   movingBoolName: isWalking
@@ -46512,7 +46771,7 @@ MonoBehaviour:
   theme: Bow
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 424858978}
   myState: 0
 --- !u!114 &1346590121
@@ -47923,7 +48182,7 @@ MonoBehaviour:
   theme: Party
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 1753931790}
   myState: 0
 --- !u!114 &1370298129
@@ -48700,7 +48959,7 @@ MonoBehaviour:
   theme: Car
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 867868660}
   myState: 0
 --- !u!1 &1390645969
@@ -48833,7 +49092,7 @@ MonoBehaviour:
   theme: Propeller
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 1087030378}
   myState: 0
 --- !u!114 &1391547737
@@ -49849,6 +50108,7 @@ MonoBehaviour:
   cafeLayoutManager: {fileID: 1023155598}
   achManager: {fileID: 745233950}
   expManager: {fileID: 504051206}
+  chalkManager: {fileID: 1954467220}
   screensTransform: {fileID: 132509329}
   centerTransform: {fileID: 855021269}
   upperUnit: {fileID: 406635225}
@@ -50456,7 +50716,7 @@ MonoBehaviour:
   theme: Airplane
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1877965787}
   myState: 0
 --- !u!1 &1441145378
@@ -50773,13 +51033,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1446788738}
   - component: {fileID: 1446788739}
+  - component: {fileID: 1446788740}
   m_Layer: 0
-  m_Name: Krill Kombutcha
+  m_Name: Krill Kombucha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1446788738
 Transform:
   m_ObjectHideFlags: 0
@@ -50853,6 +51114,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1446788740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446788737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 19
+  menuItem: Krill Kombucha
 --- !u!1 &1451397627
 GameObject:
   m_ObjectHideFlags: 0
@@ -51430,13 +51705,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1466769958}
   - component: {fileID: 1466769959}
+  - component: {fileID: 1466769960}
   m_Layer: 0
   m_Name: Algae Affogato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1466769958
 Transform:
   m_ObjectHideFlags: 0
@@ -51510,6 +51786,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1466769960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466769957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 27
+  menuItem: Algae Affogato
 --- !u!1 &1471966742
 GameObject:
   m_ObjectHideFlags: 0
@@ -52740,7 +53030,7 @@ MonoBehaviour:
   theme: Flower
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 106252493}
   myState: 0
 --- !u!1 &1544872702
@@ -53128,7 +53418,7 @@ MonoBehaviour:
   theme: Leaf
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 32017471}
   myState: 0
 --- !u!1 &1549887462
@@ -54263,7 +54553,7 @@ MonoBehaviour:
   theme: Leaf
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 594619019}
   myState: 0
 --- !u!1 &1578248015
@@ -54492,7 +54782,7 @@ MonoBehaviour:
   theme: Airplane
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1609256417}
   myState: 0
 --- !u!1 &1585750005
@@ -55585,7 +55875,7 @@ MonoBehaviour:
   theme: Flower
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 689592946}
   myState: 0
 --- !u!1 &1614435936
@@ -55882,13 +56172,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1627740877}
   - component: {fileID: 1627740878}
+  - component: {fileID: 1627740879}
   m_Layer: 0
   m_Name: Eucalyptus Tea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1627740877
 Transform:
   m_ObjectHideFlags: 0
@@ -55962,6 +56253,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1627740879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627740876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 22
+  menuItem: Eucalyptus Tea
 --- !u!1 &1630907216
 GameObject:
   m_ObjectHideFlags: 0
@@ -55998,7 +56303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 439.1225, y: -119.4}
+  m_AnchoredPosition: {x: 439.1225, y: -119.3999}
   m_SizeDelta: {x: 793, y: 238.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630907218
@@ -56594,7 +56899,7 @@ MonoBehaviour:
   theme: Chef
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 867030441}
   myState: 0
 --- !u!114 &1643735523
@@ -56717,7 +57022,7 @@ Transform:
   m_GameObject: {fileID: 1644770222}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48, y: 3.26, z: -6}
+  m_LocalPosition: {x: -1.06, y: 3.26, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58077,7 +58382,7 @@ MonoBehaviour:
   theme: Coffin
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 104728927}
   myState: 0
 --- !u!1 &1692965389
@@ -58781,7 +59086,7 @@ MonoBehaviour:
   theme: Stamp
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 611561446}
   myState: 0
 --- !u!1 &1709014415
@@ -60282,7 +60587,7 @@ MonoBehaviour:
   theme: Peace
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 2048693075}
   myState: 0
 --- !u!1 &1750971638
@@ -60817,7 +61122,7 @@ MonoBehaviour:
   theme: Baseball
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 1603767434}
   myState: 0
 --- !u!114 &1785240246
@@ -61328,7 +61633,7 @@ MonoBehaviour:
   theme: Cowboy
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 722143487}
   myState: 0
 --- !u!114 &1799990165
@@ -61549,13 +61854,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1805401217}
   - component: {fileID: 1805401218}
+  - component: {fileID: 1805401219}
   m_Layer: 0
   m_Name: Cafe Con Milkweed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1805401217
 Transform:
   m_ObjectHideFlags: 0
@@ -61629,6 +61935,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1805401219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805401216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 19
+  menuItem: Cafe Con Milkweed
 --- !u!1 &1813577030
 GameObject:
   m_ObjectHideFlags: 0
@@ -62391,7 +62711,7 @@ MonoBehaviour:
   theme: Diamond
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 2050252453}
   myState: 0
 --- !u!1 &1827475069
@@ -63753,7 +64073,7 @@ MonoBehaviour:
   theme: Coffin
   category: Table
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 848835355}
   myState: 0
 --- !u!1 &1861914173
@@ -65142,7 +65462,7 @@ MonoBehaviour:
   theme: Bow
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 346100423}
   myState: 0
 --- !u!1 &1892210815
@@ -65294,7 +65614,7 @@ MonoBehaviour:
   theme: Coffin
   category: Counter
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1636047983}
   myState: 0
 --- !u!1 &1903711463
@@ -65621,7 +65941,7 @@ MonoBehaviour:
   theme: Airplane
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1725463535}
   myState: 0
 --- !u!1 &1917146353
@@ -65773,7 +66093,7 @@ MonoBehaviour:
   theme: Flower
   category: Chair
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 1072297453}
   myState: 0
 --- !u!1 &1918022684
@@ -65925,7 +66245,7 @@ MonoBehaviour:
   theme: Default
   category: Wall
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 2041284058}
   myState: 0
 --- !u!1 &1918611987
@@ -67703,6 +68023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954467219}
+  - component: {fileID: 1954467220}
   m_Layer: 0
   m_Name: SpecialsText
   m_TagString: Untagged
@@ -67735,6 +68056,32 @@ Transform:
   - {fileID: 1031652204}
   m_Father: {fileID: 522127762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954467220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954467218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6296729188dcf478a7eb10e6e6d82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  unlockedMenu: []
+  allChalkTexts:
+  - {fileID: 1627740879}
+  - {fileID: 2044282355}
+  - {fileID: 909386742}
+  - {fileID: 2058271506}
+  - {fileID: 1805401219}
+  - {fileID: 606239043}
+  - {fileID: 1446788740}
+  - {fileID: 1466769960}
+  - {fileID: 170557276}
+  - {fileID: 1031652206}
+  startX: -0.24
+  startY: 4.253
 --- !u!1 &1955172428
 GameObject:
   m_ObjectHideFlags: 0
@@ -68774,7 +69121,7 @@ MonoBehaviour:
   theme: Garden
   category: Hat
   purchased: 0
-  cost: 50
+  cost: 15
   buttonText: {fileID: 1401119551}
   myState: 0
 --- !u!114 &1995133948
@@ -70354,13 +70701,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2044282353}
   - component: {fileID: 2044282354}
+  - component: {fileID: 2044282355}
   m_Layer: 0
   m_Name: Bamboo Boba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2044282353
 Transform:
   m_ObjectHideFlags: 0
@@ -70434,6 +70782,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2044282355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044282352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 16
+  menuItem: Bamboo Boba
 --- !u!1 &2047537723
 GameObject:
   m_ObjectHideFlags: 0
@@ -71347,13 +71709,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2058271504}
   - component: {fileID: 2058271505}
+  - component: {fileID: 2058271506}
   m_Layer: 0
   m_Name: Prairie Puppuccino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2058271504
 Transform:
   m_ObjectHideFlags: 0
@@ -71427,6 +71790,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2058271506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058271503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61fa03061ffa477468d323fce5709af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChalkText
+  height: 18
+  menuItem: Prairie Puppuccino
 --- !u!1 &2068969428
 GameObject:
   m_ObjectHideFlags: 0
@@ -71847,7 +72224,7 @@ MonoBehaviour:
   theme: Airplane
   category: Floor
   purchased: 0
-  cost: 0
+  cost: 5
   buttonText: {fileID: 160917509}
   myState: 0
 --- !u!1 &2082216248
