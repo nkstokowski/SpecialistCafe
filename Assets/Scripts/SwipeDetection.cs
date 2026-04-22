@@ -36,6 +36,8 @@ public class SwipeDetection : MonoBehaviour
 
     bool moving = false;
 
+    public bool disabled = false;
+
     private void Awake()
     {
         inputManager = InputManager.Instance;
@@ -58,6 +60,9 @@ public class SwipeDetection : MonoBehaviour
 
     private void SwipeStart(Vector2 position, float time)
     {
+
+        if (disabled) return;
+
         startPosition = position;
         startTime = time;
         if (useTrail)
@@ -70,6 +75,8 @@ public class SwipeDetection : MonoBehaviour
 
     private void SwipeEnd(Vector2 position, float time)
     {
+        if (disabled) return;
+
         if (useTrail)
         {
             trail.SetActive(false);
