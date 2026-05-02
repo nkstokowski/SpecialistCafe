@@ -9,12 +9,16 @@ public class TableUnit : MonoBehaviour
     public SpriteRenderer drink;
     public GameObject coins;
     public MenuItem menuItem;
+    public GuestIdle guestIdleController;
 
     public void SetMenu(MenuItem newMenuItem)
     {
         this.menuItem = newMenuItem;
         this.drink.sprite = this.menuItem.drinkSprite;
         this.guest.sprite = this.menuItem.guestSprite;
+        Sprite[] idleFrames = new Sprite[] {this.menuItem.guestSprite, this.menuItem.idlePose};
+        guestIdleController.SetIdleFrames(idleFrames);
+        guestIdleController.StartIdle();
     }
 
     public void SetCoins(bool enable)

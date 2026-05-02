@@ -20,4 +20,6 @@ public class MenuItem : ScriptableObject
     public Sprite coinSprite;
     public int coinValue;
 
+    public Sprite idlePose;
+
 }

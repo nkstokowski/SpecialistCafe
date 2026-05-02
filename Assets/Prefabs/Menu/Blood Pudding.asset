@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Book
   coinSprite: {fileID: 1621787491, guid: f8b359af5d6288947b1cb2fd4ef49fbd, type: 3}
   coinValue: 4
+  idlePose: {fileID: 9158637170112283272, guid: ec886c536d42a664aa6e0907150f3be7, type: 3}

@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Leaf
   coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
   coinValue: 3
+  idlePose: {fileID: 8717383328396627627, guid: 0e9bc65d9841e144991802233b06bfab, type: 3}

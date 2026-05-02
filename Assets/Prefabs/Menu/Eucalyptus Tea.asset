@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
   m_Name: Eucalyptus Tea
   m_EditorClassIdentifier: 
+  id: 0
   itemName: Eucalyptus Tea
   guestName: Koala
   guestSprite: {fileID: -1487249558, guid: c2f4cef07ff7d524cb3dde1014371330, type: 3}
@@ -22,3 +23,4 @@ MonoBehaviour:
   theme: Coffin
   coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
   coinValue: 3
+  idlePose: {fileID: 4233931214425438392, guid: 56e139513b529104ca31bb21847ae415, type: 3}

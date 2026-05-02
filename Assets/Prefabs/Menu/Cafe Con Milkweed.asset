@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Bow
   coinSprite: {fileID: 1621787491, guid: f8b359af5d6288947b1cb2fd4ef49fbd, type: 3}
   coinValue: 4
+  idlePose: {fileID: -3564213098152023746, guid: 7a6bc9ff14a8a30448c418db9ccbee50, type: 3}

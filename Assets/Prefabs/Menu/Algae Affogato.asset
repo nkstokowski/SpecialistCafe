@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Airplane
   coinSprite: {fileID: -1489109657, guid: e8a443fd952b66f4c9d1f03c87de9585, type: 3}
   coinValue: 5
+  idlePose: {fileID: 2906627962472968072, guid: 9865e11445a75c34f80d461e0228fe35, type: 3}

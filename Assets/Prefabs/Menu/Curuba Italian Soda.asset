@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Car
   coinSprite: {fileID: -1489109657, guid: e8a443fd952b66f4c9d1f03c87de9585, type: 3}
   coinValue: 5
+  idlePose: {fileID: 6684324470894755266, guid: e025ceccfc06c3749b4157c052574dbb, type: 3}

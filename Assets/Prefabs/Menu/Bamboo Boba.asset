@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Anchor
   coinSprite: {fileID: -1019513103, guid: 6d326b77563c05d4e9c7f3b4ba7b1298, type: 3}
   coinValue: 3
+  idlePose: {fileID: 4279964020668260081, guid: 522704e78ffc63742871888a1fa43912, type: 3}

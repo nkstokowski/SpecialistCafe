@@ -23,3 +23,4 @@ MonoBehaviour:
   theme: Diamond
   coinSprite: {fileID: 1621787491, guid: f8b359af5d6288947b1cb2fd4ef49fbd, type: 3}
   coinValue: 4
+  idlePose: {fileID: 8758661706835270006, guid: f4695511898e41b47b049d6952f51c44, type: 3}
