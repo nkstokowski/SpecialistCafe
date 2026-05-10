@@ -234,6 +234,16 @@ public class CafeManager : MonoBehaviour, IDataPersistence
         float roll = UnityEngine.Random.Range(0f, 100f);
         //Debug.Log("Roll: " + roll);
 
+        // Miso & Mochi check
+        if (roll <= 0.5f)
+        {
+            return "MisoCoffee";
+        }
+        if (roll <= 1.0f)
+        {
+            return "MochiCoffee";
+        }
+
         float cumulative = 0f;
 
         foreach (string item in this.unlockedMenuItems)

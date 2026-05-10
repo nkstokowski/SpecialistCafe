@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed22c284e9cad234ca9dbaa66326f7cf, type: 3}
+  m_Name: MochiCoffee
+  m_EditorClassIdentifier: Assembly-CSharp::MenuItem
+  id: 10
+  itemName: MisoCoffee
+  guestName: Miso
+  guestSprite: {fileID: 8517192544640057586, guid: 0d6bbe5991818c04eba67263ea4b2594, type: 3}
+  drinkSprite: {fileID: -1850988681521255122, guid: 5d141b05a9c7fb94a9fa64cfddffc2e8, type: 3}
+  chalkText: {fileID: 0}
+  rarity: 0.01
+  hourlyRate: 0
+  theme: None
+  coinSprite: {fileID: -1489109657, guid: e8a443fd952b66f4c9d1f03c87de9585, type: 3}
+  coinValue: 25
+  idlePose: {fileID: 8517192544640057586, guid: dd554b91b9afbbe49a9c06f16a3e462c, type: 3}
