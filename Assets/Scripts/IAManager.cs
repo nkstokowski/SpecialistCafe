@@ -86,7 +86,7 @@ public class IAManager : MonoBehaviour, IDataPersistence
 
             if (!achievementDisplayDict.ContainsKey(index))
             {
-                Debug.Log("Error: Achivement with ID " + index + " not found in achivement dictionary");
+                //Debug.Log("Error: Achivement with ID " + index + " not found in achivement dictionary");
             }
             else
             {
@@ -99,13 +99,13 @@ public class IAManager : MonoBehaviour, IDataPersistence
     {
         if (this.unlockedAchievements.Contains(index))
         {
-            Debug.Log("Tried to unlocked achievement: " + index + ". Already in list");
+            //Debug.Log("Tried to unlocked achievement: " + index + ". Already in list");
             return false;
         }
 
         if (!achievementDisplayDict.ContainsKey(index))
         {
-            Debug.Log("Error: Achievement Id: " + index + " not recognized.");
+            //Debug.Log("Error: Achievement Id: " + index + " not recognized.");
             return false;
         }
 
@@ -150,7 +150,7 @@ public class IAManager : MonoBehaviour, IDataPersistence
         {
             if (!infoDisplayDict.ContainsKey(menuItem))
             {
-                Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes dictionary.");
+                //Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes dictionary.");
             }
             else
             {
@@ -163,7 +163,7 @@ public class IAManager : MonoBehaviour, IDataPersistence
     {
         if (!infoDisplayDict.ContainsKey(menuItem))
         {
-            Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes dictionary.");
+            //Debug.Log("Error: Menu Item " + menuItem + " not found in info boxes dictionary.");
             return false;
         }
 

@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class GuestIdle : MonoBehaviour
 {
+    public Boolean animationEnabled;
     public Sprite[] idleFrames; // size 2 (or more)
 
     [Header("Timing")]
@@ -44,7 +46,7 @@ public class GuestIdle : MonoBehaviour
 
     IEnumerator IdleLoop()
     {
-        while (true)
+        while (animationEnabled)
         {
             sr.sprite = idleFrames[index];
 
@@ -65,7 +67,7 @@ public class GuestIdle : MonoBehaviour
 
                 if (cycleCount >= nextPauseCycle)
                 {
-                    float pauseTime = Random.Range(pauseDurationMin, pauseDurationMax);
+                    float pauseTime = UnityEngine.Random.Range(pauseDurationMin, pauseDurationMax);
                     yield return new WaitForSeconds(pauseTime);
 
                     cycleCount = 0;
@@ -77,7 +79,7 @@ public class GuestIdle : MonoBehaviour
 
     void ResetPauseCycle()
     {
-        nextPauseCycle = Random.Range(minCyclesBeforePause, maxCyclesBeforePause + 1);
+        nextPauseCycle = UnityEngine.Random.Range(minCyclesBeforePause, maxCyclesBeforePause + 1);
     }
 
     // Call this when swapping character
@@ -86,6 +88,7 @@ public class GuestIdle : MonoBehaviour
         idleFrames = newFrames;
         index = 0;
         cycleCount = 0;
+        animationEnabled = true;
         ResetPauseCycle();
     }
 }

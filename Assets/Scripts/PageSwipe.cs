@@ -39,10 +39,10 @@ public class PageSwipe_Canvas : MonoBehaviour, IDragHandler, IEndDragHandler
                 screenIndex = Math.Min(screens.Count, screenIndex + 1);
             }
             
-            Debug.Log("Starting drag");
+            //Debug.Log("Starting drag");
             StartCoroutine(SmoothMove(transform.position, newLocation, easing));
             panelLocation = newLocation;
-            Debug.Log("Done drag");
+            //Debug.Log("Done drag");
             // TODO - enable the canvas we are going to
 
         }

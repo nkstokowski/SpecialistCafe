@@ -73,7 +73,7 @@ public class ExpManager : MonoBehaviour, IDataPersistence
             if (this.currentExp < this.expPerLevel[i])
             {
                 this.currentLevel = (i + 1);
-                Debug.Log("Setting player level to: " + this.currentLevel);
+                //Debug.Log("Setting player level to: " + this.currentLevel);
                 break;
             }
         }

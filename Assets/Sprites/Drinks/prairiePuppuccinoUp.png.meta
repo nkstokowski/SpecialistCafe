@@ -129,11 +129,11 @@ TextureImporter:
       name: prairiePuppuccinoUp_0
       rect:
         serializedVersion: 2
-        x: 319
-        y: 772
-        width: 150
-        height: 238
-      alignment: 0
+        x: 320
+        y: 773
+        width: 148
+        height: 236
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e7d79b9b95d5f40409679e5997f7435f
     internalID: 0
     vertices: []
     indices: 

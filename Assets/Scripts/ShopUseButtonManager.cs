@@ -76,5 +76,6 @@ public class ShopUseButtonManager : MonoBehaviour
         }
 
         data.UpdateText();
+        myCafeLayoutManager.InvokeSaveGame();
     }
 }

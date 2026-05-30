@@ -10,6 +10,7 @@ public class TableUnit : MonoBehaviour
     public GameObject coins;
     public MenuItem menuItem;
     public GuestIdle guestIdleController;
+    public GuestIdle drinkIdleController;
 
     public void SetMenu(MenuItem newMenuItem)
     {
@@ -18,6 +19,12 @@ public class TableUnit : MonoBehaviour
         this.guest.sprite = this.menuItem.guestSprite;
         Sprite[] idleFrames = new Sprite[] {this.menuItem.guestSprite, this.menuItem.idlePose};
         guestIdleController.SetIdleFrames(idleFrames);
+        if (newMenuItem.itemName == "Prairie Puppuccino")
+        {
+            Sprite[] drinkIdleFrames = new Sprite[] {this.menuItem.drinkSprite, this.menuItem.drinkIdle };
+            drinkIdleController.SetIdleFrames(drinkIdleFrames);
+            drinkIdleController.StartIdle();
+        }
         guestIdleController.StartIdle();
     }
 

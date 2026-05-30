@@ -74,6 +74,7 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         data.currentChair = this.currentChair;
         data.currentWall = this.currentWall;
         data.currentFloor = this.currentFloor;
+        data.currentCounter = this.currentCounter;
         data.currentHat = this.currentHat;
     }
 
@@ -245,7 +246,7 @@ public class CafeLayoutManager : MonoBehaviour, IDataPersistence
         return finalMultiplier;
     }
 
-    private void InvokeSaveGame()
+    public void InvokeSaveGame()
     {
         onSaveGame.Invoke();
     }

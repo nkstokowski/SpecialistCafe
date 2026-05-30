@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using UnityEngine.Events;
 
 public class DataPersistenceManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class DataPersistenceManager : MonoBehaviour
     private FileDataHandler dataHandler;
 
     public static DataPersistenceManager instance { get; private set; }
+
+    public UnityEvent onNewGame;
 
     private void Awake() {
         if (instance != null) {
@@ -49,6 +52,11 @@ public class DataPersistenceManager : MonoBehaviour
     {
         IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None).OfType<IDataPersistence>();
 
+        /*foreach( IDataPersistence data in dataPersistenceObjects)
+        {
+            Debug.Log("Data Object Found: " + data.gameObject);
+        }*/
+
         return new List<IDataPersistence>(dataPersistenceObjects);
     }
 
@@ -58,13 +66,14 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame() {
         this.gameData = new GameData();
+        onNewGame.Invoke();
     }
 
     public void LoadGame() {
         this.gameData = dataHandler.Load();
 
         if (this.gameData == null) {
-            Debug.Log("No data was found. Initializing data to defaults");
+            //Debug.Log("No data was found. Initializing data to defaults");
             NewGame();
         }
 
@@ -89,6 +98,7 @@ public class DataPersistenceManager : MonoBehaviour
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects) {
             if (component == dataPersistenceObj.gameObject.name)
             {
+                //Debug.Log("Attempting save for : " + dataPersistenceObj.gameObject.name);
                 dataPersistenceObj.SaveData(ref gameData);
                 dataHandler.Save(this.gameData);
             }

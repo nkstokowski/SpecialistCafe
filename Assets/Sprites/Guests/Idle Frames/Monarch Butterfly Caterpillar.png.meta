@@ -129,9 +129,9 @@ TextureImporter:
       name: Monarch Butterfly Caterpillar_0
       rect:
         serializedVersion: 2
-        x: 34
+        x: 23
         y: 636
-        width: 348
+        width: 359
         height: 557
       alignment: 8
       pivot: {x: 1, y: 0}

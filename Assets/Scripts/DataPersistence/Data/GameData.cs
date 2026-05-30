@@ -39,13 +39,13 @@ public class GameData
     public int currentExp;
 
 
-    /*public GameData()
+    public GameData()
     {
         this.currentMoney = 0;
         this.currentTickets = 0;
         this.lastUpdateTime = DateTime.Now.ToString();
 
-        this.unlockedMenuItems = new List<string>();
+        this.unlockedMenuItems = new List<string>{ "Eucalyptus Tea" };
         this.unlockedTables = new List<string>() { "Default" };
         this.unlockedChairs = new List<string>() { "Default" };
         this.unlockedWalls = new List<string>() { "Default" };
@@ -61,20 +61,20 @@ public class GameData
         this.currentHat = "None";
 
 
-        this.lastItemUpper = "None";
-        this.lastItemLower = "None";
+        this.lastItemUpper = "Eucalyptus Tea";
+        this.lastItemLower = "Eucalyptus Tea";
 
-        this.upperCoinCollected = true;
-        this.lowerCoinCollected = true;
+        this.upperCoinCollected = false;
+        this.lowerCoinCollected = false;
 
         unlockedAchievements = new List<int>() {};
 
         this.currentLevel = 1;
         this.currentExp = 0;
 
-    }*/
+    }
     
-    public GameData()
+    /*public GameData()
     {
         this.currentMoney = 100;
         this.currentTickets = 10;
@@ -105,5 +105,5 @@ public class GameData
 
         this.currentLevel = 1;
         this.currentExp = 0;
-    }
+    }*/
 }

@@ -870,6 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553e77381c0a37d41ba5b877fed2dac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuestIdle
+  animationEnabled: 0
   idleFrames: []
   baseFrameTime: 1.2
   frameTimeMultipliers:
@@ -2323,7 +2324,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76796823}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -2369,7 +2370,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76796823}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3c59ebf993795448a979865f08777fe, type: 3}
   m_Name: 
@@ -13579,6 +13580,7 @@ MonoBehaviour:
   coins: {fileID: 1505109114}
   menuItem: {fileID: 11400000, guid: 772cb1c8840dd92459858fb0d7d28482, type: 2}
   guestIdleController: {fileID: 1723460242}
+  drinkIdleController: {fileID: 1644770225}
 --- !u!1 &407083376
 GameObject:
   m_ObjectHideFlags: 0
@@ -17827,7 +17829,7 @@ MonoBehaviour:
   currentTickets: 0
   currentExp: 0
   currentLevel: 1
-  expPerLevel: 050000000b000000120000001a000000230000002d0000003800000044000000510000005f0000006e0000007e0000008f000000a1000000b4000000c8000000dd000000
+  expPerLevel: 030000000b000000120000001a000000230000002d0000003800000044000000510000005f0000006e0000007e0000008f000000a1000000b4000000c8000000dd000000
   expText: {fileID: 1405818575}
   expSlider: {fileID: 1074197695}
   ticketText: {fileID: 583528862}
@@ -21848,6 +21850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589648866}
   - component: {fileID: 589648867}
+  - component: {fileID: 589648868}
   m_Layer: 0
   m_Name: Drink
   m_TagString: Untagged
@@ -21928,6 +21931,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &589648868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589648865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553e77381c0a37d41ba5b877fed2dac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuestIdle
+  animationEnabled: 0
+  idleFrames: []
+  baseFrameTime: 1.2
+  frameTimeMultipliers:
+  - 1
+  - 1.3
+  minCyclesBeforePause: 2
+  maxCyclesBeforePause: 5
+  pauseDurationMin: 1
+  pauseDurationMax: 2.2
 --- !u!1 &589843234
 GameObject:
   m_ObjectHideFlags: 0
@@ -26048,7 +26073,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 683910768}
+      - m_Target: {fileID: 1430612276}
         m_TargetAssemblyTypeName: NewPlayerButton, Assembly-CSharp
         m_MethodName: OnCloseTutorialselected
         m_Mode: 2
@@ -26074,6 +26099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   tutorialCanvas: {fileID: 495286821}
   cafeTutorialBackground: {fileID: 1344452963}
+  swipeDetectionManager: {fileID: 0}
   menuCanvas: {fileID: 724009973}
   shopCanvas: {fileID: 1832998300}
   swipeDetection: {fileID: 1430612271}
@@ -28067,6 +28093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   tutorialCanvas: {fileID: 495286821}
   cafeTutorialBackground: {fileID: 1344452963}
+  swipeDetectionManager: {fileID: 0}
   menuCanvas: {fileID: 724009973}
   shopCanvas: {fileID: 1832998300}
   swipeDetection: {fileID: 1430612271}
@@ -48814,8 +48841,8 @@ Transform:
   m_GameObject: {fileID: 1344452963}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.57}
-  m_LocalScale: {x: 1, y: 1.21, z: 1}
+  m_LocalPosition: {x: 0, y: 0.0736, z: -8.57}
+  m_LocalScale: {x: 1, y: 1.217623, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 855021269}
@@ -49705,6 +49732,7 @@ MonoBehaviour:
   coins: {fileID: 1927853258}
   menuItem: {fileID: 11400000, guid: 772cb1c8840dd92459858fb0d7d28482, type: 2}
   guestIdleController: {fileID: 29837437}
+  drinkIdleController: {fileID: 589648868}
 --- !u!1 &1351724614
 GameObject:
   m_ObjectHideFlags: 0
@@ -52907,6 +52935,7 @@ GameObject:
   - component: {fileID: 1430612271}
   - component: {fileID: 1430612274}
   - component: {fileID: 1430612275}
+  - component: {fileID: 1430612276}
   m_Layer: 0
   m_Name: UIManagers
   m_TagString: Untagged
@@ -52994,6 +53023,24 @@ MonoBehaviour:
   baselineAspectHeight: 16
   baselineAspectWidth: 9
   aspectScaler: 0
+--- !u!114 &1430612276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430612270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2093b5bc58b31f64496c91cec7659b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  tutorialCanvas: {fileID: 495286821}
+  cafeTutorialBackground: {fileID: 1344452963}
+  swipeDetectionManager: {fileID: 1430612271}
+  menuCanvas: {fileID: 724009973}
+  shopCanvas: {fileID: 1832998300}
+  swipeDetection: {fileID: 1430612271}
 --- !u!1 &1431491109
 GameObject:
   m_ObjectHideFlags: 0
@@ -60103,6 +60150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644770223}
   - component: {fileID: 1644770224}
+  - component: {fileID: 1644770225}
   m_Layer: 0
   m_Name: Drink
   m_TagString: Untagged
@@ -60183,6 +60231,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1644770225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644770222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553e77381c0a37d41ba5b877fed2dac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuestIdle
+  animationEnabled: 0
+  idleFrames: []
+  baseFrameTime: 1.2
+  frameTimeMultipliers:
+  - 1
+  - 1.3
+  minCyclesBeforePause: 2
+  maxCyclesBeforePause: 5
+  pauseDurationMin: 1
+  pauseDurationMax: 2.2
 --- !u!1 &1645680604
 GameObject:
   m_ObjectHideFlags: 0
@@ -61171,7 +61241,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677998054}
+      - m_Target: {fileID: 1430612276}
         m_TargetAssemblyTypeName: NewPlayerButton, Assembly-CSharp
         m_MethodName: OnNewPlayerButtonSelected
         m_Mode: 2
@@ -61190,13 +61260,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677998051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2093b5bc58b31f64496c91cec7659b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   tutorialCanvas: {fileID: 495286821}
   cafeTutorialBackground: {fileID: 1344452963}
+  swipeDetectionManager: {fileID: 0}
   menuCanvas: {fileID: 724009973}
   shopCanvas: {fileID: 1832998300}
   swipeDetection: {fileID: 1430612271}
@@ -62804,6 +62875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553e77381c0a37d41ba5b877fed2dac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GuestIdle
+  animationEnabled: 0
   idleFrames: []
   baseFrameTime: 1.2
   frameTimeMultipliers:
@@ -69822,6 +69894,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: data.game
   saveIntervalSeconds: 10
+  onNewGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1430612276}
+        m_TargetAssemblyTypeName: NewPlayerButton, Assembly-CSharp
+        m_MethodName: StartTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1920248171
 GameObject:
   m_ObjectHideFlags: 0

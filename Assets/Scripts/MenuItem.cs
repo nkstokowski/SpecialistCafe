@@ -22,4 +22,6 @@ public class MenuItem : ScriptableObject
 
     public Sprite idlePose;
 
+    public Sprite drinkIdle;
+
 }
